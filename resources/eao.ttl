@@ -1,0 +1,1202 @@
+@prefix : <http://purl.org/ontology/edu/eao/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eso: <http://purl.org/ontology/edu/eso/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix chear: <http://hadatac.org/ont/chear#> .
+
+:eao.ttl a owl:Ontology ;
+	owl:versionIRI :0.9 ;
+	dct:contributor "Deborah L. McGuiness"^^xsd:string ;
+	dct:created "2017-05-15T12:00:00"^^xsd:dateTime ;
+	dct:creator "Sabbir M. Rashid"^^xsd:string ;
+	dct:description "Education Application Ontology"^^xsd:string ;
+	dct:license <http://www.apache.org/licenses/LICENSE-2.0> ;
+	dct:modified "2019-02-14T12:00:00"^^xsd:dateTime ;
+	dct:title "Education Application Ontology"^^xsd:string .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+
+dct:contributor a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/created
+
+dct:created a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/creator
+
+dct:creator a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/description
+
+dct:description a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/license
+
+dct:license a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/modified
+
+dct:modified a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/title
+
+dct:title a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+
+skos:definition a owl:AnnotationProperty .
+# 
+# http://www.w3.org/ns/prov#wasQuotedFrom
+
+prov:wasQuotedFrom a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/ontology/edu/eao/hasStandard
+
+:hasStandard a owl:ObjectProperty ;
+	rdfs:domain :Course ;
+	rdfs:label "has standard" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://hadatac.org/ont/chear#Demographic
+
+chear:Demographic a owl:Class ;
+	rdfs:subClassOf sio:Attribute ;
+	rdfs:label "Demographic"^^xsd:string ;
+	skos:definition "Demographics are quantifiable characteristics of a given population."^^xsd:string .
+# 
+# http://hadatac.org/ont/chear#EducationGrade
+
+chear:EducationGrade a owl:Class ;
+	rdfs:subClassOf chear:Demographic , chear:SocioeconomicStatus , sio:ObjectQuality ;
+	rdfs:label "Education Grade"^^xsd:string ;
+	skos:definition "The highest grade of education achieved"^^xsd:string .
+# 
+# http://hadatac.org/ont/chear#EducationLevel
+
+chear:EducationLevel a owl:Class ;
+	rdfs:subClassOf chear:Demographic , chear:SocioeconomicStatus , sio:ObjectQuality ;
+	rdfs:label "Level of Education"^^xsd:string ;
+	skos:definition "A Person's Level of Education"^^xsd:string .
+# 
+# http://hadatac.org/ont/chear#SocioeconomicStatus
+
+chear:SocioeconomicStatus a owl:Class ;
+	rdfs:label "Socioeconomic Status"^^xsd:string ;
+	skos:definition "Socioeconomic Status Indicator Class"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Algebra
+
+:Algebra a owl:Class ;
+	rdfs:subClassOf :Mathematics ;
+	rdfs:label "Algebra"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/AmericanHistory
+
+:AmericanHistory a owl:Class ;
+	rdfs:subClassOf :History ;
+	rdfs:label "American History"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Arithmetic
+
+:Arithmetic a owl:Class ;
+	rdfs:subClassOf :Mathematics ;
+	rdfs:label "Arthimetic"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Astronomy
+
+:Astronomy a owl:Class ;
+	rdfs:subClassOf :Science ;
+	rdfs:label "Astronomy"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Bachelors
+
+:Bachelors a owl:Class ;
+	rdfs:subClassOf chear:EducationLevel ;
+	rdfs:label "Bachelor's Degree or Equivalent"^^xsd:string ;
+	skos:definition "Programmes designed to provide intermediate academic and/or professional knowledge, skills and competencies leading to a first tertiary degree or equivalent qualification."^^xsd:string ;
+	prov:wasQuotedFrom <https://en.wikipedia.org/wiki/International_Standard_Classification_of_Education#2011_version> .
+# 
+# http://purl.org/ontology/edu/eao/Biology
+
+:Biology a owl:Class ;
+	rdfs:subClassOf :Science ;
+	rdfs:label "Biology"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Calculus
+
+:Calculus a owl:Class ;
+	rdfs:subClassOf :Mathematics ;
+	rdfs:label "Calculus"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Cardinality
+
+:Cardinality a owl:Class ;
+	rdfs:subClassOf :Arithmetic .
+# 
+# http://purl.org/ontology/edu/eao/Chemistry
+
+:Chemistry a owl:Class ;
+	rdfs:subClassOf :Science ;
+	rdfs:label "Chemistry"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/ComprehensionAndCollaboration
+
+:ComprehensionAndCollaboration a owl:Class ;
+	rdfs:subClassOf :SpokenLanguage ;
+	rdfs:label "Comprehension and Collaboration"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Course
+
+:Course a owl:Class ;
+	rdfs:subClassOf sio:InformationContentEntity ;
+	rdfs:label "Course"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/DifferentialEquations
+
+:DifferentialEquations a owl:Class ;
+	rdfs:subClassOf :Mathematics ;
+	rdfs:label "Differential Equations"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Doctoral
+
+:Doctoral a owl:Class ;
+	rdfs:subClassOf chear:EducationLevel ;
+	rdfs:label "Doctoral Degree or Equivalent"^^xsd:string ;
+	skos:definition "Programmes designed primarily to lead to an advanced research qualification, usually concluding with the submission and defense of a substantive dissertation of publishable quality based on original research."^^xsd:string ;
+	prov:wasQuotedFrom <https://en.wikipedia.org/wiki/International_Standard_Classification_of_Education#2011_version> .
+# 
+# http://purl.org/ontology/edu/eao/EarlyChildhoodEducation
+
+:EarlyChildhoodEducation a owl:Class ;
+	rdfs:subClassOf chear:EducationLevel ;
+	rdfs:label "Early Childhood Education"^^xsd:string ;
+	skos:definition "Education designed to support early development in preparation for participation in school and society."^^xsd:string ;
+	prov:wasQuotedFrom <https://en.wikipedia.org/wiki/International_Standard_Classification_of_Education#2011_version> .
+# 
+# http://purl.org/ontology/edu/eao/EarthScience
+
+:EarthScience a owl:Class ;
+	rdfs:subClassOf :Science ;
+	rdfs:label "Earth Science"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/EnglishLanguageArts
+
+:EnglishLanguageArts a owl:Class ;
+	rdfs:subClassOf :Language ;
+	rdfs:label "English Language Arts"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Fluency
+
+:Fluency a owl:Class ;
+	rdfs:subClassOf :FoundationalSkills ;
+	rdfs:label "Fluency"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/FoundationalSkills
+
+:FoundationalSkills a owl:Class ;
+	rdfs:subClassOf :Reading ;
+	rdfs:label "Foundational Skills of Reading"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Geography
+
+:Geography a owl:Class ;
+	rdfs:subClassOf :History ;
+	rdfs:label "Geography"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Geometry
+
+:Geometry a owl:Class ;
+	rdfs:subClassOf :Mathematics ;
+	rdfs:label "Geometry"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Government
+
+:Government a owl:Class ;
+	rdfs:subClassOf :History ;
+	rdfs:label "Government"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Grammar
+
+:Grammar a owl:Class ;
+	rdfs:subClassOf :EnglishLanguageArts ;
+	rdfs:label "Grammar"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Graphs
+
+:Graphs a owl:Class ;
+	rdfs:subClassOf :Geometry .
+# 
+# http://purl.org/ontology/edu/eao/History
+
+:History a owl:Class ;
+	rdfs:subClassOf :Course ;
+	rdfs:label "History"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/HistoryCraftAndStructure
+
+:HistoryCraftAndStructure a owl:Class ;
+	rdfs:subClassOf :History ;
+	rdfs:label "History Craft and Structure"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/HistoryKeyIdeasAndDetails
+
+:HistoryKeyIdeasAndDetails a owl:Class ;
+	rdfs:subClassOf :History ;
+	rdfs:label "History Craft and Structure"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/HistoryKnowledgeAndIdeaIntegration
+
+:HistoryKnowledgeAndIdeaIntegration a owl:Class ;
+	rdfs:subClassOf :History ;
+	rdfs:label "History Knowledge And Idea Integration"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/HistoryReadingRangeAndTextComplexity
+
+:HistoryReadingRangeAndTextComplexity a owl:Class ;
+	rdfs:subClassOf :History ;
+	rdfs:label "History Reading Range and Text Complexity"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/InformationalCraftAndStructure
+
+:InformationalCraftAndStructure a owl:Class ;
+	rdfs:subClassOf :InformationalText ;
+	rdfs:label "Informational Craft and Structure"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/InformationalKeyIdeasAndDetails
+
+:InformationalKeyIdeasAndDetails a owl:Class ;
+	rdfs:subClassOf :InformationalText ;
+	rdfs:label "Informational Key Ideas and Details"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/InformationalKnowledgeAndIdeaIntegration
+
+:InformationalKnowledgeAndIdeaIntegration a owl:Class ;
+	rdfs:subClassOf :InformationalText ;
+	rdfs:label "Informational Knowledge and Idea Integration"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/InformationalReadingRangeAndTextComplexity
+
+:InformationalReadingRangeAndTextComplexity a owl:Class ;
+	rdfs:subClassOf :InformationalText ;
+	rdfs:label "Informational Reading Range and Text Complexity"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/InformationalText
+
+:InformationalText a owl:Class ;
+	rdfs:subClassOf :Reading ;
+	rdfs:label "Informational Text"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/KnowledgeAndIdeaPresentation
+
+:KnowledgeAndIdeaPresentation a owl:Class ;
+	rdfs:subClassOf :SpokenLanguage ;
+	rdfs:label "Presentation of Knowledge and Ideas"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Language
+
+:Language a owl:Class ;
+	rdfs:subClassOf :Course ;
+	rdfs:label "Language"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/LanguageKnowledge
+
+:LanguageKnowledge a owl:Class ;
+	rdfs:subClassOf :Grammar ;
+	rdfs:label "Knowledge of Language"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/LineAngleBasedClassification
+
+:LineAngleBasedClassification a owl:Class ;
+	rdfs:subClassOf :ShapeIdentificationAndClassification ;
+	rdfs:label "Line Angle Based Classification"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Literature
+
+:Literature a owl:Class ;
+	rdfs:subClassOf :Reading ;
+	rdfs:label "Literature"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/LiteratureCraftAndStructure
+
+:LiteratureCraftAndStructure a owl:Class ;
+	rdfs:subClassOf :Literature ;
+	rdfs:label "Literature Craft and Structure"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/LiteratureKeyIdeasAndDetails
+
+:LiteratureKeyIdeasAndDetails a owl:Class ;
+	rdfs:subClassOf :Literature ;
+	rdfs:label "Literature Key Ideas and Details"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/LiteratureKnowledgeAndIdeaIntegration
+
+:LiteratureKnowledgeAndIdeaIntegration a owl:Class ;
+	rdfs:subClassOf :Literature ;
+	rdfs:label "Literature Knowledge and Idea Integration"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/LiteratureReadingRangeAndTextComplexity
+
+:LiteratureReadingRangeAndTextComplexity a owl:Class ;
+	rdfs:subClassOf :Literature ;
+	rdfs:label "Literature Reading Range and Text Complexity"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/LowerSecondaryEducation
+
+:LowerSecondaryEducation a owl:Class ;
+	rdfs:subClassOf chear:EducationLevel ;
+	rdfs:label "Lower Secondary Education"^^xsd:string ;
+	skos:definition "First stage of secondary education building on primary education, typically with a more subject-oriented curriculum."^^xsd:string ;
+	prov:wasQuotedFrom <https://en.wikipedia.org/wiki/International_Standard_Classification_of_Education#2011_version> .
+# 
+# http://purl.org/ontology/edu/eao/Masters
+
+:Masters a owl:Class ;
+	rdfs:subClassOf chear:EducationLevel ;
+	rdfs:label "Master's Degree or Equivalent"^^xsd:string ;
+	skos:definition "Programmes designed to provide advanced academic and/or professional knowledge, skills and competencies leading to a second tertiary degree or equivalent qualification."^^xsd:string ;
+	prov:wasQuotedFrom <https://en.wikipedia.org/wiki/International_Standard_Classification_of_Education#2011_version> .
+# 
+# http://purl.org/ontology/edu/eao/Mathematics
+
+:Mathematics a owl:Class ;
+	rdfs:subClassOf :Course ;
+	rdfs:label "Mathematics"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Operations
+
+:Operations a owl:Class ;
+	rdfs:subClassOf :Arithmetic .
+# 
+# http://purl.org/ontology/edu/eao/PhonicsAndWordRecognition
+
+:PhonicsAndWordRecognition a owl:Class ;
+	rdfs:subClassOf :FoundationalSkills ;
+	rdfs:label "Phonics and Word Recognition"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/PhonologicalAwareness
+
+:PhonologicalAwareness a owl:Class ;
+	rdfs:subClassOf :FoundationalSkills ;
+	rdfs:label "Phonological Awareness"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Physics
+
+:Physics a owl:Class ;
+	rdfs:subClassOf :Science ;
+	rdfs:label "Physics"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/PostSecondaryNonTertiaryEducation
+
+:PostSecondaryNonTertiaryEducation a owl:Class ;
+	rdfs:subClassOf chear:EducationLevel ;
+	rdfs:label "Post-Secondary Non-Tertiary Education"^^xsd:string ;
+	skos:definition "Programmes providing learning experiences that build on secondary education and prepare for labour market entry and/or tertiary education. The content is broader than secondary but not as complex as tertiary education."^^xsd:string ;
+	prov:wasQuotedFrom <https://en.wikipedia.org/wiki/International_Standard_Classification_of_Education#2011_version> .
+# 
+# http://purl.org/ontology/edu/eao/PrimaryEducation
+
+:PrimaryEducation a owl:Class ;
+	rdfs:subClassOf chear:EducationLevel ;
+	rdfs:label "Primary Education"^^xsd:string ;
+	skos:definition "Programmes typically designed to provide students with fundamental skills in reading, writing and mathematics and to establish a solid foundation for learning."^^xsd:string ;
+	prov:wasQuotedFrom <https://en.wikipedia.org/wiki/International_Standard_Classification_of_Education#2011_version> .
+# 
+# http://purl.org/ontology/edu/eao/PrintConcepts
+
+:PrintConcepts a owl:Class ;
+	rdfs:subClassOf :FoundationalSkills ;
+	rdfs:label "Print Concepts"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/ProblemSolvingGeometry
+
+:ProblemSolvingGeometry a owl:Class ;
+	rdfs:subClassOf :Geometry ;
+	rdfs:label "Problem Solving Geometry"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/PropertyBasedClassification
+
+:PropertyBasedClassification a owl:Class ;
+	rdfs:subClassOf :ShapeIdentificationAndClassification ;
+	rdfs:label "Property Based Classification"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Reading
+
+:Reading a owl:Class ;
+	rdfs:subClassOf :EnglishLanguageArts ;
+	rdfs:label "Reading"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Science
+
+:Science a owl:Class ;
+	rdfs:subClassOf :Course ;
+	rdfs:label "Science"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/ScienceCraftAndStructure
+
+:ScienceCraftAndStructure a owl:Class ;
+	rdfs:subClassOf :Science ;
+	rdfs:label "Science Craft and Structure"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/ScienceKeyIdeasAndDetails
+
+:ScienceKeyIdeasAndDetails a owl:Class ;
+	rdfs:subClassOf :Science ;
+	rdfs:label "Science Key Ideas and Details"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/ScienceKnowledgeAndIdeaIntegration
+
+:ScienceKnowledgeAndIdeaIntegration a owl:Class ;
+	rdfs:subClassOf :Science ;
+	rdfs:label "Science Knowledge and Idea Integration "^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/ScienceReadingRangeAndTextComplexity
+
+:ScienceReadingRangeAndTextComplexity a owl:Class ;
+	rdfs:subClassOf :Science ;
+	rdfs:label "Science Reading Range and Text Complexity"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/ShapeAnalysis
+
+:ShapeAnalysis a owl:Class ;
+	rdfs:subClassOf :Shapes .
+# 
+# http://purl.org/ontology/edu/eao/ShapeComparison
+
+:ShapeComparison a owl:Class ;
+	rdfs:subClassOf :Shapes ;
+	rdfs:label "Shape Comparison"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/ShapeComposition
+
+:ShapeComposition a owl:Class ;
+	rdfs:subClassOf :Shapes .
+# 
+# http://purl.org/ontology/edu/eao/ShapeDescription
+
+:ShapeDescription a owl:Class ;
+	rdfs:subClassOf :Shapes .
+# 
+# http://purl.org/ontology/edu/eao/ShapeIdentificationAndClassification
+
+:ShapeIdentificationAndClassification a owl:Class ;
+	rdfs:subClassOf :Shapes .
+# 
+# http://purl.org/ontology/edu/eao/ShapeReasoning
+
+:ShapeReasoning a owl:Class ;
+	rdfs:subClassOf :Shapes .
+# 
+# http://purl.org/ontology/edu/eao/Shapes
+
+:Shapes a owl:Class ;
+	rdfs:subClassOf :Geometry ;
+	rdfs:label "Shapes"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/ShortCycleTertiaryEducation
+
+:ShortCycleTertiaryEducation a owl:Class ;
+	rdfs:subClassOf chear:EducationLevel ;
+	rdfs:label "Short-Cycle Tertiary Education"^^xsd:string ;
+	skos:definition "Short first tertiary programmes that are typically practically-based, occupationally-specific and prepare for labour market entry. These programmes may also provide a pathway to other tertiary programmes."^^xsd:string ;
+	prov:wasQuotedFrom <https://en.wikipedia.org/wiki/International_Standard_Classification_of_Education#2011_version> .
+# 
+# http://purl.org/ontology/edu/eao/SpokenLanguage
+
+:SpokenLanguage a owl:Class ;
+	rdfs:subClassOf :EnglishLanguageArts ;
+	rdfs:label "Spoken Language"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/StandardEnglishConventions
+
+:StandardEnglishConventions a owl:Class ;
+	rdfs:subClassOf :Grammar ;
+	rdfs:label "Conventions of Standard English"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Statistics
+
+:Statistics a owl:Class ;
+	rdfs:subClassOf :Mathematics ;
+	rdfs:label "Statistics"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/TextTypesAndPurposes
+
+:TextTypesAndPurposes a owl:Class ;
+	rdfs:subClassOf :Writing ;
+	rdfs:label "Text Types and Purposes"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Trigonometry
+
+:Trigonometry a owl:Class ;
+	rdfs:subClassOf :Mathematics ;
+	rdfs:label "Trigonometry"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/UpperSecondaryEducation
+
+:UpperSecondaryEducation a owl:Class ;
+	rdfs:subClassOf chear:EducationLevel ;
+	rdfs:label "Upper Secondary Education"^^xsd:string ;
+	skos:definition "Second/final stage of secondary education preparing for tertiary education and/or providing skills relevant to employment. Usually with an increased range of subject options and streams."^^xsd:string ;
+	prov:wasQuotedFrom <https://en.wikipedia.org/wiki/International_Standard_Classification_of_Education#2011_version> .
+# 
+# http://purl.org/ontology/edu/eao/VocabularyAcquisitionAndUse
+
+:VocabularyAcquisitionAndUse a owl:Class ;
+	rdfs:subClassOf :Grammar ;
+	rdfs:label "Vocabulary Acquisition and Use"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/WorldHistory
+
+:WorldHistory a owl:Class ;
+	rdfs:subClassOf :History ;
+	rdfs:label "World History"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/Writing
+
+:Writing a owl:Class ;
+	rdfs:subClassOf :EnglishLanguageArts ;
+	rdfs:label "writing"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/WritingProductionAndDistribution
+
+:WritingProductionAndDistribution a owl:Class ;
+	rdfs:subClassOf :Writing ;
+	rdfs:label "Production and Distribution of Writing"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/WritingRange
+
+:WritingRange a owl:Class ;
+	rdfs:subClassOf :Writing ;
+	rdfs:label "Range of Writing"^^xsd:string .
+# 
+# http://purl.org/ontology/edu/eao/WritingResearch
+
+:WritingResearch a owl:Class ;
+	rdfs:subClassOf :Writing ;
+	rdfs:label "Research to Build and Present Knowledge"^^xsd:string .
+# 
+# http://semanticscience.org/resource/Attribute
+
+sio:Attribute a owl:Class ;
+	rdfs:subClassOf sio:Entity ;
+	dct:description "An attribute is a characteristic of some entity."^^xsd:string ;
+	rdfs:label "Attribute"^^xsd:string .
+# 
+# http://semanticscience.org/resource/Entity
+
+sio:Entity a owl:Class ;
+	dct:description "Every thing is an entity."^^xsd:string ;
+	rdfs:label "Entity"^^xsd:string .
+# 
+# http://semanticscience.org/resource/InformationContentEntity
+
+sio:InformationContentEntity a owl:Class ;
+	rdfs:subClassOf sio:ResourceObject ;
+	dct:description "An information content entity is an object that requires some background knowledge or procedure to correctly interpret."^^xsd:string ;
+	rdfs:label "Information Content Entity"^^xsd:string .
+# 
+# http://semanticscience.org/resource/ObjectQuality
+
+sio:ObjectQuality a owl:Class ;
+	rdfs:subClassOf sio:Quality ;
+	dct:description "An object quality is quality of an object."^^xsd:string ;
+	rdfs:label "Object Quality"^^xsd:string .
+# 
+# http://semanticscience.org/resource/Quality
+
+sio:Quality a owl:Class ;
+	rdfs:subClassOf sio:Attribute ;
+	dct:description "A quality is an attribute that is intrinsically associated with its bearer (or its parts), but whose presence/absence and observed/measured value may vary."^^xsd:string ;
+	rdfs:label "Quality"^^xsd:string .
+# 
+# http://semanticscience.org/resource/ResourceObject
+
+sio:ResourceObject a owl:Class ;
+	rdfs:subClassOf sio:Entity ;
+	dct:description "An object is an entity that is wholly identifiable at any instant of time during which it exists."^^xsd:string ;
+	rdfs:label "Object"^^xsd:string .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/ontology/edu/eao/Cardinality
+
+:Cardinality a owl:NamedIndividual ;
+	:hasStandard eso:CCSS.MATH.CONTENT.K.CC.A.1 .
+
+eso:CCSS.MATH.CONTENT.K.CC.A.1 a owl:NamedIndividual .
+
+:Cardinality :hasStandard eso:CCSS.MATH.CONTENT.K.CC.A.2 .
+
+eso:CCSS.MATH.CONTENT.K.CC.A.2 a owl:NamedIndividual .
+
+:Cardinality :hasStandard eso:CCSS.MATH.CONTENT.K.CC.A.3 .
+
+eso:CCSS.MATH.CONTENT.K.CC.A.3 a owl:NamedIndividual .
+
+:Cardinality :hasStandard eso:CCSS.MATH.CONTENT.K.CC.B.4 .
+
+eso:CCSS.MATH.CONTENT.K.CC.B.4 a owl:NamedIndividual .
+
+:Cardinality :hasStandard eso:CCSS.MATH.CONTENT.K.CC.B.5 .
+
+eso:CCSS.MATH.CONTENT.K.CC.B.5 a owl:NamedIndividual .
+
+:Cardinality :hasStandard eso:CCSS.MATH.CONTENT.K.CC.C.6 .
+
+eso:CCSS.MATH.CONTENT.K.CC.C.6 a owl:NamedIndividual .
+
+:Cardinality :hasStandard eso:CCSS.MATH.CONTENT.K.CC.C.7 .
+
+eso:CCSS.MATH.CONTENT.K.CC.C.7 a owl:NamedIndividual .
+# 
+# http://purl.org/ontology/edu/eao/Graphs
+
+:Graphs a owl:NamedIndividual ;
+	:hasStandard eso:CCSS.MATH.CONTENT.5.G.A.1 .
+
+eso:CCSS.MATH.CONTENT.5.G.A.1 a owl:NamedIndividual .
+
+:Graphs :hasStandard eso:CCSS.MATH.CONTENT.5.G.A.2 .
+
+eso:CCSS.MATH.CONTENT.5.G.A.2 a owl:NamedIndividual .
+# 
+# http://purl.org/ontology/edu/eao/Operations
+
+:Operations a owl:NamedIndividual ;
+	:hasStandard eso:CCSS.MATH.CONTENT.1.OA.A.1 .
+
+eso:CCSS.MATH.CONTENT.1.OA.A.1 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.1.OA.A.2 .
+
+eso:CCSS.MATH.CONTENT.1.OA.A.2 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.1.OA.B.3 .
+
+eso:CCSS.MATH.CONTENT.1.OA.B.3 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.1.OA.B.4 .
+
+eso:CCSS.MATH.CONTENT.1.OA.B.4 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.1.OA.C.5 .
+
+eso:CCSS.MATH.CONTENT.1.OA.C.5 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.1.OA.C.6 .
+
+eso:CCSS.MATH.CONTENT.1.OA.C.6 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.1.OA.D.7 .
+
+eso:CCSS.MATH.CONTENT.1.OA.D.7 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.1.OA.D.8 .
+
+eso:CCSS.MATH.CONTENT.1.OA.D.8 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.2.OA.A.1 .
+
+eso:CCSS.MATH.CONTENT.2.OA.A.1 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.2.OA.B.2 .
+
+eso:CCSS.MATH.CONTENT.2.OA.B.2 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.2.OA.C.3 .
+
+eso:CCSS.MATH.CONTENT.2.OA.C.3 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.2.OA.C.4 .
+
+eso:CCSS.MATH.CONTENT.2.OA.C.4 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.3.OA.A.1 .
+
+eso:CCSS.MATH.CONTENT.3.OA.A.1 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.3.OA.A.2 .
+
+eso:CCSS.MATH.CONTENT.3.OA.A.2 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.3.OA.A.3 .
+
+eso:CCSS.MATH.CONTENT.3.OA.A.3 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.3.OA.A.4 .
+
+eso:CCSS.MATH.CONTENT.3.OA.A.4 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.3.OA.B.5 .
+
+eso:CCSS.MATH.CONTENT.3.OA.B.5 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.3.OA.B.6 .
+
+eso:CCSS.MATH.CONTENT.3.OA.B.6 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.3.OA.C.7 .
+
+eso:CCSS.MATH.CONTENT.3.OA.C.7 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.3.OA.D.8 .
+
+eso:CCSS.MATH.CONTENT.3.OA.D.8 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.3.OA.D.9 .
+
+eso:CCSS.MATH.CONTENT.3.OA.D.9 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.4.OA.A.1 .
+
+eso:CCSS.MATH.CONTENT.4.OA.A.1 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.4.OA.A.2 .
+
+eso:CCSS.MATH.CONTENT.4.OA.A.2 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.4.OA.A.3 .
+
+eso:CCSS.MATH.CONTENT.4.OA.A.3 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.4.OA.B.4 .
+
+eso:CCSS.MATH.CONTENT.4.OA.B.4 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.4.OA.C.5 .
+
+eso:CCSS.MATH.CONTENT.4.OA.C.5 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.5.OA.A.1 .
+
+eso:CCSS.MATH.CONTENT.5.OA.A.1 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.5.OA.A.2 .
+
+eso:CCSS.MATH.CONTENT.5.OA.A.2 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.5.OA.B.3 .
+
+eso:CCSS.MATH.CONTENT.5.OA.B.3 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.K.OA.A.1 .
+
+eso:CCSS.MATH.CONTENT.K.OA.A.1 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.K.OA.A.2 .
+
+eso:CCSS.MATH.CONTENT.K.OA.A.2 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.K.OA.A.3 .
+
+eso:CCSS.MATH.CONTENT.K.OA.A.3 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.K.OA.A.4 .
+
+eso:CCSS.MATH.CONTENT.K.OA.A.4 a owl:NamedIndividual .
+
+:Operations :hasStandard eso:CCSS.MATH.CONTENT.K.OA.A.5 .
+
+eso:CCSS.MATH.CONTENT.K.OA.A.5 a owl:NamedIndividual .
+# 
+# http://purl.org/ontology/edu/eao/ShapeAnalysis
+
+:ShapeAnalysis a owl:NamedIndividual ;
+	:hasStandard eso:CCSS.MATH.CONTENT.6.G.A.1 .
+
+eso:CCSS.MATH.CONTENT.6.G.A.1 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.6.G.A.2 .
+
+eso:CCSS.MATH.CONTENT.6.G.A.2 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.6.G.A.3 .
+
+eso:CCSS.MATH.CONTENT.6.G.A.3 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.6.G.A.4 .
+
+eso:CCSS.MATH.CONTENT.6.G.A.4 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.7.G.B.4 .
+
+eso:CCSS.MATH.CONTENT.7.G.B.4 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.7.G.B.5 .
+
+eso:CCSS.MATH.CONTENT.7.G.B.5 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.7.G.B.6 .
+
+eso:CCSS.MATH.CONTENT.7.G.B.6 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.8.G.A.1 .
+
+eso:CCSS.MATH.CONTENT.8.G.A.1 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.8.G.A.2 .
+
+eso:CCSS.MATH.CONTENT.8.G.A.2 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.8.G.A.4 .
+
+eso:CCSS.MATH.CONTENT.8.G.A.4 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.8.G.A.5 .
+
+eso:CCSS.MATH.CONTENT.8.G.A.5 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.8.G.B.6 .
+
+eso:CCSS.MATH.CONTENT.8.G.B.6 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.8.G.B.7 .
+
+eso:CCSS.MATH.CONTENT.8.G.B.7 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.8.G.B.8 .
+
+eso:CCSS.MATH.CONTENT.8.G.B.8 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.8.G.C.9 .
+
+eso:CCSS.MATH.CONTENT.8.G.C.9 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.K.G.B.4 .
+
+eso:CCSS.MATH.CONTENT.K.G.B.4 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.K.G.B.5 .
+
+eso:CCSS.MATH.CONTENT.K.G.B.5 a owl:NamedIndividual .
+
+:ShapeAnalysis :hasStandard eso:CCSS.MATH.CONTENT.K.G.B.6 .
+
+eso:CCSS.MATH.CONTENT.K.G.B.6 a owl:NamedIndividual .
+# 
+# http://purl.org/ontology/edu/eao/ShapeComposition
+
+:ShapeComposition a owl:NamedIndividual ;
+	:hasStandard eso:CCSS.MATH.CONTENT.7.G.A.1 .
+
+eso:CCSS.MATH.CONTENT.7.G.A.1 a owl:NamedIndividual .
+
+:ShapeComposition :hasStandard eso:CCSS.MATH.CONTENT.7.G.A.2 .
+
+eso:CCSS.MATH.CONTENT.7.G.A.2 a owl:NamedIndividual .
+# 
+# http://purl.org/ontology/edu/eao/ShapeDescription
+
+:ShapeDescription a owl:NamedIndividual ;
+	:hasStandard eso:CCSS.MATH.CONTENT.7.G.A.3 .
+
+eso:CCSS.MATH.CONTENT.7.G.A.3 a owl:NamedIndividual .
+
+:ShapeDescription :hasStandard eso:CCSS.MATH.CONTENT.8.G.A.3 .
+
+eso:CCSS.MATH.CONTENT.8.G.A.3 a owl:NamedIndividual .
+# 
+# http://purl.org/ontology/edu/eao/ShapeIdentificationAndClassification
+
+:ShapeIdentificationAndClassification a owl:NamedIndividual ;
+	:hasStandard eso:CCSS.MATH.CONTENT.4.G.A.1 .
+
+eso:CCSS.MATH.CONTENT.4.G.A.1 a owl:NamedIndividual .
+
+:ShapeIdentificationAndClassification :hasStandard eso:CCSS.MATH.CONTENT.4.G.A.2 .
+
+eso:CCSS.MATH.CONTENT.4.G.A.2 a owl:NamedIndividual .
+
+:ShapeIdentificationAndClassification :hasStandard eso:CCSS.MATH.CONTENT.4.G.A.3 .
+
+eso:CCSS.MATH.CONTENT.4.G.A.3 a owl:NamedIndividual .
+
+:ShapeIdentificationAndClassification :hasStandard eso:CCSS.MATH.CONTENT.5.G.B.3 .
+
+eso:CCSS.MATH.CONTENT.5.G.B.3 a owl:NamedIndividual .
+
+:ShapeIdentificationAndClassification :hasStandard eso:CCSS.MATH.CONTENT.5.G.B.4 .
+
+eso:CCSS.MATH.CONTENT.5.G.B.4 a owl:NamedIndividual .
+
+:ShapeIdentificationAndClassification :hasStandard eso:CCSS.MATH.CONTENT.K.G.A.1 .
+
+eso:CCSS.MATH.CONTENT.K.G.A.1 a owl:NamedIndividual .
+
+:ShapeIdentificationAndClassification :hasStandard eso:CCSS.MATH.CONTENT.K.G.A.2 .
+
+eso:CCSS.MATH.CONTENT.K.G.A.2 a owl:NamedIndividual .
+
+:ShapeIdentificationAndClassification :hasStandard eso:CCSS.MATH.CONTENT.K.G.A.3 .
+
+eso:CCSS.MATH.CONTENT.K.G.A.3 a owl:NamedIndividual .
+# 
+# http://purl.org/ontology/edu/eao/ShapeReasoning
+
+:ShapeReasoning a owl:NamedIndividual ;
+	:hasStandard eso:CCSS.MATH.CONTENT.1.G.A.1 .
+
+eso:CCSS.MATH.CONTENT.1.G.A.1 a owl:NamedIndividual .
+
+:ShapeReasoning :hasStandard eso:CCSS.MATH.CONTENT.1.G.A.2 .
+
+eso:CCSS.MATH.CONTENT.1.G.A.2 a owl:NamedIndividual .
+
+:ShapeReasoning :hasStandard eso:CCSS.MATH.CONTENT.1.G.A.3 .
+
+eso:CCSS.MATH.CONTENT.1.G.A.3 a owl:NamedIndividual .
+
+:ShapeReasoning :hasStandard eso:CCSS.MATH.CONTENT.2.G.A.1 .
+
+eso:CCSS.MATH.CONTENT.2.G.A.1 a owl:NamedIndividual .
+
+:ShapeReasoning :hasStandard eso:CCSS.MATH.CONTENT.2.G.A.2 .
+
+eso:CCSS.MATH.CONTENT.2.G.A.2 a owl:NamedIndividual .
+
+:ShapeReasoning :hasStandard eso:CCSS.MATH.CONTENT.2.G.A.3 .
+
+eso:CCSS.MATH.CONTENT.2.G.A.3 a owl:NamedIndividual .
+
+:ShapeReasoning :hasStandard eso:CCSS.MATH.CONTENT.3.G.A.1 .
+
+eso:CCSS.MATH.CONTENT.3.G.A.1 a owl:NamedIndividual .
+
+:ShapeReasoning :hasStandard eso:CCSS.MATH.CONTENT.3.G.A.2 .
+
+eso:CCSS.MATH.CONTENT.3.G.A.2 a owl:NamedIndividual .
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.G.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.G.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.G.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.OA.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.OA.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.OA.B.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.OA.B.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.OA.C.5
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.OA.C.6
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.OA.D.7
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.1.OA.D.8
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.2.G.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.2.G.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.2.G.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.2.OA.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.2.OA.B.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.2.OA.C.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.2.OA.C.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.G.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.G.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.OA.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.OA.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.OA.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.OA.A.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.OA.B.5
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.OA.B.6
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.OA.C.7
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.OA.D.8
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.3.OA.D.9
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.4.G.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.4.G.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.4.G.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.4.OA.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.4.OA.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.4.OA.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.4.OA.B.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.4.OA.C.5
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.5.G.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.5.G.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.5.G.B.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.5.G.B.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.5.OA.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.5.OA.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.5.OA.B.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.6.G.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.6.G.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.6.G.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.6.G.A.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.7.G.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.7.G.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.7.G.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.7.G.B.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.7.G.B.5
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.7.G.B.6
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.8.G.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.8.G.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.8.G.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.8.G.A.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.8.G.A.5
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.8.G.B.6
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.8.G.B.7
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.8.G.B.8
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.8.G.C.9
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.CC.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.CC.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.CC.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.CC.B.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.CC.B.5
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.CC.C.6
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.CC.C.7
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.G.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.G.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.G.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.G.B.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.G.B.5
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.G.B.6
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.OA.A.1
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.OA.A.2
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.OA.A.3
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.OA.A.4
+# 
+# http://purl.org/ontology/edu/eso/CCSS.MATH.CONTENT.K.OA.A.5
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+:Cardinality rdfs:label "Cardinality"^^xsd:string .
+# 
+
+:Graphs rdfs:label "Graphs"^^xsd:string .
+# 
+
+:Operations rdfs:label "Operations"^^xsd:string .
+# 
+
+:ShapeAnalysis rdfs:label "Shape Analysis"^^xsd:string .
+# 
+
+:ShapeComposition rdfs:label "Shape Composition"^^xsd:string .
+# 
+
+:ShapeDescription rdfs:label "Shape Description"^^xsd:string .
+# 
+
+:ShapeIdentificationAndClassification rdfs:label "Shape Identification and Classification"^^xsd:string .
+# 
+
+:ShapeReasoning rdfs:label "Shape Reasoning"^^xsd:string .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

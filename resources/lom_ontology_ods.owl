@@ -1,0 +1,2130 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#"
+     xml:base="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:lom2owl="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#">
+    <owl:Ontology rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#">
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <dc:creator xml:lang="uah.es)">
+			Enayat Rajabi (enayat.rajabi</dc:creator>
+        <dc:description xml:lang="en">An ontology and vocabulary used for exposing IEEE LOM, a metadata standard for educational contents, as Linked Data. 
+		It is intended as a bridge for linkage of educational metadata into Linked Open Data (LOD). 
+		In this ontology, we designed a mapping of IEEE LOM elements to RDF based on Linked Data principles. </dc:description>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-03-30</dc:modified>
+        <dc:publisher>
+University of Alcala (www.uah.es) </dc:publisher>
+        <dc:rights>Copyright © 2015 University of Alcala, Information Engineering (IE) research unit (http://www.ieru.org/) </dc:rights>
+        <dc:title xml:lang="en">A vocabulary for exposing IEEE LOM metadata as Linked Open Data</dc:title>
+        <rdfs:comment xml:lang="en">-Version 1.0: covers a complete mapping of IEEE LOM to Linked Open Data</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/coverage -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/coverage"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/type -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/type"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#value -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#FN -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#FN"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#N -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#N"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#ORG -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#ORG"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#email -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#email"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotation -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotation">
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation"/>
+        <rdfs:comment xml:lang="en">Comments on the educational use of a learning object, containing information on when and by whom the comments were created. This category enables educators to share their assessments of learning objects, suggestions for use, etc. IEEE LOM element 8.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDate -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDate">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime"/>
+        <rdfs:comment xml:lang="en">Date that this annotation was created. IEEE LOM element 8.2.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classification -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classification">
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification"/>
+        <rdfs:comment xml:lang="en">Description of where a learning object falls within a particular classification system. IEEE LOM element 9.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationKeyword -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationKeyword">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keywords and phrases descriptive of the learning object relative to the stated 9.1:Classification.Purpose of this specific classification, such as accessibility, security level, etc., most relevant first. IEEE LOM element 9.4</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationTaxon -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationTaxon">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon"/>
+        <rdfs:comment xml:lang="en">A particular term within a taxonomy which serves to classify a learning object. IEEE LOM element 9.2.2.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionDateTime -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionDateTime">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime"/>
+        <rdfs:comment xml:lang="en">The date of the contribution. IEEE LOM element 3.2.3.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionEntity -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#contributionEntity">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The identification of and information about entities (i.e., people, organizations) contributing to this learning object. The entities shall be ordered as most relevant first. IEEE LOM element 3.2.2.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#coverage -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#coverage">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <terms:coverage rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></terms:coverage>
+        <rdfs:comment xml:lang="en">The time, culture, geography or region to which this learning object applies.
+The extent or scope of the content of the learning object. Coverage will typically include spatial location (a place name or geographic coordinates), temporal period (a period label, date, or date range) or jurisdiction (such as a named administrative entity). Recommended best practice is to select a value from a controlled vocabulary (for example, the Thesaurus of Geographic Names [TGN]) and that, where appropriate, named places or time periods be used in preference to numeric identifiers such as sets of coordinates or date ranges. IEEE LOM element 1.6.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <terms:description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></terms:description>
+        <rdfs:comment xml:lang="en">A textual description of the content of this learning object. IEEE LOM element 1.4.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comments on how this learning object is to be used. IEEE LOM element 5.10</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#duration -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#duration">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educational -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educational">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This category describes the key educational or pedagogic characteristics of this learning object. IEEE LOM element 5.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalAgeRange -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalAgeRange">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational"/>
+        <rdf:value rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></rdf:value>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Age of the typical intended user. IEEE LOM element 5.7.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalLearningTime -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalLearningTime">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasRelatedResource -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasRelatedResource">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier"/>
+        <rdfs:comment xml:lang="en">The target learning object that a relationship references. IEEE LOM element 7.2.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasResourceIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasResourceIdentifier">
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier"/>
+        <rdfs:comment xml:lang="en">A globally unique label that identifies the target  learning object. IEEE LOM element 7.2.1.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier"/>
+        <rdfs:comment xml:lang="en">This predicate represents the fact that a learning object has a label that identifies it. IEEE LOM element 1.1.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#includesSingleLangString -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#includesSingleLangString">
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString"/>
+        <rdfs:comment xml:lang="en">LangString values may include multiple semantically equivalent character strings, such as translations or alternative descriptions. Each of these is represented by a singleLangString.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#isCompositeOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#isCompositeOf">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement"/>
+        <rdfs:comment xml:lang="en">When grouping multiple requirements, the composite requirement is satisfied when one of the component requirements is satisfied, i.e., the logical connector is OR. IEEE LOM element 4.4.1.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#keyword -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#keyword">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdf:value rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></rdf:value>
+        <rdfs:comment xml:lang="en">A keyword or phrase describing the topic of this learning object. This data element should not be used for characteristics that can be described by other data elements. IEEE LOM element 1.5.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContribution -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContribution"/>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContribution -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContribution">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution"/>
+        <rdfs:comment xml:lang="en">Those entities (i.e., people, organizations) that have contributed to the state of this learning object during its life cycle (e.g.,creation, edits, publication).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataIdentifier">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A globally unique label that identifies this metadata record. IEEE LOM element 3.1.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relatedResourceDescription -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relatedResourceDescription">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString"/>
+        <terms:description rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></terms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relation -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relation">
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation"/>
+        <rdfs:comment xml:lang="en">Relationship between a learning object and other learning objects, if any.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonPath -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonPath">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath"/>
+        <rdfs:comment xml:lang="en">A taxonomic path in a specific classification system according to which a learning object is classified. IEEE LOM element 9.2.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalDuration -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalDuration">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration"/>
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalRequirements -->
+
+    <owl:ObjectProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalRequirements">
+        <rdfs:range rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement"/>
+        <rdfs:comment xml:lang="en">A technical capability necessary for using a learning object. IEEE LOM Element &quot;4.4. Requirement&quot;.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#aggregationLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#aggregationLevel">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The functional granularity of this learning object. IEEE LOM element 1.8.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDescription">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationDescription">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationPurpose -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationPurpose">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accessibility</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">competency</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">discipline</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">educational level</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">educational objective</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">idea</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prerequisite</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">restrictions</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">security level</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skill level</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The purpose of classifying a learning object. IEEE LOM element 9.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightAndOtherRestrictions -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightAndOtherRestrictions">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether copyright or other restrictions apply to the use of this learning object. IEEE LOM element 6.2.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightDescription">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#cost -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#cost">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether use of the learning object requires payment. IEEE LOM element 6.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date time value in format: YYYY[-MM[-DD[Thh[:mm[:ss[.s[TZD]]]]]]]</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationDescription">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationValue -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationValue">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalContext -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalContext">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">higher education</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">training</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The principal environment within which the learning and use of this learning object is intended to take place. IEEE LOM element 5.6.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalDifficulty -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalDifficulty">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">difficult</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">easy</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very difficult</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very easy</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">How hard it is to work with or through this learning object for the typical intended target audience. IEEE LOM element 5.8</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalIntendedUserRole -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalIntendedUserRole">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">learner</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manager</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teacher</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Principal user(s) for which this learning object was designed, most dominant first. IEEE LOM element 5.5.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityLevel">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very high</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very low</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree of interactivity characterizing this learning object. Interactivity in this context refers to the degree to which the learner can influence the aspect or behavior of the learning object. IEEE LOM element 5.3.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityType -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityType">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">expositive</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mised</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Predominant mode of learning supported by this learning object. IEEE LOM element 5.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalLanguage">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ba</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ca</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">es</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ga</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The primary human language or languages used within this learning object to communicate to the intended user. If the learning object had no lingual content (as in the case of a picture of the Mona Lisa, for example), then the appropriate value for this data element would be &quot;none&quot;. IEEE LOM element 1.3.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalSemanticDensity -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalSemanticDensity">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very high</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">very low</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">higherEducation</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">training</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree of conciseness of a learning object. The semantic density of a learning object may be estimated in terms of its size, span, or --in the case of self-timed resources such as audio or video-- duration. IEEE LOM element 5.4.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#email -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#email">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Email as it appears in the vCard</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasTechnicalFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasTechnicalFormat">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Technical datatype(s) of (all the components of) this learning object. This information is used to identify the software needed to access the learning object. IEEE LOM element 4.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This predicate relates a singleLangString to the character string containing its textual description.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierCatalog -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierCatalog">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This predicate relates a lomIdentifier to the name or designator of the identification or cataloging scheme used for its identification. It is usually a namespace scheme. IEEE LOM element 1.1, 3.1, 7.2.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierEntry -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierEntry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This predicate relates a lomIdentifier to the value of the identifier within the identification or cataloging scheme that designates or identifies a learning object or a learning object metadata record (a namespace specific string).  IEEE LOM element 1.1, 3.1, 7.2.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContributionRole -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContributionRole">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">content provider</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">editor</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">educational validator</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">graphical designer</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initiator</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">instructional designer</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">publisher</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">script writer</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subject matter expert</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">technical implementer</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">technical validator</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">terminator</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unknown</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">validator</rdf:first>
+                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Kind of contribution. IEEE LOM element 2.3.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleStatus">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draft</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">final</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">revised</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unavalaible</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The completion status or condition of this learning object. IEEE LOM element 2.2</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleVersion">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContributionRole -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContributionRole">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kind of contribution. IEEE LOM element 3.2.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataLanguage">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ba</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ca</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">es</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ga</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Language of this metadata instance. This is the default language for all LangString values in this metadata instance. If a value for this data element is not present in a metadata instance, then there is no default language for LangString values. IEEE LOM element 3.4.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metadataSchema -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metadataSchema">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name and version of the authoritative specification used to create this metadata instance. IEEE LOM element 3.3.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMaximumVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMaximumVersion">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Highest possible version of the required technology to use the learning object. IEEE LOM element 4.4.1.4.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMinimumVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMinimumVersion">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Lowest possible version of the required technology to use the learning object. IEEE LOM element 4.4.1.3.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeName -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeName">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of the required technology to use a learning object. IEEE LOM element 4.4.1.2.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeType -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeType">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">browser</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operating system</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The technology required to use this learning object, e.g., hardware, software, network, etc. IEEE LOM element 4.4.1.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#otherPlatformRequirements -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#otherPlatformRequirements">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relationKind -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relationKind">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFormat</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasPart</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasVersion</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isBasedOn</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isBasisFor</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isFormatOf</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isPartOf</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isReferencedBy</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isRequiredBy</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isVersionOf</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">references</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires</rdf:first>
+                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Nature of the relationship between a learning object and the target learning object, identified by 7.2:Relation.Resource. IEEE LOM element 7.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#structure -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#structure">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atomic</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hierarchical</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">linear</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">networked</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Underlying organizational structure of this learning object. IEEE LOM element 1.7.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonEntry -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonEntry">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonId -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonId">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The identifier of the taxon, such as a number or letter combination provided by the source of the taxonomy. IEEE LOM element 9.2.2.1.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonpathSource -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonpathSource">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalInstallationRemarks -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalInstallationRemarks">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalLocation">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A string that is used to access this learning object. It may be a location  (e.g., Universal Resource Locator), or a method that resolves to a location (e.g., Universal Resource Identifier). The first element of this list shall be the preferable location. IEEE LOM element 4.3.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalSize -->
+
+    <owl:DatatypeProperty rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalSize">
+        <rdfs:domain rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The size of the digital learning object in bytes (not Mbytes, GB, etc.). The size is represented as a decimal value. This data element shall refer to the actual size of this learning object. If the learning object is compressed, then this data element shall refer to the uncompressed size. IEEE LOM element 4.2.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationDescription"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Comments on the educational use of a learning object, including information on when and by whom the comments were created.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationKeyword"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">40</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonPath"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationDescription"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationPurpose"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Description of where a learning object falls within a particular classification system. To define multiple classifications, there may be multiple instances of this category for a learning object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Those entities (i.e., people, organizations) that have contributed to the state of this learning object during its life cycle (e.g., creation, edits, publication).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#DateTime">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A point in time with accuracy at least as small as one second, as described by IEEE LOM in clause 8 (IEEE 1484.12.1-2002).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationDescription"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#durationValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An interval in time with accuracy at least as small as one second.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalLearningTime"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalTypicalAgeRange"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalDifficulty"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityLevel"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalInteractivityType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalSemanticDensity"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalContext"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalIntendedUserRole"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educationalLanguage"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:type rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></terms:type>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifierCatalog"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></terms:identifier>
+        <rdfs:comment xml:lang="en">A globally unique label that identifies either a learning object or a learning object metadata record.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Each of the possible semantically equivalent character strings of a langString.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/InformationContentEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalDuration"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">30</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Annotation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classification"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">40</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Classification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#coverage"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#educational"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Educational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#keyword"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContribution"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">30</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContribution"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataIdentifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalRequirements"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">40</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleVersion"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#otherPlatformRequirements"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalInstallationRemarks"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#aggregationLevel"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#copyrightAndOtherRestrictions"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#cost"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleStatus"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataLanguage"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#structure"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalSize"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metadataSchema"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#technicalLocation"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:format rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></terms:format>
+        <terms:language rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></terms:language>
+        <terms:publisher rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></terms:publisher>
+        <terms:rights rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></terms:rights>
+        <rdfs:comment>Learning Object</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LifeCycleContribution">
+        <rdfs:subClassOf rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#lifeCycleContributionRole"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#MetaMetadataContribution">
+        <rdfs:subClassOf rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Contribution"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeDescription"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#dateTimeValue"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#metaMetadataContributionRole"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Relation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#identifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relatedResourceDescription"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LangString"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#relationKind"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A concept which defines the relationship between a learning object and other learning objects, if any.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMaximumVersion"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#orCompositeMinimumVersion"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A technical capability necessary for using a learning object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonEntry"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonId"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A particular term within a taxonomy. A taxon is a node that has a defined label or
+term. A taxon may also have an alphanumeric designation or identifier for standardized reference. Either or both the label and the entry may be used to designate a particular taxon. An ordered list of taxons creates a taxonomic path, i.e., &quot;taxonomic stairway&quot;: this is a path from a more general to more specific entry in a classification.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TaxonPath">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#classificationTaxon"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#Taxon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#taxonpathSource"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A taxonomic path in a specific classification system. Each succeeding level is a refinement in the definition of the preceding level. There may be different paths, in the same or different classifications, which describe the same characteristic.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#TechnicalRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#isCompositeOf"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">40</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#SingleTechnicalRequirement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The technical capabilities necessary for using a learning object. There can be multiple requirements, in which case all are required, i.e., the logical connector is AND.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard -->
+
+    <owl:Class rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#VCard">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vCard is a collection of one or more properties. A property is a uniquely named value. A set of properties can be grouped within a vCard. For example, the properties for a telephone number and comment can be grouped in order to preserve the coupling of the annotation with the telephone number. In addition to property groupings, a vC. versit  is developing a comprehensive family of PDI technologies based on open specifications and interoperability agreements to help meet this technology need.</rdfs:comment>
+        <ns:FN rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></ns:FN>
+        <ns:N rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></ns:N>
+        <ns:ORG rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></ns:ORG>
+        <ns:email rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></ns:email>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/InformationContentEntity -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/InformationContentEntity"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity -->
+
+    <owl:Thing rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#annotationEntity">
+        <rdfs:comment xml:lang="en">Entity (i.e., people, organization) that created this annotation. IEEE LOM element 8.1.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

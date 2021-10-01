@@ -1,0 +1,833 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#"
+     xml:base="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:ns1="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:GenericOntology="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#"
+     xmlns:accessible_ocw_ontology="http://purl.org/accessible_ocw_ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology/1.0"/>
+        <owl:imports rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#"/>
+        <owl:imports rdf:resource="http://purl.org/accessible_ocw_ontology"/>
+        <owl:imports rdf:resource="http://purl.org/ontology/edu/eao/0.9"/>
+        <owl:imports rdf:resource="http://purl.org/ontology/edu/eso/0.9"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#canRead -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#canRead">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#canWrite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#canWrite">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasAcquired -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasAcquired">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasAcquiredAdditionalQualification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasAcquiredAdditionalQualification">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasArtisticSkills -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasArtisticSkills">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasCompletedProjects -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasCompletedProjects">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasCurrentlyStuding -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasCurrentlyStuding">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasDesiredFutureCourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasDesiredFutureCourse">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasDisability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasDisability">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasGolas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasGolas">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasHobbies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasHobbies">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasInterest -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasInterest">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasPassed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasPassed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasPassedLastExam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasPassedLastExam">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#isAcquiredAdditionalQualificationBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#isAcquiredAdditionalQualificationBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#isAcquiredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#isAcquiredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#isAttendedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#isAttendedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasBirthDay -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasBirthDay">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#studentDataProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasGender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasGender">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#studentDataProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#studentDataProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#studentDataProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#studentDataProperties">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://hadatac.org/ont/chear#SocioeconomicStatus -->
+
+    <rdf:Description rdf:about="http://hadatac.org/ont/chear#SocioeconomicStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:label>Accademic Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Age -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Age">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Animals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Animals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Art -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Art">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Arts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Arts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Astrology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Astrology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Commerce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Commerce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Cricket -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Cricket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#CurrentPursuingCourse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CurrentPursuingCourse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Dancing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Dancing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#DateOfBirth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#DateOfBirth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Design -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Design">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#DesiredFutureCourses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#DesiredFutureCourses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#English -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#English">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Entrepreneurship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Entrepreneurship">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Excellent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Excellent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Football -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Football">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Full-TimeCourse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Full-TimeCourse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#TypeOfFutureCourse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Gender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Gender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:label>General Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Goals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Goals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Golf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Golf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Good -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Good">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Hindi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Hindi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Hockey -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Hockey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Italian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Italian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#LastPassedExam -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#LastPassedExam">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#LearningMental -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#LearningMental">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Lesson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Lesson">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/InformationContentEntity"/>
+        <rdfs:label>Lesson</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#ListeningMusic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ListeningMusic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Math -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Math">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Medicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Medicine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Name">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Naturalistic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Naturalistic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#NonVisible -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#NonVisible">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Part-TimeCourse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Part-TimeCourse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#TypeOfFutureCourse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Passion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Persian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Persian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:label>Personal Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Physical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Physical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Reading -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Reading">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Satisfactory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Satisfactory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Science -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Science">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Sculpture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Sculpture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Singing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Singing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#SocialStudies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#SocialStudies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Teaching -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Teaching">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Tecnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Tecnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Telugu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Telugu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Tennis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Tennis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Theme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Theme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Topic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Topic">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/InformationContentEntity"/>
+        <rdfs:label>Topic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#TypeOfFutureCourse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#TypeOfFutureCourse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Urdu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Urdu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#VeryGood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#VeryGood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Volleyball -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Volleyball">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Volunteering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Volunteering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#WorkExperience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#WorkExperience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Writing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Writing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Health&amp;Fitness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Health&amp;Fitness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject">
+        <rdfs:label>Learning Object</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
