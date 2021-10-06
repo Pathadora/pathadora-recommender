@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'edu.stanford.swrl:swrlapi:2.0.11'
+
+    testImplementation 'junit:junit:4.12'
+}
+
+
+application {
+    mainClassName = 'prova'
+}
