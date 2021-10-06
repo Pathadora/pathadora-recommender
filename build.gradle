@@ -8,6 +8,8 @@ repositories {
 }
 
 dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.29'
+
     implementation 'edu.stanford.swrl:swrlapi:2.0.11'
 
     testImplementation 'junit:junit:4.12'
@@ -15,5 +17,5 @@ dependencies {
 
 
 application {
-    mainClassName = 'prova'
+    mainClassName = 'Main'
 }

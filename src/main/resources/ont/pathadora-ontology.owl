@@ -17,9 +17,6 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology">
         <owl:versionIRI rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology/1.0"/>
         <owl:imports rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#"/>
-        <owl:imports rdf:resource="http://purl.org/accessible_ocw_ontology"/>
-        <owl:imports rdf:resource="http://purl.org/ontology/edu/eao/0.9"/>
-        <owl:imports rdf:resource="http://purl.org/ontology/edu/eso/0.9"/>
     </owl:Ontology>
     
 
@@ -235,9 +232,9 @@
 
     <!-- http://hadatac.org/ont/chear#SocioeconomicStatus -->
 
-    <rdf:Description rdf:about="http://hadatac.org/ont/chear#SocioeconomicStatus">
+    <owl:Class rdf:about="http://hadatac.org/ont/chear#SocioeconomicStatus">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
