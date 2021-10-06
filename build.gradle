@@ -8,6 +8,8 @@ repositories {
 }
 
 dependencies {
+    compile group: 'org.glassfish.metro', name: 'webservices-extra', version: '2.1.1-b01'
+
     compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.29'
 
     implementation 'edu.stanford.swrl:swrlapi:2.0.11'
