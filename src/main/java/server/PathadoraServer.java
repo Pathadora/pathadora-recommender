@@ -1,14 +1,13 @@
 package server;
 
-import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpServer;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import server.owl.OntologyLoader;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.util.List;
-import java.util.Map;
 
-import static server.Utils.Configuration.*;
-import static server.Utils.*;
+import static server.utils.PathadoraUtils.ServerConfig.*;
 
 /**
  * Pathadora server with be used to handle the request for a path generation.
@@ -21,40 +20,13 @@ import static server.Utils.*;
 
 public class PathadoraServer {
 
-    public static void main(final String... args) throws IOException {
+    public static void initializeAndStart() throws IOException, OWLOntologyCreationException {
         final HttpServer server = HttpServer.create(new InetSocketAddress(HOSTNAME, PORT), BACKLOG);
-        server.createContext("/pathadora", handler -> {
-            try {
-                final Headers headers = handler.getResponseHeaders();
-                final String requestMethod = handler.getRequestMethod().toUpperCase();
-                switch (requestMethod) {
-                    case METHOD_GET:
-                        final Map<String, List<String>> requestParameters = getRequestParameters(handler.getRequestURI());
-                        String responseBody = computeResponse(requestParameters);
-                        headers.set(HEADER_CONTENT_TYPE, String.format("application/json; charset=%s", CHARSET));
+        final OntologyLoader ontLoader = new OntologyLoader();
 
-                        final byte[] rawResponseBody = responseBody.getBytes(CHARSET);
-                        handler.sendResponseHeaders(STATUS_OK, rawResponseBody.length);
-                        handler.getResponseBody().write(rawResponseBody);
-                        break;
-                    case METHOD_OPTIONS:
-                        headers.set(HEADER_ALLOW, ALLOWED_METHODS);
-                        handler.sendResponseHeaders(STATUS_OK, NO_RESPONSE_LENGTH);
-                        break;
-                    default:
-                        headers.set(HEADER_ALLOW, ALLOWED_METHODS);
-                        handler.sendResponseHeaders(STATUS_METHOD_NOT_ALLOWED, NO_RESPONSE_LENGTH);
-                        break;
-                }
-            } finally {
-                handler.close();
-            }
-        });
+        /* TODO: other handlers to be added */
+        server.createContext("/pathadora", new LearnerHandler());
+
         server.start();
-    }
-
-    private static String computeResponse(Map<String, List<String>> requestParameters) {
-        System.out.println("Parameters \n"+ requestParameters.toString());
-        return "Parameters received, this is the response";
     }
 }

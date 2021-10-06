@@ -1,4 +1,4 @@
-package api;
+package server.api;
 
 public interface API {
 

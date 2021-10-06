@@ -1,12 +1,13 @@
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import server.PathadoraServer;
 
 import java.io.IOException;
 
-public class Main {
+public class PathadoraRecommender {
 
     public static void main(String... args) throws OWLOntologyCreationException, OWLOntologyStorageException, IOException {
-       // new OntologyLoader().dataLoader();
+       PathadoraServer.initializeAndStart();
     }
 
 }

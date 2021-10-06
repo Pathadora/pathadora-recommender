@@ -1,4 +1,4 @@
-package owl;
+package server.owl;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
@@ -6,14 +6,14 @@ import org.semanticweb.owlapi.util.SimpleIRIMapper;
 
 import java.io.File;
 
-import static utils.Parameters.*;
+import static server.utils.PathadoraUtils.OntologyConfig.*;
 
 public class OntologyLoader {
 
-    OWLOntologyManager ontologyManager;
-    OWLOntology lomOnto;
-    OWLOntology accOnto;
-    OWLOntology pathadora;
+    private OWLOntologyManager ontologyManager;
+    private OWLOntology lomOnto;
+    private OWLOntology accOnto;
+    private OWLOntology pathadora;
 
     public OntologyLoader() throws OWLOntologyCreationException {
         initialize();
@@ -41,5 +41,15 @@ public class OntologyLoader {
         new AddImport(pathadora, accDec);
 
         ontologyManager.saveOntology(pathadora);
+    }
+
+
+    public OWLOntologyManager getOntologyManager() {
+        return ontologyManager;
+    }
+
+
+    public OWLOntology getPathadora() {
+        return pathadora;
     }
 }
