@@ -535,6 +535,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Learner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner"/>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#LearningMental -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#LearningMental">
@@ -823,6 +829,41 @@
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Health&amp;Fitness">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Frani123 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Frani123">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Sokol_Guri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Sokol_Guri">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Optional[Matias] -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Optional[Matias]">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner"/>
+    </owl:NamedIndividual>
     
 
 

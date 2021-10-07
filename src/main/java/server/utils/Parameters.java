@@ -2,9 +2,10 @@ package server.utils;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 public class Parameters {
+
+    private final static String DEFAULT = "default";
 
     private final Map<String, String> params;
 
@@ -20,8 +21,8 @@ public class Parameters {
         params.putIfAbsent(key, value);
     }
 
-    public Optional<String> searchByParam(String param){
-        return (params.containsKey(param)) ? Optional.of(params.get(param)) : Optional.empty();
+    public String searchByParam(String param){
+        return params.getOrDefault(param, DEFAULT);
     }
 
     public Map<String, String> get(){

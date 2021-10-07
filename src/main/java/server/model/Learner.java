@@ -2,7 +2,7 @@ package server.model;
 
 import server.utils.Parameters;
 
-public class Learner {
+public class Learner implements Individual{
 
     private final String name;
     private final String lastname;
@@ -35,10 +35,10 @@ public class Learner {
     /* TODO: handle incorrect params list */
     public Learner buildLearner(final Parameters params){
         return new Learner(
-                params.searchByParam("name").get(),
-                params.searchByParam("lastname").get(),
-                params.searchByParam("gender").get(),
-                params.searchByParam("birthdate").get());
+                params.searchByParam("name"),
+                params.searchByParam("lastname"),
+                params.searchByParam("gender"),
+                params.searchByParam("birthdate"));
 
     }
 }

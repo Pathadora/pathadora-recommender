@@ -22,6 +22,8 @@ public class PathadoraUtils {
 
         public final static String LOM_RESOURCE = "http://data.opendiscoveryspace.eu/lom_ontology_ods.owl";
         public final static String ACC_RESOURCE = "http://purl.org/accessible_ocw_ontology";
+        public final static String PATHADORA_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology";
+
     }
 
     public static class ServerConfig {
