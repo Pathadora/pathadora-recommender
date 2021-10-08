@@ -13,6 +13,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:GenericOntology="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#"
+     xmlns:pathadora-ontology="http://www.semanticweb.org/learning-path/pathadora-ontology#"
      xmlns:accessible_ocw_ontology="http://purl.org/accessible_ocw_ontology#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology">
         <owl:versionIRI rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology/1.0"/>
@@ -253,11 +254,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontologyLearner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontologyLearner"/>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation">
         <rdfs:subClassOf rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
-        <rdfs:label>Accademic Information</rdfs:label>
+        <rdfs:label>Academic Information</rdfs:label>
     </owl:Class>
     
 
@@ -532,12 +539,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Law">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
     </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Learner -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner"/>
     
 
 
@@ -843,27 +844,21 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Frani123 -->
+    <!-- http://purl.org/accessible_ocw_ontology#Albert1_Guri -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Frani123">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Sokol_Guri -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Sokol_Guri">
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Albert1_Guri">
         <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <pathadora-ontology:canRead rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+        <pathadora-ontology:canWrite rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+        <pathadora-ontology:hasAcquired rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+        <pathadora-ontology:hasArtisticSkills rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Optional[Matias] -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#yes -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Optional[Matias]">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
     
 
 

@@ -2,18 +2,28 @@ package server.model;
 
 import server.utils.Parameters;
 
+import java.util.Map;
+
 public class Learner implements Individual{
 
-    private final String name;
-    private final String lastname;
-    private final String gender;
-    private final String birthdate;
+    private String name;
+    private String lastname;
+    private String gender;
+    private String birthdate;
+
 
     public Learner(String name, String lastname, String gender, String birthdate) {
         this.name = name;
         this.lastname = lastname;
         this.gender = gender;
         this.birthdate = birthdate;
+    }
+
+    public Learner(Parameters p){
+         buildLearner(p);
+    }
+    public Learner(Map<String, String > p){
+        buildLearner(p);
     }
 
     public String getName() {
@@ -39,6 +49,15 @@ public class Learner implements Individual{
                 params.searchByParam("lastname"),
                 params.searchByParam("gender"),
                 params.searchByParam("birthdate"));
+
+    }
+
+    public Learner buildLearner(final Map<String, String> params){
+        return new Learner(
+                params.get("name"),
+                params.get("lastname"),
+                params.get("gender"),
+                params.get("birthdate"));
 
     }
 }
