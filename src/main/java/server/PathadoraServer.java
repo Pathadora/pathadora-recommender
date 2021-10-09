@@ -40,7 +40,7 @@ class PathadoraHandler implements HttpHandler {
 
     private final PathadoraManager pathadoraManager;
 
-    public PathadoraHandler(PathadoraManager pathadoraManager){
+    public PathadoraHandler(PathadoraManager pathadoraManager) {
         this.pathadoraManager = pathadoraManager;
     }
 
@@ -91,7 +91,7 @@ class PathadoraHandler implements HttpHandler {
     private String computeRequest(String paramsString) throws IOException, OWLOntologyCreationException, OWLOntologyStorageException {
         Map<String, String> params = paramsToMap(paramsString);
 
-        if(params.containsKey(ACTION)) {
+        if (params.containsKey(ACTION)) {
             switch (params.get(ACTION)) {
                 case ADD:
                     System.out.println("Add individual was requested");

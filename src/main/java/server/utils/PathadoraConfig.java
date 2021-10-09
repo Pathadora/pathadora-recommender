@@ -7,7 +7,7 @@ import java.nio.charset.StandardCharsets;
  * Utils class to help on server configuration and handling the requests.
  */
 public class PathadoraConfig {
-    
+
     public static class OntologyConfig {
         public final static String PATHADORA_LOCAL_PATH = "./src/main/resources/ont/pathadora-ontology.owl";
         public final static String LOM_LOCAL_PATH = "./src/main/resources/ont/lom_ontology_ods.owl";

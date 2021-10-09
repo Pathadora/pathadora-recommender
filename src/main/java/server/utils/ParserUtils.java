@@ -20,16 +20,15 @@ public class ParserUtils {
         return new ObjectMapper().readValue(paramsJson, Map.class);
     }
 
-    public static Map<String, String> paramsToMapByKey(String key, Map<String,String> params) {
-
-        if(params.containsKey(key)){
+    public static Map<String, String> paramsToMapByKey(String key, Map<String, String> params) {
+        if (params.containsKey(key)) {
             Object jsonS = params.get(key);
             return Splitter
                     .on(",")
                     .withKeyValueSeparator('=')
                     .split(jsonS.toString()
-                            .substring(1, jsonS.toString().length()-1)  // remove { and }
-                            .replaceAll("\\s+","") // clean spaces
+                            .substring(1, jsonS.toString().length() - 1)  // remove { and }
+                            .replaceAll("\\s+", "") // clean spaces
                     );
         }
         return new HashMap<>();
@@ -44,10 +43,10 @@ public class ParserUtils {
         return body.toString();
     }
 
-    public static void outputToConsole(String where, Map<String, String> data){
+    public static void outputToConsole(String where, Map<String, String> data) {
         System.out.println(where);
-        for(Map.Entry e : data.entrySet()){
-            System.out.println("\t\t<"+ e.getKey() + ", " + e.getValue()+">");
+        for (Map.Entry e : data.entrySet()) {
+            System.out.println("\t\t<" + e.getKey() + ", " + e.getValue() + ">");
         }
         System.out.println("");
     }

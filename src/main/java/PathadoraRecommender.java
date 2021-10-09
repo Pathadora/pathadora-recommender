@@ -7,7 +7,7 @@ import java.io.IOException;
 public class PathadoraRecommender {
 
     public static void main(String... args) throws OWLOntologyCreationException, OWLOntologyStorageException, IOException {
-       PathadoraServer.initializeAndStart();
+        PathadoraServer.initializeAndStart();
     }
 
 }

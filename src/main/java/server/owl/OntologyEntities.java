@@ -38,6 +38,11 @@ public class OntologyEntities {
         return manager.pathadoraOnt().getIndividualsInSignature();
     }
 
+    private Set<OWLAnnotationProperty> annotationProperties() throws OWLOntologyCreationException {
+        return manager.pathadoraOnt().getAnnotationPropertiesInSignature();
+    }
+
+
     public boolean checkAssertionAxiom(OWLClass iClass, OWLIndividual individual) throws OWLOntologyCreationException {
         OWLReasonerFactory reasonerFactory = new StructuralReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(manager.pathadoraOnt());
@@ -80,11 +85,19 @@ public class OntologyEntities {
         }
 
         if(type.equals(INDIVIDUALS)){
-            List<OWLLogicalEntity> objProps =
+            List<OWLLogicalEntity> individuals =
                     namedIndividuals().stream()
                             .filter(c -> c.toString().contains(key))
                             .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
-            return (objProps.isEmpty()) ? df.getOWLNamedIndividual("#"+key, pm) : objProps.get(0);
+            return (individuals.isEmpty()) ? df.getOWLNamedIndividual("#"+key, pm) : individuals.get(0);
+        }
+
+        if(type.equals(ANNOTATION_PROPERTIES)){
+            List<OWLLogicalEntity> annProps =
+                    annotationProperties().stream()
+                    .filter(c -> c.toString().contains(key))
+                    .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
+            return (annProps.isEmpty()) ? df.getOWLAnnotationProperty("#"+key, pm) : annProps.get(0);
         }
 
         /*if(type.equals(DATA_PROPERTIES)){
