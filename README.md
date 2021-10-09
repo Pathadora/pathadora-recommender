@@ -6,20 +6,20 @@ The server will expect three types of request on localhost:8080/pathadora URL. T
 {
     "action": "add", 
 
-    "type": "learner", 
+    "type": "learner",
+  
+    "class": "Learner",
 
-    "annotation_properties":{
+  "annotation_properties":{
         "name": "Rossi",
         "last_name": "Guri",
         "birthdaye": 23,
         "gender": "male"
-        ...
     },
 
     "object_properties":{
         "canRead": "yes",
-        "canWrite": "yes",
-        ...
+        "canWrite": "yes"
     }
     
  }
