@@ -16,6 +16,7 @@ import static server.utils.PathadoraConfig.OntologyConfig.*;
 public class PathadoraManager {
 
     private OWLOntologyManager manager;
+    private OWLOntology pathadora;
 
     public PathadoraManager() throws OWLOntologyCreationException {
         initialize();
@@ -27,6 +28,7 @@ public class PathadoraManager {
         manager.getIRIMappers().add(new SimpleIRIMapper(IRI.create(ACC_RESOURCE), IRI.create(ACC_LOCAL_PATH)));
         manager.loadOntologyFromOntologyDocument(new File(LOM_LOCAL_PATH));
         manager.loadOntologyFromOntologyDocument(new File(ACC_LOCAL_PATH));
+        pathadora = manager.loadOntologyFromOntologyDocument(new File(PATHADORA_LOCAL_PATH));
     }
 
     public void addIndividual(Map<String, String> params) throws OWLOntologyCreationException, OWLOntologyStorageException, IOException {
@@ -47,25 +49,20 @@ public class PathadoraManager {
 
     private void addLearner(Map<String, String> params) throws OWLOntologyCreationException, IOException, OWLOntologyStorageException {
         OWLDataFactory df = manager.getOWLDataFactory();
-        PrefixManager pmPathadora = new DefaultPrefixManager(PATHADORA_RESOURCE);
-        PrefixManager pmLom = new DefaultPrefixManager(LOM_RESOURCE);
-        PrefixManager pmAcc = new DefaultPrefixManager(ACC_RESOURCE);
-
-        Learner l = new Learner(params);
-        Map<String, String> obj_prop = paramsToMapByKey(OBJECT_PROPERTIES, params);
-        Map<String, String> ann_prop = paramsToMapByKey(ANNOTATION_PROPERTIES, params);
-
         OntologyEntities entities = new OntologyEntities(this);
         OWLOntology pathadora = pathadoraOnt();
 
-        OWLClass learnerClass = entities.getClassBy("Learner"); //'#' is  delimiter
-        OWLIndividual tIndividual = df.getOWLNamedIndividual("#" +ann_prop.get("name")+"_"+ann_prop.get("last_name"), pmAcc);
-        OWLClassAssertionAxiom learnerAx = df.getOWLClassAssertionAxiom(learnerClass, tIndividual);
-        manager.addAxiom(pathadora, learnerAx);
+        Map<String, String> obj_prop = paramsToMapByKey(OBJECT_PROPERTIES, params);
+        Map<String, String> ann_prop = paramsToMapByKey(ANNOTATION_PROPERTIES, params);
+
+        OWLClass learnerClass = (OWLClass) entities.ontologyEntitiesBy(CLASSES, params.get(CLASS));
+        OWLNamedIndividual tIndividual = (OWLNamedIndividual) entities.ontologyEntitiesBy(INDIVIDUALS, label(ann_prop) );
+
+        manager.addAxiom(pathadora, df.getOWLClassAssertionAxiom(learnerClass, tIndividual));
 
         for(Map.Entry<String, String> obj : obj_prop.entrySet()){
-            OWLNamedIndividual val = entities.getIndividualsBy(obj.getValue());
-            OWLObjectProperty prop = entities.getObjectPropertiesBy(obj.getKey());
+            OWLNamedIndividual val = (OWLNamedIndividual) entities.ontologyEntitiesBy(INDIVIDUALS, obj.getValue());
+            OWLObjectProperty prop = (OWLObjectProperty) entities.ontologyEntitiesBy(OBJECT_PROPERTIES, obj.getKey());
             OWLObjectPropertyAssertionAxiom propertyAssertion = df.getOWLObjectPropertyAssertionAxiom(prop, tIndividual, val);
             manager.addAxiom(pathadora, propertyAssertion);
         }
@@ -85,6 +82,12 @@ public class PathadoraManager {
 
 
     public OWLOntology pathadoraOnt() throws OWLOntologyCreationException {
-        return manager.loadOntologyFromOntologyDocument(new File(PATHADORA_LOCAL_PATH));
+        return this.pathadora;
+       // return manager.loadOntologyFromOntologyDocument(new File(PATHADORA_LOCAL_PATH));
     }
+
+    private String label(Map<String, String> properties){
+        return properties.get("name")+"_"+properties.get("last_name");
+    }
+
 }

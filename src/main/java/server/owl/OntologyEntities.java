@@ -1,10 +1,18 @@
 package server.owl;
 
 import org.semanticweb.owlapi.model.*;
+import org.semanticweb.owlapi.reasoner.NodeSet;
+import org.semanticweb.owlapi.reasoner.OWLReasoner;
+import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
+import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
+import org.semanticweb.owlapi.util.DefaultPrefixManager;
 
 import java.util.Comparator;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import static server.utils.PathadoraConfig.OntologyConfig.*;
 
 public class OntologyEntities {
 
@@ -30,33 +38,62 @@ public class OntologyEntities {
         return manager.pathadoraOnt().getIndividualsInSignature();
     }
 
-    /** TODO: to be refactored with strategy pattern */
-    public OWLClass getClassBy(String classKey) throws OWLOntologyCreationException {
-        return classes().stream()
-                .filter(c -> c.toString().contains(classKey))
-                .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList())
-                .get(0);
+    public boolean checkAssertionAxiom(OWLClass iClass, OWLIndividual individual) throws OWLOntologyCreationException {
+        OWLReasonerFactory reasonerFactory = new StructuralReasonerFactory();
+        OWLReasoner reasoner = reasonerFactory.createReasoner(manager.pathadoraOnt());
+
+        NodeSet<OWLNamedIndividual> individualsNodeSet = reasoner.getInstances(iClass, true);
+        Set<OWLNamedIndividual> individuals = individualsNodeSet.getFlattened();
+
+        for (OWLNamedIndividual ind : individuals) {
+            if(individual.toString().equals(individuals.toString())){
+                return true;
+            }
+            //String s = ind.toString();
+            //System.out.println(s.substring(s.indexOf("#") + 1, s.length() -1));
+        }
+        return false;
     }
 
-    public OWLObjectProperty getObjectPropertiesBy(String propKey) throws OWLOntologyCreationException {
-        return objectProperties().stream()
-                .filter(c -> c.toString().contains(propKey))
-                .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList())
-                .get(0);
-    }
+    public OWLLogicalEntity ontologyEntitiesBy(String type, String key) throws OWLOntologyCreationException {
+        OWLDataFactory df = manager.getManager().getOWLDataFactory();
+        PrefixManager pm = new DefaultPrefixManager(PATHADORA_RESOURCE);
+        System.out.println("We are at Ontology Entities");
 
-    public OWLDataProperty getDataPropertyBy(String dataPropKey) throws OWLOntologyCreationException {
-        return dataProperties().stream()
-                .filter(c -> c.toString().contains(dataPropKey))
-                .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList())
-                .get(0);
-    }
+        if(type.equals(CLASSES)){
+            System.out.println("Classes");
+            List<OWLLogicalEntity> classes =
+                    classes().stream()
+                    .filter(c -> c.toString().contains(key))
+                    .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
 
-    public OWLNamedIndividual getIndividualsBy(String indKey) throws OWLOntologyCreationException {
-        return namedIndividuals().stream()
-                .filter(c -> c.toString().contains(indKey))
-                .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList())
-                .get(0);
+            System.out.println(classes.toString());
+            return (classes.isEmpty()) ? df.getOWLClass("#"+key, pm) : classes.get(0);
+        }
+
+        if(type.equals(OBJECT_PROPERTIES)){
+            List<OWLLogicalEntity> objProps =
+                    objectProperties().stream()
+                            .filter(c -> c.toString().contains(key))
+                            .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
+            return (objProps.isEmpty()) ? df.getOWLObjectProperty("#"+key, pm) : objProps.get(0);
+        }
+
+        if(type.equals(INDIVIDUALS)){
+            List<OWLLogicalEntity> objProps =
+                    namedIndividuals().stream()
+                            .filter(c -> c.toString().contains(key))
+                            .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
+            return (objProps.isEmpty()) ? df.getOWLNamedIndividual("#"+key, pm) : objProps.get(0);
+        }
+
+        /*if(type.equals(DATA_PROPERTIES)){
+            return dataProperties().stream()
+                    .filter(c -> c.toString().contains(key))
+                    .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
+        }
+        return new ArrayList<>();*/
+        return null;
     }
 
     public void ontologyEntitiesToConsole() throws OWLOntologyCreationException {
