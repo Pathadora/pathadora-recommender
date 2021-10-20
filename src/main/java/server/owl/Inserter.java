@@ -7,6 +7,7 @@ import java.util.Map;
 
 import static server.utils.ParserUtils.*;
 import static server.utils.PathadoraConfig.OntologyConfig.*;
+import static server.utils.PathadoraConfig.ServerConfig.STATUS_OK;
 
 public class Inserter {
 
@@ -18,10 +19,12 @@ public class Inserter {
         this.ontManager = m.getManager();
     }
 
-    public void addLearner(Map<String, String> params) throws OWLOntologyCreationException, IOException, OWLOntologyStorageException {
+    public String addLearner(Map<String, String> params) throws OWLOntologyCreationException, OWLOntologyStorageException {
         OWLDataFactory df = ontManager.getOWLDataFactory();
         OntologyEntities entities = new OntologyEntities(manager);
         OWLOntology pathadora = manager.pathadoraOnt();
+
+        System.out.println("Entered add learner");
 
         Map<String, String> obj_prop = paramsToMapByKey(OBJECT_PROPERTIES, params);
         Map<String, String> ann_prop = paramsToMapByKey(ANNOTATION_PROPERTIES, params);
@@ -34,18 +37,21 @@ public class Inserter {
 
         ontManager.saveOntology(pathadora);
         System.out.println("Adding action done");
+        return String.valueOf(STATUS_OK);
     }
 
 
-    public void addCourse(Map<String, String> p) {
+    public String addCourse(Map<String, String> p) {
+        return String.valueOf(STATUS_OK);
     }
 
-    public void addLesson(Map<String, String> p) {
+    public String addLesson(Map<String, String> p) {
+        return String.valueOf(STATUS_OK);
     }
 
     /**TODO: to be refactored after discussion, (course & lesson label key) */
     private String label(Map<String, String> properties) {
-        return properties.get("name") + "_" + properties.get("last_name");
+        return properties.get("name") + "_" + properties.get("surname");
     }
 
     private void defineClassAssertion(Map<String, String> params,

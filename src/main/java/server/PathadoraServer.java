@@ -98,8 +98,7 @@ class PathadoraHandler implements HttpHandler {
             switch (params.get(ACTION)) {
                 case ADD:
                     System.out.println("Add individual was requested");
-                    pathadoraManager.addIndividual(params);
-                    return "This is my response";
+                    return pathadoraManager.addIndividual(params);
                 case FAC_DEP_GENERATION:
                     System.out.println("FAC_DEP_GENERATION was requested");
                     return pathadoraManager.recommendFacDep(params);

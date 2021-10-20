@@ -50,6 +50,7 @@ public class PathadoraConfig {
         public static final Charset CHARSET = StandardCharsets.UTF_8;
 
         public static final int STATUS_OK = 200;
+        public static final int STATUS_ERROR = 404;
         public static final int STATUS_METHOD_NOT_ALLOWED = 405;
 
         public static final int NO_RESPONSE_LENGTH = -1;

@@ -1,6 +1,5 @@
 package server.owl;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
@@ -14,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 import static server.utils.PathadoraConfig.OntologyConfig.*;
+import static server.utils.PathadoraConfig.ServerConfig.*;
 
 public class PathadoraManager {
 
@@ -51,24 +51,23 @@ public class PathadoraManager {
         System.out.println("Pathadora: " + pathadora.getAxioms().size());
     }
 
-    public void addIndividual(Map<String, String> params) throws OWLOntologyCreationException, OWLOntologyStorageException, IOException {
+    public String addIndividual(Map<String, String> params) throws OWLOntologyCreationException, OWLOntologyStorageException, IOException {
         Inserter indInserter = new Inserter(this);
         switch (params.get(TYPE)) {
             case LEARNER:
-                indInserter.addLearner(params);
-                break;
+                return indInserter.addLearner(params);
             case COURSE:
-                indInserter.addCourse(params);
-                break;
+                /** TODO: maybe no need to insert new courses */
+                return indInserter.addCourse(params);
             case LESSON:
-                indInserter.addLesson(params);
-                break;
+                return indInserter.addLesson(params);
             default:
                 break;
         }
+        return String.valueOf(STATUS_OK);
     }
 
-    public String recommendFacDep(Map<String, String> params) throws OWLOntologyCreationException, JsonProcessingException, SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
+    public String recommendFacDep(Map<String, String> params) throws OWLOntologyCreationException, SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
         Recommender rec = new Recommender(this);
         String learner = params.get("learner");
         System.out.println("leaner: " + learner);
@@ -77,9 +76,9 @@ public class PathadoraManager {
             Map<String, List<String>> output = rec.recommendedDepartments(learner, "recommendedDepartment");
             System.out.println("output : " +output.size());
             return OutputToJson.facDepJsonResponse(learner, output);
-        }else{
+        }else {
             System.out.println("Error on action");
-            return "Error on action";
+            return String.valueOf(STATUS_ERROR);
         }
     }
 

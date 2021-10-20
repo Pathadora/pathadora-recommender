@@ -61,16 +61,12 @@ public class OntologyEntities {
     public OWLLogicalEntity ontologyEntitiesBy(String type, String key) throws OWLOntologyCreationException {
         OWLDataFactory df = manager.getManager().getOWLDataFactory();
         PrefixManager pm = new DefaultPrefixManager(PATHADORA_RESOURCE);
-        System.out.println("We are at Ontology Entities");
 
         if (type.equals(CLASSES)) {
-            System.out.println("Classes");
             List<OWLLogicalEntity> classes =
                     classes().stream()
                             .filter(c -> c.toString().contains(key))
                             .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
-
-            System.out.println(classes.toString());
             return (classes.isEmpty()) ? df.getOWLClass("#" + key, pm) : classes.get(0);
         }
 
