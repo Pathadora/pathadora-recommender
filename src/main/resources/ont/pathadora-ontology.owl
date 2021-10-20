@@ -51,6 +51,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology/1.0#hasDegree -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology/1.0#hasDegree"/>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology/1.0#surname -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology/1.0#surname"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -414,6 +426,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology/1.0#hasGoals -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology/1.0#hasGoals"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -627,10 +645,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Advanced_Automotive_Electronic_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Advanced_Automotive_Electronic_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Advanced_Cosmetic_Sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Advanced_Cosmetic_Sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_CHIIM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Advanced_automotive_engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Advanced_automotive_engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIN"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Advanced_design -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Advanced_design">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Aerospace_engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Aerospace_engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Aerospace_engineering_DIN -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Aerospace_engineering_DIN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIN"/>
     </owl:Class>
     
 
@@ -667,10 +725,66 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Animal_biotechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Animal_biotechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEVET"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Animals -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Animals">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Anthropology_Religions_Oriental_Civilizations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Anthropology_Religions_Oriental_Civilizations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISCI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Applied_Pharmaceutical_Sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Applied_Pharmaceutical_Sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FaBiT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Applied_cognitive_psychology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Applied_cognitive_psychology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_PSI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Aquaculture_and_hygiene_of_fish_production -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Aquaculture_and_hygiene_of_fish_production">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEVET"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Archaeological_artistic_and_landscape_heritage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Archaeological_artistic_and_landscape_heritage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_BC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Archaeology_and_Cultures_of_the_Ancient_World -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Archaeology_and_Cultures_of_the_Ancient_World">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISCI"/>
     </owl:Class>
     
 
@@ -723,6 +837,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Artificial_intelligence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Artificial_intelligence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Astrology -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Astrology">
@@ -731,10 +853,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Automation_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Automation_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Automation_Engineering_DEI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Automation_Engineering_DEI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#DegreeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_BC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_BC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Cultural_Heritage_BC"/>
     </owl:Class>
     
 
@@ -755,10 +901,98 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_CHIM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_CHIM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Chemistry_Giacomo_Ciamician_CHIM"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DA -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DA">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Architecture_DA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DAR -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DAR">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#The_Arts_DAR"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DEI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DEI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Electrical_Electronic_and_Information_Engineering_Guglielmo_Marconi_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DICAM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DICAM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_Chemical_Environmental_and_Materials_Engineering_DICAM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Medical_and_Surgical_Sciences_DIMEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMES -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMES">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Experimental_Diagnostic_and_Specialty_Medicine_DIMES"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEVET -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEVET">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Veterinary_Medical_Sciences_DIMEVET"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIN -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Industrial_Engineering_DIN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Management_DiSA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISCI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISCI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#History_and_Cultures_DiSCi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Computer_Science_and_Engineering_DISI"/>
     </owl:Class>
     
 
@@ -771,10 +1005,122 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_DSE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Legal_Studies_DSG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_EDU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_EDU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Education_Studies_Giovanni_Maria_Bertin_EDU"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FICLIT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FICLIT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Classical_Philology_and_Italian_Studies_FICLIT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FILCOM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FILCOM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Philosophy_and_Communication_Studies_FILCOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FaBiT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FaBiT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy_and_Biotechnology_FaBiT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_LILEC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_LILEC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Modern_Languages_Literatures_and_Cultures_LILEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_MAT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_MAT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Mathematics_MAT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_PSI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_PSI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Psychology_Renzo_Canestrari_PSI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_QUVI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_QUVI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#for_Life_Quality_Studies_QUVI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_SDE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_SDE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Sociology_and_Business_Law_SDE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_SPS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_SPS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Political_and_Social_Sciences_SPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_STAT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_STAT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_Sciences_Paolo_Fortunati_STAT"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Biodiversity_and_Evolution -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Biodiversity_and_Evolution">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_BiGeA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Bioinformatics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bioinformatics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FaBiT"/>
     </owl:Class>
     
 
@@ -795,10 +1141,122 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Biomedical_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Biomedical_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Biomedical_Engineering_DEI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Biomedical_Engineering_DEI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Biomedical_and_Neuromotor_Sciences_DIBINEM -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Biomedical_and_Neuromotor_Sciences_DIBINEM">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Biomedical_laboratory_techniques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Biomedical_laboratory_techniques">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMES"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Biotechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Biotechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FaBiT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Book_and_document_sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Book_and_document_sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_BC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Business_Administration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Business_Administration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Business_Administration_DISA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Business_Administration_DISA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Business_Administration_and_Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Business_Administration_and_Management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Business_Economics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Business_Economics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Business_and_Economics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Business_and_Economics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Chemical_Innovation_and_Regulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Chemical_Innovation_and_Regulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_CHIIM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Chemical_and_process_engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Chemical_and_process_engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DICAM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Chemical_engineering_and_biochemistry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Chemical_engineering_and_biochemistry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DICAM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Chemistry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Chemistry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_CHIIM"/>
     </owl:Class>
     
 
@@ -811,10 +1269,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Chemistry_and_Materials_Chemistry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Chemistry_and_Materials_Chemistry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_CHIM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Cinema_television_and_multimedia_production -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Cinema_television_and_multimedia_production">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DAR"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_Chemical_Environmental_and_Materials_Engineering_DICAM -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_Chemical_Environmental_and_Materials_Engineering_DICAM">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DICAM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DICAM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_engineering_DICAM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_engineering_DICAM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DICAM"/>
     </owl:Class>
     
 
@@ -827,10 +1325,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Clinical_psychology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Clinical_psychology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_PSI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Commerce -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Commerce">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Communication_Sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Communication_Sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FILCOM"/>
     </owl:Class>
     
 
@@ -843,6 +1357,38 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Computer_engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Computer_engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Computer_engineering_DISI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Computer_engineering_DISI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Conservation_and_restoration_of_cultural_heritage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Conservation_and_restoration_of_cultural_heritage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_BC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Construction_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Construction_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DICAM"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Construction_Engineering_architecture -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Construction_Engineering_architecture">
@@ -851,10 +1397,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Construction_techniques_and_the_territory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Construction_techniques_and_the_territory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DICAM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Criminology_for_Investigation_and_Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Criminology_for_Investigation_and_Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SDE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Cultural_Anthropology_and_Ethnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Cultural_Anthropology_and_Ethnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISCI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Cultural_Heritage_BC -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Cultural_Heritage_BC">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Cultural_heritage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Cultural_heritage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_BC"/>
     </owl:Class>
     
 
@@ -899,10 +1477,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Design_and_management_of_audiovisual_and_performative_production_systems -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Design_and_management_of_audiovisual_and_performative_production_systems">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DAR"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#DesiredFutureCourses -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#DesiredFutureCourses">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Dietetics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Dietetics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Digital_humanities_and_digital_knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Digital_humanities_and_digital_knowledge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FICLIT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Digital_transformation_management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Digital_transformation_management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISI"/>
     </owl:Class>
     
 
@@ -915,6 +1525,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Disciplines_of_music_and_theater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Disciplines_of_music_and_theater">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DAR"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Doctoral -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Doctoral">
@@ -923,10 +1541,90 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_-_DSE -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_-_DSE">
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DSE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_DSE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_DSE">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_Markets_and_Institutions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_Markets_and_Institutions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_Politics_and_Social_Sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_Politics_and_Social_Sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_Accounting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_Accounting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_Commerce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_Commerce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_Economic_Policy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_Economic_Policy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DSE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_Finance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_Finance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_business -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_business">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_and_management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_of_Tourism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_of_Tourism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSE"/>
     </owl:Class>
     
 
@@ -939,6 +1637,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Educator_in_Childhood_Social_Services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Educator_in_Childhood_Social_Services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_EDU"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Electric_Vehicle_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Electric_Vehicle_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Electrical_Electronic_and_Information_Engineering_Guglielmo_Marconi_DEI -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Electrical_Electronic_and_Information_Engineering_Guglielmo_Marconi_DEI">
@@ -947,10 +1661,99 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Electrical_Energy_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Electrical_Energy_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Electrical_Energy_Engineering_DEI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Electrical_Energy_Engineering_DEI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Electronic_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Electronic_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Electronics_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Electronics_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Electronics_and_Telecommunications_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Electronics_and_Telecommunications_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Electronics_and_Telecommunications_Engineering_for_Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Electronics_and_Telecommunications_Engineering_for_Energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Employment_and_Business_Relations_Consultant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Employment_and_Business_Relations_Consultant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Energetic_engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Energetic_engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIN"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIN"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering_and_computer_science -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering_and_computer_science">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering_for_the_environment_and_the_territory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering_for_the_environment_and_the_territory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DICAM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering_for_the_environment_and_the_territory_DICAM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering_for_the_environment_and_the_territory_DICAM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DICAM"/>
     </owl:Class>
     
 
@@ -995,10 +1798,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Exercise_and_Sports_Sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Exercise_and_Sports_Sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_QUVI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Experimental_Diagnostic_and_Specialty_Medicine_DIMES -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Experimental_Diagnostic_and_Specialty_Medicine_DIMES">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Expert_in_Social_and_Cultural_Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Expert_in_Social_and_Cultural_Education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_EDU"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Expert_in_Social_and_Cultural_Education_DEI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Expert_in_Social_and_Cultural_Education_DEI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_EDU"/>
     </owl:Class>
     
 
@@ -1131,10 +1958,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Fashion_cultures_and_practices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Fashion_cultures_and_practices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_QUVI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Fashion_studies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Fashion_studies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_QUVI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Female -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Female">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Gender"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Finance_insurance_and_business -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Finance_insurance_and_business">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_STAT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Financial_Markets_and_Institutions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Financial_Markets_and_Institutions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISA"/>
     </owl:Class>
     
 
@@ -1159,6 +2018,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Food_Technology">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISTAL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Food_animal_metabolism_and_management_in_the_circular_economy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Food_animal_metabolism_and_management_in_the_circular_economy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEVET"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Foreign_languages_and_Literatures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Foreign_languages_and_Literatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_LILEC"/>
     </owl:Class>
     
 
@@ -1196,6 +2071,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Genomics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Genomics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FaBiT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Geography_and_Territorial_Processes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Geography_and_Territorial_Processes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISCI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Geological_Science -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Geological_Science">
@@ -1228,10 +2119,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Health_Biology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Health_Biology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FaBiT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Health_Economics_and_Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Health_Economics_and_Management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DSE"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Hindi -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Hindi">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Language"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#History -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#History">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISCI"/>
     </owl:Class>
     
 
@@ -1244,10 +2159,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Industrial_Chemistry__Toso_Montanari_CHIMIND -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#History_and_Oriental_Studies -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Industrial_Chemistry__Toso_Montanari_CHIMIND">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#History_and_Oriental_Studies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISCI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Human_nutrition_well-being_and_health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Human_nutrition_well-being_and_health">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_QUVI"/>
     </owl:Class>
     
 
@@ -1268,6 +2191,62 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Informatics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Informatics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Informatics_DISI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Informatics_DISI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Information_culture_and_media_organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Information_culture_and_media_organization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DAR"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Information_systems_technologies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Information_systems_technologies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Information_technology_for_management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Information_technology_for_management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Innovation_and_Organization_of_Culture_and_the_Arts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Innovation_and_Organization_of_Culture_and_the_Arts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Interdisciplinary_research_and_studies_on_eastern_europe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Interdisciplinary_research_and_studies_on_eastern_europe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#International_Horticultural_Science -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#International_Horticultural_Science">
@@ -1276,10 +2255,50 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Interpreting_and_Translation_DIT -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#International_and_diplomatic_sciences -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Interpreting_and_Translation_DIT">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#International_and_diplomatic_sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_SPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#International_and_diplomatic_sciences_SPS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#International_and_diplomatic_sciences_SPS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#International_cooperation_on_human_rights_and_intercultural_heritage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#International_cooperation_on_human_rights_and_intercultural_heritage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_BC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#International_development_and_cooperation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#International_development_and_cooperation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_STAT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#International_politics_and_economics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#International_politics_and_economics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#International_relations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#International_relations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS"/>
     </owl:Class>
     
 
@@ -1288,6 +2307,30 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Italian">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Language"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Italian_language_and_culture_for_foreigners -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Italian_language_and_culture_for_foreigners">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_LILEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Italian_studies_European_literary_cultures_linguistic_sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Italian_studies_European_literary_cultures_linguistic_sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FICLIT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Journalistic_public_and_corporate_communication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Journalistic_public_and_corporate_communication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS"/>
     </owl:Class>
     
 
@@ -1308,6 +2351,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Language_society_and_communication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Language_society_and_communication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_LILEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Languages__markets_and_cultures_of_Asia_and_Mediterranean_Africa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Languages__markets_and_cultures_of_Asia_and_Mediterranean_Africa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_LILEC"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#LastPassedExam -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#LastPassedExam">
@@ -1324,10 +2383,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Law_DSG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Law_DSG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#MasteR_DSG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Law_and_Economics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Law_and_Economics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SDE"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#LearningMental -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#LearningMental">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Legal_Consultant_in_Business_and_Public_Administrationdministration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Legal_Consultant_in_Business_and_Public_Administrationdministration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSG"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Legal_Studies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Legal_Studies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#MasteR_DSG"/>
     </owl:Class>
     
 
@@ -1345,6 +2436,30 @@
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Lesson">
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/InformationContentEntity"/>
         <rdfs:label>Lesson</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Letters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Letters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FICLIT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Local_and_global_development -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Local_and_global_development">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#MATH_Mat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#MATH_Mat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_MAT"/>
     </owl:Class>
     
 
@@ -1373,6 +2488,46 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Management_and_Marketing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Management_and_Marketing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Management_engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Management_engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Management_engineering_DIN -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Management_engineering_DIN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Management_for_Social_Economy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Management_for_Social_Economy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Management_of_motor_and_sports_activities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Management_of_motor_and_sports_activities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_QUVI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Marine_Biology -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Marine_Biology">
@@ -1389,10 +2544,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Mass_media_and_politics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Mass_media_and_politics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#MasteR_DSG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#MasteR_DSG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Legal_Studies_DSG"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#DegreeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_BC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_BC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Cultural_Heritage_BC"/>
     </owl:Class>
     
 
@@ -1413,10 +2592,98 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_CHIIM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_CHIIM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Chemistry_Giacomo_Ciamician_CHIM"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DA -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DA">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Architecture_DA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DAR -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DAR">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#The_Arts_DAR"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Electrical_Electronic_and_Information_Engineering_Guglielmo_Marconi_DEI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DICAM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DICAM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_Chemical_Environmental_and_Materials_Engineering_DICAM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Medical_and_Surgical_Sciences_DIMEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMES -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMES">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Experimental_Diagnostic_and_Specialty_Medicine_DIMES"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEVET -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEVET">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Veterinary_Medical_Sciences_DIMEVET"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIN -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Industrial_Engineering_DIN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Management_DiSA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISCI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISCI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#History_and_Cultures_DiSCi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Computer_Science_and_Engineering_DISI"/>
     </owl:Class>
     
 
@@ -1429,10 +2696,114 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DSE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DSE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_DSE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_EDU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_EDU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Education_Studies_Giovanni_Maria_Bertin_EDU"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FICLIT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FICLIT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Classical_Philology_and_Italian_Studies_FICLIT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FILCOM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FILCOM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Philosophy_and_Communication_Studies_FILCOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FaBiT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FaBiT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy_and_Biotechnology_FaBiT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_LILEC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_LILEC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Modern_Languages_Literatures_and_Cultures_LILEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_MAT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_MAT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Mathematics_MAT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_PSI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_PSI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Psychology_Renzo_Canestrari_PSI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_QUVI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_QUVI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#for_Life_Quality_Studies_QUVI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SDE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SDE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Sociology_and_Business_Law_SDE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Political_and_Social_Sciences_SPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Master_STAT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_STAT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_Sciences_Paolo_Fortunati_STAT"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Math -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Math">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Math_MAT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Math_MAT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_MAT"/>
     </owl:Class>
     
 
@@ -1445,10 +2816,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Mechanical_engineerig_DIN -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Mechanical_engineerig_DIN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIN"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Mechatronics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Mechatronics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DEI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Medical_and_Surgical_Sciences_DIMEC -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Medical_and_Surgical_Sciences_DIMEC">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Medical_biotechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Medical_biotechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMES"/>
     </owl:Class>
     
 
@@ -1469,10 +2864,58 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Medicine_and_Surgery_DIMES -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Medicine_and_Surgery_DIMES">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMES"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Medicine_and_surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Medicine_and_surgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Mediterranean_societies_and_cultures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Mediterranean_societies_and_cultures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_BC"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Modern_Languages_Literatures_and_Cultures_LILEC -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Modern_Languages_Literatures_and_Cultures_LILEC">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Medical_and_Surgical_Sciences_DIMEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Modern_comparative_and_postcolonial_literature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Modern_comparative_and_postcolonial_literature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_LILEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Molecular_and_Cell_Biology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Molecular_and_Cell_Biology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FaBiT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Molecular_and_industrial_biotechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Molecular_and_industrial_biotechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FaBiT"/>
     </owl:Class>
     
 
@@ -1501,10 +2944,58 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Neuroscience_and_neuropsychological_rehabilitation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Neuroscience_and_neuropsychological_rehabilitation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_PSI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#NonVisible -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#NonVisible">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Nursing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Nursing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMES"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Nursing_DIMEC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Nursing_DIMEC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Nursing_and_Midwifery_Sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Nursing_and_Midwifery_Sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Obstetrics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Obstetrics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Offshore_engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Offshore_engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DICAM"/>
     </owl:Class>
     
 
@@ -1541,6 +3032,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Pedagogy_Science_of_education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Pedagogy_Science_of_education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_EDU"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Persian -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Persian">
@@ -1558,10 +3057,58 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmaceutical_Biotechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmaceutical_Biotechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FaBiT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmaceutical_Chemistry_and_Technology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmaceutical_Chemistry_and_Technology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FaBiT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FaBiT"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy_and_Biotechnology_FaBiT -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy_and_Biotechnology_FaBiT">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Philology_literature_and_classical_tradition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Philology_literature_and_classical_tradition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FICLIT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Philosophical_Sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Philosophical_Sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FILCOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Philosophy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Philosophy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FILCOM"/>
     </owl:Class>
     
 
@@ -1574,6 +3121,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Photochemistry_and_Molecular_Materials -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Photochemistry_and_Molecular_Materials">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_CHIIM"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Physical -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Physical">
@@ -1582,18 +3137,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Physics_and_Astronomy_Augusto_Righi_DIFA -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Physics_and_Astronomy_Augusto_Righi_DIFA">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Physiotherapy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Physiotherapy">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_BIBINEM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Planning_and_managing_of_educational_intervention_in_social_distress -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Planning_and_managing_of_educational_intervention_in_social_distress">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_EDU"/>
     </owl:Class>
     
 
@@ -1614,10 +3169,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Political_social_and_international_sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Political_social_and_international_sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_SPS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Politics_administration_and_organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Politics_administration_and_organization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Precise_and_Sustainable_Agriculture -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Precise_and_Sustainable_Agriculture">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISTAL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Prevention_health_professions_sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Prevention_health_professions_sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Primary_Teacher_Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Primary_Teacher_Education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_EDU"/>
     </owl:Class>
     
 
@@ -1638,10 +3225,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Psychological_sciences_and_techniques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Psychological_sciences_and_techniques">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_PSI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Psychology_Renzo_Canestrari_PSI -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Psychology_Renzo_Canestrari_PSI">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Psychology_of_wellbeing_and_social_inclusivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Psychology_of_wellbeing_and_social_inclusivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_PSI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Quantitative_finance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Quantitative_finance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_STAT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Resource_Economics_and_Sustainable_Development -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Resource_Economics_and_Sustainable_Development">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DSE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Safety_and_quality_of_animal_production -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Safety_and_quality_of_animal_production">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEVET"/>
     </owl:Class>
     
 
@@ -1654,10 +3281,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#School_and_community_psychology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#School_and_community_psychology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_PSI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Science -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Science">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Science_Of_Lifelong_Educational_Processes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Science_Of_Lifelong_Educational_Processes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_EDU"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Science_for_the_Conservation-Restoration_of_Cultural_Heritage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Science_for_the_Conservation-Restoration_of_Cultural_Heritage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_CHIIM"/>
     </owl:Class>
     
 
@@ -1686,10 +3337,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Sciences_and_techniques_of_preventive_and_adapted_motor_activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Sciences_and_techniques_of_preventive_and_adapted_motor_activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_QUVI"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#ScoreDriven -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ScoreDriven">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Goals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Semiotics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Semiotics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_FILCOM"/>
     </owl:Class>
     
 
@@ -1710,10 +3377,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Social_Work -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Social_Work">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_SDE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Sociology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Sociology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_SDE"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Sociology_and_Business_Law_SDE -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Sociology_and_Business_Law_SDE">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Sociology_and_Social_Work -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Sociology_and_Social_Work">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SDE"/>
     </owl:Class>
     
 
@@ -1726,6 +3417,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Sports_sciences_and_techniques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Sports_sciences_and_techniques">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_QUVI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_Sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_Sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_STAT"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_Sciences_Paolo_Fortunati_STAT -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_Sciences_Paolo_Fortunati_STAT">
@@ -1734,10 +3441,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_financial_and_actuarial_sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_financial_and_actuarial_sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_STAT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_sciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_sciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_STAT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Statistics_economics_and_business -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Statistics_economics_and_business">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_STAT"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Teaching_and_Communication_of_Natural_Sciences -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Teaching_and_Communication_of_Natural_Sciences">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_BiGeA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Techniques_of_medical_radiology_imaging_and_radiotherapy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Techniques_of_medical_radiology_imaging_and_radiotherapy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMES"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Techniques_of_prevention_in_the_environment_and_in_the_workplace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Techniques_of_prevention_in_the_environment_and_in_the_workplace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEC"/>
     </owl:Class>
     
 
@@ -1754,6 +3501,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Tecnology">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Telecommunications_Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Telecommunications_Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI"/>
     </owl:Class>
     
 
@@ -1791,6 +3546,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Tourism_Economics_and_Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Tourism_Economics_and_Management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DSE"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#University -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#University"/>
@@ -1817,6 +3580,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Veterinary_Medical_Sciences_DIMEVET">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Veterinary_medicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Veterinary_medicine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DIMEVET"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Visual_arts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Visual_arts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DAR"/>
     </owl:Class>
     
 
@@ -1853,10 +3632,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#mechanical_engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#mechanical_engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIN"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#A_Health&amp;Fitness -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Health&amp;Fitness">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Dams_-_disciplines_of_arts,_music_and_entertainment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Dams_-_disciplines_of_arts,_music_and_entertainment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DAR"/>
     </owl:Class>
     
 
@@ -1873,6 +3668,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Planning_and_management_of_agro-territorial,_forest_and_landscape">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DISTAL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Wellness,_sport_and_health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Wellness,_sport_and_health">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_QUVI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Work,_organizational_and_personnel_psychology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Work,_organizational_and_personnel_psychology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_PSI"/>
     </owl:Class>
     
 
@@ -2258,6 +4069,21 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Health&amp;Fitness">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Health&amp;Fitness"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology/1.0#Antonio_null -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology/1.0#Antonio_null">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <pathadora-ontology:canRead rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+        <pathadora-ontology:canWrite rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+        <pathadora-ontology:hasPassed rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+        <pathadora-ontology1:hasGoals rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+        <pathadora-ontology:hasSurname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antonio</pathadora-ontology:hasSurname>
+        <pathadora-ontology1:hasDegree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</pathadora-ontology1:hasDegree>
+        <pathadora-ontology1:surname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luir</pathadora-ontology1:surname>
     </owl:NamedIndividual>
     
 
