@@ -83,8 +83,10 @@ public class PathadoraManager {
         }
     }
 
-    public void recommendCourses(Map<String, String> params){
+    public String recommendCourses(Map<String, String> params){
         Recommender rec = new Recommender(this);
+        Map<String, String> output = rec.recommendCourses();
+        return OutputToJson.coursesJsonResponse(output);
     }
 
     public void recommendResources(Map<String, String> params){

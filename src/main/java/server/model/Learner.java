@@ -4,7 +4,7 @@ import server.utils.Parameters;
 
 import java.util.Map;
 
-public class Learner implements Individual{
+public class Learner {
 
     private String name;
     private String lastname;

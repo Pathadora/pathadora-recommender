@@ -9,8 +9,7 @@ import org.swrlapi.parser.SWRLParseException;
 
 import java.util.*;
 
-import static server.utils.PathadoraConfig.OntologyConfig.INDIVIDUALS;
-import static server.utils.PathadoraConfig.OntologyConfig.OBJECT_PROPERTIES;
+import static server.utils.PathadoraConfig.OntologyConfig.*;
 
 public class Recommender {
 
@@ -21,7 +20,7 @@ public class Recommender {
     }
 
     public Map<String, List<String>> recommendedDepartments(String individual, String property) throws OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
-        new RuleBasedModel(manager).applyRule();
+        new RuleBasedModel(manager).applyFacultiesAndDepartmentsRule();
 
         OntologyEntities entities = new OntologyEntities(manager);
         OWLOntology ontology = manager.pathadoraOnt();
@@ -34,7 +33,6 @@ public class Recommender {
         OWLReasonerFactory reasonerFactory = new StructuralReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
         Set<OWLNamedIndividual> values = reasoner.getObjectPropertyValues(namedInd, objProperty).getFlattened();
-        System.out.println("Entered");
 
         for (OWLNamedIndividual value : values) {
             System.out.println("value " + value.toString());
@@ -42,6 +40,16 @@ public class Recommender {
         }
 
         return output;
+    }
+
+    public Map<String, String> recommendCourses(){
+        Map<String, String> courseData = new HashMap<>();
+        courseData.put("course", "Chemistry");
+        courseData.put("period", "I");
+        courseData.put("type", "basic learning activities");
+        courseData.put("scientific area", "CHIM/03");
+
+        return courseData;
     }
 
     private List<String> recommendedFaculties(){

@@ -16,9 +16,10 @@ public class RuleBasedModel {
         this.pathadoraManager = manager;
     }
 
-    public void applyRule() throws OWLOntologyCreationException, SWRLBuiltInException, SWRLParseException, OWLOntologyStorageException {
+
+    public void applyFacultiesAndDepartmentsRule() throws OWLOntologyCreationException, SWRLBuiltInException, SWRLParseException, OWLOntologyStorageException {
         SWRLRuleEngine engine = initializeQueryEngine();
-        engine.createSWRLRule("query 1",
+        engine.createSWRLRule("Faculties & Departments",
                 "accessible_ocw_ontology:Learner(?learner) ^ " +
                         "pathadora-ontology:hasDegree(?learner, ?degree) ^ " +
                         "pathadora-ontology:passionateOf(?learner, ?passion) ^ " +
@@ -29,6 +30,26 @@ public class RuleBasedModel {
         OWLOntology ontology = pathadoraManager.pathadoraOnt();
         pathadoraManager.getManager().saveOntology(ontology);
     }
+
+    public void applyCoursesRule() throws OWLOntologyCreationException, SWRLBuiltInException, SWRLParseException, OWLOntologyStorageException {
+        /*SWRLRuleEngine engine = initializeQueryEngine();
+        engine.createSWRLRule("Courses","");
+        engine.infer();
+
+        OWLOntology ontology = pathadoraManager.pathadoraOnt();
+        pathadoraManager.getManager().saveOntology(ontology);
+         */
+    }
+
+    public void applyResourcesRule() throws OWLOntologyCreationException, SWRLBuiltInException, SWRLParseException, OWLOntologyStorageException {
+        SWRLRuleEngine engine = initializeQueryEngine();
+        engine.createSWRLRule("Resources","");
+        engine.infer();
+
+        OWLOntology ontology = pathadoraManager.pathadoraOnt();
+        pathadoraManager.getManager().saveOntology(ontology);
+    }
+
 
 
     public void applyQuery() throws OWLOntologyCreationException, SWRLParseException, SQWRLException {
