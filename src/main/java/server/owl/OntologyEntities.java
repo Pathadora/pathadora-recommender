@@ -5,11 +5,10 @@ import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
+import org.semanticweb.owlapi.search.Searcher;
 import org.semanticweb.owlapi.util.DefaultPrefixManager;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static server.utils.PathadoraConfig.OntologyConfig.*;
@@ -51,7 +50,7 @@ public class OntologyEntities {
         Set<OWLNamedIndividual> individuals = individualsNodeSet.getFlattened();
 
         for (OWLNamedIndividual ind : individuals) {
-            if(individual.toString().equals(individuals.toString())){
+            if (individual.toString().equals(individuals.toString())) {
                 return true;
             }
             //String s = ind.toString();
@@ -65,39 +64,39 @@ public class OntologyEntities {
         PrefixManager pm = new DefaultPrefixManager(PATHADORA_RESOURCE);
         System.out.println("We are at Ontology Entities");
 
-        if(type.equals(CLASSES)){
+        if (type.equals(CLASSES)) {
             System.out.println("Classes");
             List<OWLLogicalEntity> classes =
                     classes().stream()
-                    .filter(c -> c.toString().contains(key))
-                    .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
+                            .filter(c -> c.toString().contains(key))
+                            .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
 
             System.out.println(classes.toString());
-            return (classes.isEmpty()) ? df.getOWLClass("#"+key, pm) : classes.get(0);
+            return (classes.isEmpty()) ? df.getOWLClass("#" + key, pm) : classes.get(0);
         }
 
-        if(type.equals(OBJECT_PROPERTIES)){
+        if (type.equals(OBJECT_PROPERTIES)) {
             List<OWLLogicalEntity> objProps =
                     objectProperties().stream()
                             .filter(c -> c.toString().contains(key))
                             .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
-            return (objProps.isEmpty()) ? df.getOWLObjectProperty("#"+key, pm) : objProps.get(0);
+            return (objProps.isEmpty()) ? df.getOWLObjectProperty("#" + key, pm) : objProps.get(0);
         }
 
-        if(type.equals(INDIVIDUALS)){
+        if (type.equals(INDIVIDUALS)) {
             List<OWLLogicalEntity> individuals =
                     namedIndividuals().stream()
                             .filter(c -> c.toString().contains(key))
                             .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
-            return (individuals.isEmpty()) ? df.getOWLNamedIndividual("#"+key, pm) : individuals.get(0);
+            return (individuals.isEmpty()) ? df.getOWLNamedIndividual("#" + key, pm) : individuals.get(0);
         }
 
-        if(type.equals(ANNOTATION_PROPERTIES)){
+        if (type.equals(ANNOTATION_PROPERTIES)) {
             List<OWLLogicalEntity> annProps =
                     annotationProperties().stream()
-                    .filter(c -> c.toString().contains(key))
-                    .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
-            return (annProps.isEmpty()) ? df.getOWLAnnotationProperty("#"+key, pm) : annProps.get(0);
+                            .filter(c -> c.toString().contains(key))
+                            .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
+            return (annProps.isEmpty()) ? df.getOWLAnnotationProperty("#" + key, pm) : annProps.get(0);
         }
 
         /*if(type.equals(DATA_PROPERTIES)){

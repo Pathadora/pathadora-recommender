@@ -12,16 +12,19 @@ public class PathadoraConfig {
         public final static String PATHADORA_LOCAL_PATH = "./src/main/resources/ont/pathadora-ontology.owl";
         public final static String LOM_LOCAL_PATH = "./src/main/resources/ont/lom_ontology_ods.owl";
         public final static String ACC_LOCAL_PATH = "./src/main/resources/ont/AccessibleOCW.owl";
+        public final static String ESO_LOCAL_PATH = "./src/main/resources/ont/eso.ttl";
 
         public final static String LOM_RESOURCE = "http://data.opendiscoveryspace.eu/lom_ontology_ods.owl";
         public final static String ACC_RESOURCE = "http://purl.org/accessible_ocw_ontology";
+        public final static String ESO_RESOURCE = "http://purl.org/ontology/edu/eso";
         public final static String PATHADORA_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology/1.0";
 
         /** TODO: to be discussed */
         public static final String ACTION = "action";
         public static final String ADD = "add";
-        public static final String NEXT_STEP = "next_step";
-        public static final String PATH_GENERATION = "path_generation";
+        public static final String FAC_DEP_GENERATION = "fac_dep_generation";
+        public static final String COURSE_GENERATION = "course_generation";
+        public static final String RESOURCE_GENERATION = "resource_generation";
         public static final String TYPE = "type";
         public static final String LEARNER = "learner";
         public static final String COURSE = "course";

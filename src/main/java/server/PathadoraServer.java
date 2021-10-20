@@ -6,6 +6,8 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.swrlapi.exceptions.SWRLBuiltInException;
+import org.swrlapi.parser.SWRLParseException;
 import server.owl.PathadoraManager;
 
 import java.io.BufferedReader;
@@ -64,9 +66,10 @@ class PathadoraHandler implements HttpHandler {
                 case METHOD_POST:
                     System.out.println("Entered");
                     String parameters = paramsToString(new BufferedReader(new InputStreamReader(exchange.getRequestBody())));
-                    computeRequest(parameters);
+                    String response = computeRequest(parameters);
+                    System.out.println("Final  : " +response);
 
-                    final byte[] rawResponseBody = "My response".getBytes(CHARSET);
+                    final byte[] rawResponseBody = response.getBytes(CHARSET);
                     exchange.sendResponseHeaders(STATUS_OK, rawResponseBody.length);
                     exchange.getResponseBody().write(rawResponseBody);
                     break;
@@ -81,14 +84,14 @@ class PathadoraHandler implements HttpHandler {
                     exchange.sendResponseHeaders(STATUS_METHOD_NOT_ALLOWED, NO_RESPONSE_LENGTH);
                     break;
             }
-        } catch (OWLOntologyCreationException | OWLOntologyStorageException e) {
+        } catch (OWLOntologyCreationException | OWLOntologyStorageException | SWRLParseException | SWRLBuiltInException e) {
             e.printStackTrace();
         } finally {
             exchange.close();
         }
     }
 
-    private String computeRequest(String paramsString) throws IOException, OWLOntologyCreationException, OWLOntologyStorageException {
+    private String computeRequest(String paramsString) throws IOException, OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
         Map<String, String> params = paramsToMap(paramsString);
 
         if (params.containsKey(ACTION)) {
@@ -96,17 +99,21 @@ class PathadoraHandler implements HttpHandler {
                 case ADD:
                     System.out.println("Add individual was requested");
                     pathadoraManager.addIndividual(params);
-                    break;
-                case NEXT_STEP:
-                    System.out.println("Next step was requested");
-                    break;
-                case PATH_GENERATION:
-                    System.out.println("Path generation was requested");
-                    break;
+                    return "This is my response";
+                case FAC_DEP_GENERATION:
+                    System.out.println("FAC_DEP_GENERATION was requested");
+                    return pathadoraManager.recommendFacDep(params);
+                case COURSE_GENERATION:
+                    System.out.println("COURSE_GENERATION was requested");
+                    pathadoraManager.recommendCourses(params);
+                    return "This is my response";
+                case RESOURCE_GENERATION:
+                    System.out.println("RESOURCE_GENERATION was requested");
+                    pathadoraManager.recommendResources(params);
+                    return "This is my response";
                 default:
-                    break;
+                    return "This is my response";
             }
-        }
-        return "This is my response";
+        }else { return "This is my response"; }
     }
 }

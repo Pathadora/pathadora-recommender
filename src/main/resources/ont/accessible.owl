@@ -1,26 +1,122 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#"
-     xml:base="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24"
+<rdf:RDF xmlns="http://purl.org/accessible_ocw_ontology#"
+     xml:base="http://purl.org/accessible_ocw_ontology"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
-     xmlns:ns1="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:GenericOntology="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#"
-     xmlns:accessible_ocw_ontology="http://purl.org/accessible_ocw_ontology#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology">
-        <owl:versionIRI rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology/1.0"/>
-        <owl:imports rdf:resource="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#"/>
-        <owl:imports rdf:resource="http://purl.org/accessible_ocw_ontology"/>
-        <owl:imports rdf:resource="http://purl.org/ontology/edu/eao/0.9"/>
-        <owl:imports rdf:resource="http://purl.org/ontology/edu/eso/0.9"/>
+     xmlns:GenericOntology="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#">
+    <owl:Ontology rdf:about="http://purl.org/accessible_ocw_ontology">
+        <dc:contributor>Steffen Lohmann</dc:contributor>
+        <dc:creator>Mirette Elias</dc:creator>
+        <dc:description>This ontology is designed for accessible OpenCourseWare. It is built on the accessibilty concepts of IMS Learning Global Consortium (https://www.imsglobal.org/activity/accessibility) and the vocabulary structure of the ACCESSIBLE ontology (http://www.accessible-eu.org/index.php/ontology.html).</dc:description>
+        <dc:title>Accessible OCW</dc:title>
+        <rdfs:label xml:lang="en">accessible_ocw_ontology Ontology</rdfs:label>
+        <owl:versionInfo>Version 1.0</owl:versionInfo>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#Meet -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#Meet"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#TechnologyUsage -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#TechnologyUsage"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#User_has_Disability -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#User_has_Disability"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasAge -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasAge"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasEducation -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasEducation"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasJob -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasJob"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasLocation -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasLocation"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasMaritalStatus -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasMaritalStatus"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasName -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasName"/>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#User_has_Disability -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/accessible_ocw_ontology#User_has_Disability"/>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#hasMaritalStatus -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/accessible_ocw_ontology#hasMaritalStatus"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
@@ -35,146 +131,236 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#canRead -->
+    <!-- http://purl.org/accessible_ocw_ontology#AccessMode -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#canRead">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#AccessMode">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#canWrite -->
+    <!-- http://purl.org/accessible_ocw_ontology#accessModeAdapted -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#canWrite">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#accessModeAdapted">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasAcquired -->
+    <!-- http://purl.org/accessible_ocw_ontology#accessModeOrnamental -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasAcquired">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#accessModeOrnamental">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasAcquiredAdditionalQualification -->
+    <!-- http://purl.org/accessible_ocw_ontology#accessModeReq -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasAcquiredAdditionalQualification">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#accessModeReq">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasArtisticSkills -->
+    <!-- http://purl.org/accessible_ocw_ontology#accessMode_adaptionRequest -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasArtisticSkills">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#accessMode_adaptionRequest">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasCompletedProjects -->
+    <!-- http://purl.org/accessible_ocw_ontology#accessMode_existingAccessMode -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasCompletedProjects">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#accessMode_existingAccessMode">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasCurrentlyStuding -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationDetail -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasCurrentlyStuding">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationDetail">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasDesiredFutureCourse -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationDetailReq -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasDesiredFutureCourse">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationDetailReq">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasDisability -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationDetail_adaptationRequest -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasDisability">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationDetail_adaptationRequest">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasGolas -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationDetail_existingAccessMode -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasGolas">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationDetail_existingAccessMode">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasHobbies -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationMediaReq -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasHobbies">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationMediaReq">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasInterest -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationMediaType -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasInterest">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationMediaType">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasPassed -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationMedia_adaptationRequest -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasPassed">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationMedia_adaptationRequest">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasPassedLastExam -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationMedia_existingAccessMode -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasPassedLastExam">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationMedia_existingAccessMode">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#isAcquiredAdditionalQualificationBy -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationType -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#isAcquiredAdditionalQualificationBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationType">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#isAcquiredBy -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationTypeReq -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#isAcquiredBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationTypeReq">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#isAttendedBy -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationType_adaptationRequest -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#isAttendedBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationType_adaptationRequest">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty -->
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationType_existingAccessMode -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationType_existingAccessMode">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#apiInteroperable -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#apiInteroperable">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#controlFlexibility -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#controlFlexibility">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#displayTransformability -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#displayTransformability">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#dr_educationalComplexityOfAdaptation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#dr_educationalComplexityOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#EducationalComplexityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#educationalComplexityOfAdaptation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#educationalComplexityOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#EducationalComplexityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#hazard -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#hazard">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#hazardAvoidance -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#hazardAvoidance">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#inputRequirements -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#inputRequirements">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue"/>
     </owl:ObjectProperty>
     
 
@@ -190,34 +376,100 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasBirthDay -->
+    <!-- http://purl.org/accessible_ocw_ontology#atInteroperable -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasBirthDay">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#studentDataProperties"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#atInteroperable">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasGender -->
+    <!-- http://purl.org/accessible_ocw_ontology#dr_atInteroperable -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasGender">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#studentDataProperties"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#dr_atInteroperable">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#hasName -->
+    <!-- http://purl.org/accessible_ocw_ontology#dr_educationalLevelOfAdaptation -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#hasName">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#studentDataProperties"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#dr_educationalLevelOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#studentDataProperties -->
+    <!-- http://purl.org/accessible_ocw_ontology#dr_languageOfAdaptation -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#studentDataProperties">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#dr_languageOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#educationalLevelOfAdaptation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#educationalLevelOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#hasAdaptation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#hasAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#isAdaptationOf -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#isAdaptationOf">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#isFullAdaptationOf -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#isFullAdaptationOf">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#isPartialAdaptationOf -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#isPartialAdaptationOf">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#languageOfAdaptation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#languageOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#languageOfInterface -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#languageOfInterface">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
     </owl:DatatypeProperty>
     
 
@@ -233,583 +485,131 @@
     
 
 
-    <!-- http://hadatac.org/ont/chear#SocioeconomicStatus -->
-
-    <rdf:Description rdf:about="http://hadatac.org/ont/chear#SocioeconomicStatus">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
-        <rdfs:label>Accademic Information</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Age -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Age">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Animals -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Animals">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Art -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Art">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Arts -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Arts">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Astrology -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Astrology">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Commerce -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Commerce">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Cricket -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Cricket">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#CurrentPursuingCourse -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CurrentPursuingCourse">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Dancing -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Dancing">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#DateOfBirth -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#DateOfBirth">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Design -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Design">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#DesiredFutureCourses -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#DesiredFutureCourses">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Engineering">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#English -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#English">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Entrepreneurship -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Entrepreneurship">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Excellent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Excellent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Football -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Football">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Full-TimeCourse -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Full-TimeCourse">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#TypeOfFutureCourse"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Gender -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Gender">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
-        <rdfs:label>General Information</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Goals -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Goals">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Golf -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Golf">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Good -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Good">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Hindi -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Hindi">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Hockey -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Hockey">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Italian -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Italian">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#LastPassedExam -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#LastPassedExam">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Law -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Law">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#LearningMental -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#LearningMental">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Lesson -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Lesson">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/InformationContentEntity"/>
-        <rdfs:label>Lesson</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#ListeningMusic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ListeningMusic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Management -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Management">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Math -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Math">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Medicine -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Medicine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Name -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Name">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Naturalistic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Naturalistic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#NonVisible -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#NonVisible">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Part-TimeCourse -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Part-TimeCourse">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#TypeOfFutureCourse"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Passion -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Persian -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Persian">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#PersonalInformation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
-        <rdfs:label>Personal Information</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Physical -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Physical">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Disabilities"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Reading -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Reading">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Satisfactory -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Satisfactory">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Science -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Science">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Sculpture -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Sculpture">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Singing -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Singing">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#SocialStudies -->
+    <!-- http://purl.org/accessible_ocw_ontology#AccessModeRequired -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#SocialStudies">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedAccademicAreas"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AccessModeRequired">
+        <rdfs:label>AccessModeRequired</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Teaching -->
+    <!-- http://purl.org/accessible_ocw_ontology#AccessModeValue -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Teaching">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AccessModeValue">
+        <rdfs:label>AccessModeValue</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Tecnology -->
+    <!-- http://purl.org/accessible_ocw_ontology#AccessibilityAPI -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Tecnology">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AccessibilityAPI">
+        <rdfs:label>AccessibilityAPI</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Telugu -->
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Telugu">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired">
+        <rdfs:label>AdaptationDetailRequired</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Tennis -->
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationDetailValue -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Tennis">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue">
+        <rdfs:label>AdaptationDetailValue</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Theme -->
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Theme">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ArtisticSkills"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired">
+        <rdfs:label>AdaptationMediaRequired</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Topic -->
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Topic">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/InformationContentEntity"/>
-        <rdfs:label>Topic</rdfs:label>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue">
+        <rdfs:label>AdaptationMediaTypeValue</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#TypeOfFutureCourse -->
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#TypeOfFutureCourse">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired">
+        <rdfs:label>AdaptationTypeRequired</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Urdu -->
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationTypeValue -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Urdu">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#LanguageSkills"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue">
+        <rdfs:label>AdaptationTypeValue</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#VeryGood -->
+    <!-- http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#VeryGood">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue">
+        <rdfs:label>ControlFlexibilityValue</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills -->
+    <!-- http://purl.org/accessible_ocw_ontology#DigitalResource -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#VocabularySkills">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#DigitalResource">
+        <rdfs:label>DigitalResource</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Volleyball -->
+    <!-- http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Volleyball">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#InterestedSports"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue">
+        <rdfs:label>DisabilityTransformabilityValue</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Volunteering -->
+    <!-- http://purl.org/accessible_ocw_ontology#EducationalComplexityValue -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Volunteering">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#EducationalComplexityValue">
+        <rdfs:label>EducationalComplexityValue</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#WorkExperience -->
+    <!-- http://purl.org/accessible_ocw_ontology#HazardValue -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#WorkExperience">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#GeneralInformation"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#HazardValue">
+        <rdfs:label>HazardValue</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Writing -->
+    <!-- http://purl.org/accessible_ocw_ontology#Learner -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Writing">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Hobbies"/>
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#Learner">
+        <rdfs:subClassOf rdf:resource="http://www.AccessibleOntology.com/GenericOntology.owl#User"/>
+        <rdfs:label>Learner</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Health&amp;Fitness -->
+    <!-- http://www.AccessibleOntology.com/GenericOntology.owl#User -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Health&amp;Fitness">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+    <owl:Class rdf:about="http://www.AccessibleOntology.com/GenericOntology.owl#User">
+        <rdfs:label>User</rdfs:label>
     </owl:Class>
     
 
@@ -817,14 +617,667 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotations
+    // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#LearningObject">
-        <rdfs:label>Learning Object</rdfs:label>
-    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#ARIAv1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#ARIAv1">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AT-SPI -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#AT-SPI">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#ATK -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#ATK">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AndroidAccessibility -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#AndroidAccessibility">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#BlackberryAccessibility -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#BlackberryAccessibility">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#ChemML -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#ChemML">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Daisy -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Daisy">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#EPUB3 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#EPUB3">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#JavaAccessibility -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#JavaAccessibility">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#LIT -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#LIT">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#LaTeX -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#LaTeX">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Learner_1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Learner_1">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <accessModeReq rdf:resource="http://purl.org/accessible_ocw_ontology#visual_textual"/>
+        <adaptationTypeReq rdf:resource="http://purl.org/accessible_ocw_ontology#visual_alternativeText"/>
+        <adaptationTypeReq rdf:resource="http://purl.org/accessible_ocw_ontology#visual_audioDiscription"/>
+        <atInteroperable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</atInteroperable>
+        <languageOfAdaptation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</languageOfAdaptation>
+        <languageOfInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</languageOfInterface>
+        <GenericOntology:Meet>Lena was born blind. She completed her high&lt;/br&gt;school but she couldn&apos;t find a job.</GenericOntology:Meet>
+        <GenericOntology:TechnologyUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lena uses her PC (Windows XP) on a daily basis to check her email and apply for jobs. She uses the Jaws screenreader and she also&lt;/br&gt;uses OCR software, a Braille embosser and Adobe reader speech output. </GenericOntology:TechnologyUsage>
+        <GenericOntology:User_has_Disability rdf:resource="http://purl.org/accessible_ocw_ontology#Blindness"/>
+        <GenericOntology:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</GenericOntology:hasAge>
+        <GenericOntology:hasEducation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High school</GenericOntology:hasEducation>
+        <GenericOntology:hasJob rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unemployed</GenericOntology:hasJob>
+        <GenericOntology:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</GenericOntology:hasLocation>
+        <GenericOntology:hasMaritalStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</GenericOntology:hasMaritalStatus>
+        <GenericOntology:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lena Fox</GenericOntology:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Learner_2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Learner_2">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <hazardAvoidance rdf:resource="http://purl.org/accessible_ocw_ontology#flashing"/>
+        <languageOfAdaptation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</languageOfAdaptation>
+        <languageOfInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</languageOfInterface>
+        <GenericOntology:Meet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James have problems with some colors. He is working as an engineer.</GenericOntology:Meet>
+        <GenericOntology:TechnologyUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He works on his desktop PC every day, most of the day and is responsible of the network admistration in his company.</GenericOntology:TechnologyUsage>
+        <GenericOntology:User_has_Disability rdf:resource="http://purl.org/accessible_ocw_ontology#Colour_Blindness"/>
+        <GenericOntology:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</GenericOntology:hasAge>
+        <GenericOntology:hasEducation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor&amp;rsquo;s degree in Network and Communication</GenericOntology:hasEducation>
+        <GenericOntology:hasJob rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employed</GenericOntology:hasJob>
+        <GenericOntology:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belgium</GenericOntology:hasLocation>
+        <GenericOntology:hasMaritalStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Married</GenericOntology:hasMaritalStatus>
+        <GenericOntology:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Van</GenericOntology:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Learner_3 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Learner_3">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <accessModeReq rdf:resource="http://purl.org/accessible_ocw_ontology#auditory_textual"/>
+        <adaptationDetailReq rdf:resource="http://purl.org/accessible_ocw_ontology#auditory_verbatim"/>
+        <adaptationTypeReq rdf:resource="http://purl.org/accessible_ocw_ontology#auditory_caption"/>
+        <languageOfAdaptation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</languageOfAdaptation>
+        <languageOfInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</languageOfInterface>
+        <GenericOntology:Meet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomasa is completely deaf. She holds a&lt;/br&gt;master&amp;rsquo;s degree in Law, and she works in a consulting firm in Belgium. &lt;/br&gt;Since her teenage years, Tomasa is completely deaf. At first, it was very&lt;/br&gt;difficult to communicate with other people, but she has learned to cope&lt;/br&gt;with her deafness: she mostly uses lip reading to communicate with&lt;/br&gt;other people. Sometimes, she also uses some sign language when she is&lt;/br&gt;in a company where people also understand it. But as many people don&amp;rsquo;t&lt;/br&gt;understand sign language, she doesn&amp;rsquo;t use it very often.</GenericOntology:Meet>
+        <GenericOntology:TechnologyUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomasa is quite a heavy technology user. For work, she has a standard Windows&lt;/br&gt;Vista laptop, which she also uses at home and sometimes even in&lt;/br&gt;train stations and airports when she is waiting. She spends about 50 hours&lt;/br&gt;per week using her computer, it is an important tool for her. At work, &lt;/br&gt;Tomasa creates and edits word and excel documents, and searches for&lt;/br&gt;information on the internet. She is also a heavy e-mail user, as she has to&lt;/br&gt;keep a close contact with her clients without being able to make&lt;/br&gt;phonecalls. At home, she manages the pictures of her children growing&lt;/br&gt;up and occasionally plays a casual computer game like Tetris. She&lt;/br&gt;has already considered switching to Firefox, but still uses Internet&lt;/br&gt;Explorer to surf the internet on a daily basis. Tomasa uses Google, &lt;/br&gt;Gmail, updates her blog, uses instant messaging to talk to her friends, takes&lt;/br&gt;quizzes on Facebook, sometimes watching a video on Youtube, etc. &lt;/br&gt;The mobile phone is also very important for Tomasa: she couldn&amp;rsquo;t miss it as&lt;/br&gt;a tool. But it is also part of her life style, and she carries is around all the&lt;/br&gt;time. She uses it to videocall her husband if she will be home late, and to&lt;/br&gt;keep up with her friends. Most important about her phone is the look and&lt;/br&gt;feel. It has a big screen displaying clear letters, and it feeds pretty good&lt;/br&gt;images when she uses the phone in video calls. Although her&lt;/br&gt;smartphone was quite expensive, the device, with all its functionalities, &lt;/br&gt;was worth the investment. She mostly uses the phone as any other user&lt;/br&gt;would, but as she can&amp;rsquo;t make any regular calls, the video call&lt;/br&gt;functionality is very important to her. Besides video call, she uses&lt;/br&gt;texting, e-mail (she likes the Qwerty keypad!), and sometimes internet. &lt;/br&gt;As the phone has so many features, she thinks it is a pity she can&amp;rsquo;t use all of&lt;/br&gt;them, such as the built-in radio receiver, MP3 player, etc. Tomasa uses no&lt;/br&gt;assistive technology with her phone.</GenericOntology:TechnologyUsage>
+        <GenericOntology:User_has_Disability rdf:resource="http://purl.org/accessible_ocw_ontology#Communication_Disability"/>
+        <GenericOntology:User_has_Disability rdf:resource="http://purl.org/accessible_ocw_ontology#Deafness"/>
+        <GenericOntology:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">34</GenericOntology:hasAge>
+        <GenericOntology:hasEducation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master&apos;s degree in law</GenericOntology:hasEducation>
+        <GenericOntology:hasJob rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employed</GenericOntology:hasJob>
+        <GenericOntology:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barcelona, Spain</GenericOntology:hasLocation>
+        <GenericOntology:hasMaritalStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Married</GenericOntology:hasMaritalStatus>
+        <GenericOntology:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomasa Almaraz</GenericOntology:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#MSAA -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#MSAA">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#MacOSXAccessibility -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#MacOSXAccessibility">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#MathML -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#MathML">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#NIMAS -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#NIMAS">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Nemeth -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Nemeth">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#OEBPS -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#OEBPS">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#PDF -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#PDF">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#UIAutomation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#UIAutomation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#alternativeText -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#alternativeText">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#auditory -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#auditory">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#auditory_caption -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#auditory_caption">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+        <adaptationType_adaptationRequest rdf:resource="http://purl.org/accessible_ocw_ontology#captions"/>
+        <adaptationType_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#auditory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#auditory_textual -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#auditory_textual">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+        <accessMode_adaptionRequest rdf:resource="http://purl.org/accessible_ocw_ontology#textual"/>
+        <accessMode_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#auditory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#auditory_verbatim -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#auditory_verbatim">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired"/>
+        <adaptationDetail_adaptationRequest rdf:resource="http://purl.org/accessible_ocw_ontology#verbatim"/>
+        <adaptationDetail_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#auditory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#backgroundColour -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#backgroundColour">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#braille -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#braille">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#captions -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#captions">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#color -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#color">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#color_textual -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#color_textual">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+        <accessMode_adaptionRequest rdf:resource="http://purl.org/accessible_ocw_ontology#textual"/>
+        <accessMode_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#cursorPresentation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#cursorPresentation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#e-book -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#e-book">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#enhanced -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#enhanced">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#enriched -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#enriched">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#EducationalComplexityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#flashing -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#flashing">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#fontFace -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#fontFace">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#fontSize -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#fontSize">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#fontWeight -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#fontWeight">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#foregroundColour -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#foregroundColour">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#fullKeyboardControl -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#fullKeyboardControl">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#fullMouseControl -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#fullMouseControl">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#haptic -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#haptic">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#highContrast -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#highContrast">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#highlightPresentation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#highlightPresentation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#iAccessible2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#iAccessible2">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#itemsize -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#itemsize">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#layout -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#layout">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#letterSpacing -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#letterSpacing">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#lineHeight -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#lineHeight">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#longDescription -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#longDescription">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#motionSimulation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#motionSimulation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#olfactory -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#olfactory">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#olfactoryHazard -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#olfactoryHazard">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#orientation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#orientation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#position -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#position">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#realTime -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#realTime">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#recorded -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#recorded">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#signLanguage -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#signLanguage">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#simplified -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#simplified">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#EducationalComplexityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#sound -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#sound">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#structurePresentation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#structurePresentation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#symbolic -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#symbolic">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#synthesized -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#synthesized">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#tactile -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#tactile">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#textOnImage -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#textOnImage">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#textual -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#textual">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#transcript -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#transcript">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#verbatim -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#verbatim">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#visual -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#visual">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+        <accessMode_adaptionRequest rdf:resource="http://purl.org/accessible_ocw_ontology#textual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#visual_alternativeText -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#visual_alternativeText">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+        <adaptationType_adaptationRequest rdf:resource="http://purl.org/accessible_ocw_ontology#alternativeText"/>
+        <adaptationType_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#visual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#visual_audioDiscription -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#visual_audioDiscription">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+        <adaptationType_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#visual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#visual_textual -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#visual_textual">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+        <accessMode_adaptionRequest rdf:resource="http://purl.org/accessible_ocw_ontology#textual"/>
+        <accessMode_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#visual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#wordSpacing -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#wordSpacing">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
