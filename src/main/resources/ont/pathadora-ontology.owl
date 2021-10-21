@@ -129,6 +129,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#facultyArea -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#facultyArea">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topAcademicProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#facultyHasDepartment -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#facultyHasDepartment">
@@ -355,6 +363,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#passionArea -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#passionArea">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topStudentProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#passionateOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#passionateOf">
@@ -379,6 +397,16 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topAcademicProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedFaculty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedFaculty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topAcademicProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty"/>
     </owl:ObjectProperty>
     
 
@@ -3704,10 +3732,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Commerce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Commerce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Commerce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Engineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Engineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Engineering"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Entrepreneurship -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Entrepreneurship">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Entrepreneurship"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Law -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Law">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Law"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Management -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Management">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Management"/>
     </owl:NamedIndividual>
     
 
@@ -3720,10 +3780,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Medicine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Medicine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Medicine"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Nature -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Nature">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Nature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Science"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A_SocialStudies"/>
     </owl:NamedIndividual>
     
 
@@ -3777,7 +3861,6 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Architecture_DA"/>
         <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Art"/>
         <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Math"/>
-        <pathadora-ontology:departmentOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Engineering_Architecture"/>
     </owl:NamedIndividual>
     
 
@@ -3797,7 +3880,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Biomedical_Neuromotor_Science">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Biomedical_and_Neuromotor_Sciences_DIBINEM"/>
         <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Nature"/>
-        <pathadora-ontology:departmentOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Sciences"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Health&amp;Fitness"/>
     </owl:NamedIndividual>
     
 
@@ -3807,7 +3890,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Chemistry">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Chemistry_Giacomo_Ciamician_CHIM"/>
         <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Math"/>
-        <pathadora-ontology:departmentOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Sciences"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
     </owl:NamedIndividual>
     
 
@@ -3816,7 +3899,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Civil_Chemical">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Civil_Chemical_Environmental_and_Materials_Engineering_DICAM"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Engineering"/>
         <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Math"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
     </owl:NamedIndividual>
     
 
@@ -3825,6 +3910,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Classical_Philology">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Classical_Philology_and_Italian_Studies_FICLIT"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Art"/>
     </owl:NamedIndividual>
     
 
@@ -3833,6 +3919,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Computer_Science">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Computer_Science_and_Engineering_DISI"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Engineering"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Tech"/>
     </owl:NamedIndividual>
     
 
@@ -3841,6 +3930,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Cultural_Heritage">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Cultural_Heritage_BC"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Art"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies"/>
     </owl:NamedIndividual>
     
 
@@ -3849,6 +3940,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Economics">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Economics_DSE"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Commerce"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Entrepreneurship"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Management"/>
     </owl:NamedIndividual>
     
 
@@ -3857,6 +3951,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Education_Studies">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Education_Studies_Giovanni_Maria_Bertin_EDU"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies"/>
     </owl:NamedIndividual>
     
 
@@ -3865,6 +3960,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Electrical_Electronic">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Electrical_Electronic_and_Information_Engineering_Guglielmo_Marconi_DEI"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Engineering"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Math"/>
     </owl:NamedIndividual>
     
 
@@ -3881,6 +3978,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_History_Culture">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#History_and_Cultures_DiSCi"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Art"/>
     </owl:NamedIndividual>
     
 
@@ -3889,6 +3987,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Industrial_Engineering">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Industrial_Engineering_DIN"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Engineering"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
     </owl:NamedIndividual>
     
 
@@ -3897,6 +3997,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Legal_Studies">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Legal_Studies_DSG"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Law"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies"/>
     </owl:NamedIndividual>
     
 
@@ -3913,6 +4015,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Management">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Management_DiSA"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Commerce"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Management"/>
     </owl:NamedIndividual>
     
 
@@ -3921,6 +4025,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Mathematics">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Mathematics_MAT"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Math"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
     </owl:NamedIndividual>
     
 
@@ -3929,6 +4035,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Medical_Science">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Medical_and_Surgical_Sciences_DIMEC"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Medicine"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
     </owl:NamedIndividual>
     
 
@@ -3937,6 +4045,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Pharmacy">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy_and_Biotechnology_FaBiT"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Medicine"/>
     </owl:NamedIndividual>
     
 
@@ -3945,6 +4054,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Philosophy">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Philosophy_and_Communication_Studies_FILCOM"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Art"/>
     </owl:NamedIndividual>
     
 
@@ -3953,6 +4063,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Political_Social_Science">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Political_and_Social_Sciences_SPS"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Law"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies"/>
     </owl:NamedIndividual>
     
 
@@ -3961,6 +4073,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Psychology">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Psychology_Renzo_Canestrari_PSI"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies"/>
     </owl:NamedIndividual>
     
 
@@ -3969,6 +4082,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Sociology">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Sociology_and_Business_Law_SDE"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies"/>
     </owl:NamedIndividual>
     
 
@@ -3977,6 +4091,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Statistical_Sciences">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Statistical_Sciences_Paolo_Fortunati_STAT"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Math"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
     </owl:NamedIndividual>
     
 
@@ -3985,6 +4101,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_The_Arts">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#The_Arts_DAR"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Art"/>
     </owl:NamedIndividual>
     
 
@@ -3993,6 +4110,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Veterinary">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Veterinary_Medical_Sciences_DIMEVET"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Animals"/>
+        <pathadora-ontology:departmentArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Nature"/>
     </owl:NamedIndividual>
     
 
@@ -4001,6 +4120,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Agriculture_Veterinary">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Fac_of_Agriculture_Veterninary_Medicine"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Animals"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Nature"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Agricultural"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Veterinary"/>
     </owl:NamedIndividual>
@@ -4011,6 +4132,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Arts_Humanities_Cultural_Heritage">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Fac_of_Arts_Humanities_Cultural_Heritage"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Art"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Classical_Philology"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Cultural_Heritage"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_History_Culture"/>
@@ -4023,6 +4145,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Economics_Management_Statistics">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Fac_of_Economics_Management"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Engineering"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Entrepreneurship"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Management"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Economics"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Management"/>
     </owl:NamedIndividual>
@@ -4033,6 +4158,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Engineering_Architecture">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Fac_of_Engineering_Architecture"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Engineering"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Architecture"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Computer_Science"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Electrical_Electronic"/>
@@ -4046,6 +4173,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Foreign_Languages_Literature_Interpretation">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Fac_of_Foreign_Lanugages_Literature_interpretation_Translation"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Law"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Classical_Philology"/>
     </owl:NamedIndividual>
     
@@ -4064,6 +4193,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Medicine_Surgery">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Medicine_Surgery"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Medicine"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Medical_Science"/>
     </owl:NamedIndividual>
     
@@ -4073,6 +4203,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Pharmacy_Biotechnologies_Sport_Sciences">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Fac_of_Pharmacy_Biotechnologies_Sport_Sciences"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Health&amp;Fitness"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Biomedical_Neuromotor_Science"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Life_Quality_Studies"/>
     </owl:NamedIndividual>
@@ -4083,6 +4215,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Political_Sciences">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Fac_of_Political_Sciences"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies"/>
     </owl:NamedIndividual>
     
 
@@ -4091,6 +4224,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Psychology_Education_Sciences">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Fac_of_Psychology_Education_Sciences"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_SocialStudies"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Education_Studies"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Psychology"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Sociology"/>
@@ -4102,6 +4237,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_of_Sciences">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Fac_of_Science"/>
+        <pathadora-ontology:facultyArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Science"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Biological_Geological"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Chemistry"/>
         <pathadora-ontology:facultyHasDepartment rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Mathematics"/>
@@ -4186,6 +4322,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Animals">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Animals"/>
+        <pathadora-ontology:passionArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Animals"/>
     </owl:NamedIndividual>
     
 
@@ -4194,6 +4331,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Art">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Art"/>
+        <pathadora-ontology:passionArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Art"/>
     </owl:NamedIndividual>
     
 
@@ -4202,6 +4340,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Astrology">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Astrology"/>
+        <pathadora-ontology:passionArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Astrology"/>
     </owl:NamedIndividual>
     
 
@@ -4210,6 +4349,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Entrepreneurship">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Entrepreneurship"/>
+        <pathadora-ontology:passionArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Entrepreneurship"/>
     </owl:NamedIndividual>
     
 
@@ -4218,6 +4358,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Math">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Math"/>
+        <pathadora-ontology:passionArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Math"/>
     </owl:NamedIndividual>
     
 
@@ -4226,6 +4367,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Nature">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Nature"/>
+        <pathadora-ontology:passionArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Nature"/>
     </owl:NamedIndividual>
     
 
@@ -4234,6 +4376,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Tech">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Tecnology"/>
+        <pathadora-ontology:passionArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Tech"/>
     </owl:NamedIndividual>
     
 
@@ -4324,25 +4467,19 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Health&amp;Fitness -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Health&amp;Fitness -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Health&amp;Fitness">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Health&amp;Fitness"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Health&amp;Fitness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Health&amp;Fitness"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology/1.0#Antonio_null -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Health&amp;Fitness -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology/1.0#Antonio_null">
-        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
-        <pathadora-ontology:canRead rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
-        <pathadora-ontology:canWrite rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
-        <pathadora-ontology:hasPassed rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
-        <pathadora-ontology1:hasGoals rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
-        <pathadora-ontology:hasSurname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antonio</pathadora-ontology:hasSurname>
-        <pathadora-ontology1:hasDegree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</pathadora-ontology1:hasDegree>
-        <pathadora-ontology1:surname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luir</pathadora-ontology1:surname>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Health&amp;Fitness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Health&amp;Fitness"/>
+        <pathadora-ontology:passionArea rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Health&amp;Fitness"/>
     </owl:NamedIndividual>
     
 
