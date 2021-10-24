@@ -80,13 +80,5 @@ public class ParserUtils {
         }
     }
 
-    public static String listToJson(List<String> list){
-        StringBuilder builder = new StringBuilder("\t\t{");
-        for(int i=0; i<list.size(); i++){
-            builder.append("\t\t\t'"+i+"': ").append("'"+list.get(i)+"',\n\t\t\t");
-        }
-        String res = builder.substring(0, builder.length() - 5).concat("\n\t\t\t}");
-        return  res;
-    }
 
 }

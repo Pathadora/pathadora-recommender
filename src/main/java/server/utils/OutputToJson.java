@@ -2,7 +2,6 @@ package server.utils;
 
 import java.util.*;
 
-import static server.utils.ParserUtils.listToJson;
 
 public class OutputToJson {
 
@@ -13,14 +12,14 @@ public class OutputToJson {
         response.append("'learner': ")
                 .append("'"+learner+"'")
                 .append(",\n")
-                .append("'departments': {\n");
+                .append("'data': {\n");
 
         for (Map.Entry v : data.entrySet()) {
             indexDep++;
             response.append("\t'" + indexDep + "'")
-                    .append(":{\n\t\t 'department': ")
+                    .append(":{\n\t\t'faculty': ")
                     .append("'" + v.getKey() + "',\n\t\t")
-                    .append("'faculties' :\n")
+                    .append("'departments' :{\n")
                     .append(listToJson((List<String>) v.getValue()))
                     .append("\n");
         }
@@ -40,7 +39,7 @@ public class OutputToJson {
         for(int i=0; i< output.size(); i++){
             response.append("\t\t'" + i + "': {\n");
             for (Map.Entry courseInfo : output.entrySet()) {
-                response.append("\t\t\t'" + courseInfo.getKey() + "': '"+courseInfo.getValue()+"',\n");
+                response.append("\t\t'" + courseInfo.getKey() + "': '"+courseInfo.getValue()+"',\n");
             }
             response.setLength(response.length()-2);
             response.append("\n\t\t},\n");
@@ -50,6 +49,16 @@ public class OutputToJson {
     }
 
     public void resourcesJsonResponse(){}
+
+    public static String listToJson(List<String> list){
+        StringBuilder builder = new StringBuilder("");
+        for(int i=0; i<list.size(); i++){
+            builder.append("\t\t\t\t\t'"+i+"': ").append("'"+list.get(i)+"',\n");
+        }
+        String res = builder.substring(0, builder.length() - 5).concat("\n\t\t}");
+        return  res;
+    }
+
 
     public static void main(String... args){
         Map<String, String> courseData = new HashMap<>();

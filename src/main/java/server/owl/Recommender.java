@@ -19,28 +19,64 @@ public class Recommender {
         this.manager = m;
     }
 
-    public Map<String, List<String>> recommendedDepartments(String individual, String property) throws OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
-        new RuleBasedModel(manager).applyFacultiesAndDepartmentsRule();
 
+    public Map<String, List<String>> recommendedFacultiesAndDepartments(String individual) throws OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
+        RuleBasedModel model = new RuleBasedModel(manager);
+        Map<String, List<String>> output = new HashMap<>();
+
+        List<String> faculties = recommendedFaculties(model, individual);
+
+        for(String fac : faculties){
+            System.out.println("Faculty: " + fac);
+            List<String> departments =  recommendedDepartmentsOfFaculty(model, individual, fac);
+            output.put(fac, departments);
+        }
+
+        return output;
+    }
+
+
+
+    private List<String> recommendedFaculties(RuleBasedModel model, String learner) throws OWLOntologyCreationException, SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
+        model.applyRule("Faculties", Rules.facultyRule());
+
+        Set<OWLNamedIndividual> values = extractIndividualsBy(learner, "recommendedFaculty");
+        List<String> output = new ArrayList<>();
+        for (OWLNamedIndividual value : values) {
+            System.out.println("value " + value.toString());
+            output.add(value.toString().split("#")[1].replaceFirst(".$","")); // remove last char >
+        }
+        return output;
+    }
+
+
+    private List<String> recommendedDepartmentsOfFaculty(RuleBasedModel model, String learner, String faculty) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
+        model.applyRule("Departments", Rules.departmentRule(learner, faculty));
+
+        Set<OWLNamedIndividual> values = extractIndividualsBy(learner, "recommendedDepartment");
+        List<String> output = new ArrayList<>();
+        for (OWLNamedIndividual value : values) {
+            System.out.println("value " + value.toString());
+            output.add(value.toString().split("#")[1].replaceFirst(".$",""));
+        }
+        return output;
+    }
+
+
+    private Set<OWLNamedIndividual> extractIndividualsBy(String individual, String property) throws OWLOntologyCreationException {
         OntologyEntities entities = new OntologyEntities(manager);
         OWLOntology ontology = manager.pathadoraOnt();
         OWLObjectProperty objProperty = (OWLObjectProperty) entities.ontologyEntitiesBy(OBJECT_PROPERTIES, property);
         OWLNamedIndividual namedInd = (OWLNamedIndividual) entities.ontologyEntitiesBy(INDIVIDUALS, individual);
 
-        //Collection<OWLIndividual> ind = Searcher.values(manager.pathadoraOnt().getAxioms(AxiomType.OBJECT_PROPERTY_ASSERTION), recommendedDepartment);
-
-        Map<String, List<String>> output = new HashMap<>();
         OWLReasonerFactory reasonerFactory = new StructuralReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
-        Set<OWLNamedIndividual> values = reasoner.getObjectPropertyValues(namedInd, objProperty).getFlattened();
 
-        for (OWLNamedIndividual value : values) {
-            System.out.println("value " + value.toString());
-            output.put(value.toString().split("#")[1], recommendedFaculties());
-        }
-
-        return output;
+        return reasoner.getObjectPropertyValues(namedInd, objProperty).getFlattened();
     }
+
+
+
 
     public Map<String, String> recommendCourses(){
         Map<String, String> courseData = new HashMap<>();
@@ -50,16 +86,6 @@ public class Recommender {
         courseData.put("scientific area", "CHIM/03");
 
         return courseData;
-    }
-
-    private List<String> recommendedFaculties(){
-        List<String> faculties = new ArrayList<>();
-        faculties.add("Faculty 1 Random");
-        faculties.add("Faculty 2 Random");
-        faculties.add("Faculty 3 Random");
-        faculties.add("Faculty 4 Random");
-
-        return faculties;
     }
 
 }

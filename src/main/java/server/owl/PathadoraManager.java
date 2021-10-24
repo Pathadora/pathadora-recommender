@@ -70,10 +70,9 @@ public class PathadoraManager {
     public String recommendFacDep(Map<String, String> params) throws OWLOntologyCreationException, SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
         Recommender rec = new Recommender(this);
         String learner = params.get("learner");
-        System.out.println("leaner: " + learner);
 
         if(params.containsValue(FAC_DEP_GENERATION)){
-            Map<String, List<String>> output = rec.recommendedDepartments(learner, "recommendedDepartment");
+            Map<String, List<String>> output = rec.recommendedFacultiesAndDepartments(learner);
             System.out.println("output : " +output.size());
             return OutputToJson.facDepJsonResponse(learner, output);
         }else {
