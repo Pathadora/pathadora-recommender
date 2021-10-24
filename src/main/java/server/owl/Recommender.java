@@ -19,7 +19,6 @@ public class Recommender {
         this.manager = m;
     }
 
-
     public Map<String, List<String>> recommendedFacultiesAndDepartments(String individual) throws OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
         RuleBasedModel model = new RuleBasedModel(manager);
         Map<String, List<String>> output = new HashMap<>();
@@ -34,7 +33,6 @@ public class Recommender {
 
         return output;
     }
-
 
 
     private List<String> recommendedFaculties(RuleBasedModel model, String learner) throws OWLOntologyCreationException, SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
@@ -76,15 +74,12 @@ public class Recommender {
     }
 
 
-
-
     public Map<String, String> recommendCourses(){
         Map<String, String> courseData = new HashMap<>();
         courseData.put("course", "Chemistry");
         courseData.put("period", "I");
         courseData.put("type", "basic learning activities");
         courseData.put("scientific area", "CHIM/03");
-
         return courseData;
     }
 

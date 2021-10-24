@@ -67,7 +67,6 @@ class PathadoraHandler implements HttpHandler {
                     System.out.println("Entered");
                     String parameters = paramsToString(new BufferedReader(new InputStreamReader(exchange.getRequestBody())));
                     String response = computeRequest(parameters);
-                    System.out.println("Final  : " +response);
 
                     final byte[] rawResponseBody = response.getBytes(CHARSET);
                     exchange.sendResponseHeaders(STATUS_OK, rawResponseBody.length);
@@ -101,7 +100,7 @@ class PathadoraHandler implements HttpHandler {
                     return pathadoraManager.addIndividual(params);
                 case FAC_DEP_GENERATION:
                     System.out.println("FAC_DEP_GENERATION was requested");
-                    return pathadoraManager.recommendFacDep(params);
+                    return pathadoraManager.recommendFacAndDep(params);
                 case COURSE_GENERATION:
                     System.out.println("COURSE_GENERATION was requested");
                     pathadoraManager.recommendCourses(params);
@@ -113,6 +112,10 @@ class PathadoraHandler implements HttpHandler {
                 default:
                     return "This is my response";
             }
-        }else { return "This is my response"; }
+        }
+        else {
+            System.out.println("Error on request");
+            return String.valueOf(STATUS_ERROR);
+        }
     }
 }

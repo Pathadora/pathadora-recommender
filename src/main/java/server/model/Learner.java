@@ -1,7 +1,5 @@
 package server.model;
 
-import server.utils.Parameters;
-
 import java.util.Map;
 
 public class Learner {

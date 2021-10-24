@@ -11,11 +11,11 @@ import org.swrlapi.sqwrl.exceptions.SQWRLException;
 
 public class RuleBasedModel {
 
-    PathadoraManager pathadoraManager;
+    private final PathadoraManager pathadoraManager;
+
     public RuleBasedModel(PathadoraManager manager) {
         this.pathadoraManager = manager;
     }
-
 
     public void applyRule(String ruleName, String rule) throws OWLOntologyCreationException, SWRLBuiltInException, SWRLParseException, OWLOntologyStorageException {
         SWRLRuleEngine engine = initializeQueryEngine();
@@ -36,6 +36,7 @@ public class RuleBasedModel {
     private SWRLRuleEngine initializeRuleEngine() throws OWLOntologyCreationException {
         return SWRLAPIFactory.createSWRLRuleEngine(pathadoraManager.pathadoraOnt());
     }
+
 
     private SQWRLQueryEngine initializeQueryEngine() throws OWLOntologyCreationException {
         return SWRLAPIFactory.createSQWRLQueryEngine(pathadoraManager.pathadoraOnt());

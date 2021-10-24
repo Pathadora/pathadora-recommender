@@ -1,8 +1,6 @@
 package server.owl;
 
 import org.semanticweb.owlapi.model.*;
-
-import java.io.IOException;
 import java.util.Map;
 
 import static server.utils.ParserUtils.*;
@@ -24,8 +22,6 @@ public class Inserter {
         OntologyEntities entities = new OntologyEntities(manager);
         OWLOntology pathadora = manager.pathadoraOnt();
 
-        System.out.println("Entered add learner");
-
         Map<String, String> obj_prop = paramsToMapByKey(OBJECT_PROPERTIES, params);
         Map<String, String> ann_prop = paramsToMapByKey(ANNOTATION_PROPERTIES, params);
 
@@ -36,14 +32,9 @@ public class Inserter {
         defineAnnotationPropertyAssertions(ann_prop, df, tIndividual, entities, pathadora);
 
         ontManager.saveOntology(pathadora);
-        System.out.println("Adding action done");
         return String.valueOf(STATUS_OK);
     }
 
-
-    public String addCourse(Map<String, String> p) {
-        return String.valueOf(STATUS_OK);
-    }
 
     public String addLesson(Map<String, String> p) {
         return String.valueOf(STATUS_OK);
@@ -90,7 +81,5 @@ public class Inserter {
             ontManager.addAxiom(pathadora, propertyAssertion);
         }
     }
-
-
 
 }

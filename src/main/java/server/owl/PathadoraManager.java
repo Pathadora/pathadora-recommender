@@ -56,9 +56,6 @@ public class PathadoraManager {
         switch (params.get(TYPE)) {
             case LEARNER:
                 return indInserter.addLearner(params);
-            case COURSE:
-                /** TODO: maybe no need to insert new courses */
-                return indInserter.addCourse(params);
             case LESSON:
                 return indInserter.addLesson(params);
             default:
@@ -67,7 +64,7 @@ public class PathadoraManager {
         return String.valueOf(STATUS_OK);
     }
 
-    public String recommendFacDep(Map<String, String> params) throws OWLOntologyCreationException, SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
+    public String recommendFacAndDep(Map<String, String> params) throws OWLOntologyCreationException, SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
         Recommender rec = new Recommender(this);
         String learner = params.get("learner");
 
@@ -91,19 +88,8 @@ public class PathadoraManager {
         Recommender rec = new Recommender(this);
     }
 
-    public OWLOntology pathadoraOnt() throws OWLOntologyCreationException {
-        return this.pathadora;
-        // return manager.loadOntologyFromOntologyDocument(new File(PATHADORA_LOCAL_PATH));
-    }
+    public OWLOntology pathadoraOnt() { return this.pathadora; }
 
-    public OWLOntologyManager getManager() {
-        return manager;
-    }
-
-    public static void main(String... args) throws OWLOntologyCreationException, OWLOntologyStorageException {
-        System.out.println("Pathadora manager");
-        PathadoraManager manager = new PathadoraManager();
-
-    }
+    public OWLOntologyManager getManager() { return manager;}
 
 }
