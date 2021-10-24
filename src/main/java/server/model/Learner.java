@@ -17,9 +17,7 @@ public class Learner {
         this.birthdate = birthdate;
     }
 
-    public Learner(Parameters p){
-         buildLearner(p);
-    }
+
     public Learner(Map<String, String > p){
         buildLearner(p);
     }
@@ -40,15 +38,7 @@ public class Learner {
         return birthdate;
     }
 
-    /* TODO: handle incorrect params list */
-    public Learner buildLearner(final Parameters params){
-        return new Learner(
-                params.searchByParam("name"),
-                params.searchByParam("lastname"),
-                params.searchByParam("gender"),
-                params.searchByParam("birthdate"));
 
-    }
 
     public Learner buildLearner(final Map<String, String> params){
         return new Learner(

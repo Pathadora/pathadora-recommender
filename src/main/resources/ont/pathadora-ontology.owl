@@ -4352,7 +4352,9 @@
         <pathadora-ontology:gender rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Gender_Male"/>
         <pathadora-ontology:hasDoctoral rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Doctoral"/>
         <pathadora-ontology:isPathDriven rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Goal_PathDriven"/>
-        <pathadora-ontology:passionateOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Nature"/>
+        <pathadora-ontology:passionateOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Art"/>
+        <pathadora-ontology:passionateOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Math"/>
+        <pathadora-ontology:passionateOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Nature"/>
         <pathadora-ontology:speaks rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Language_Italian"/>
         <pathadora-ontology:speaks rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Languange_English"/>
         <GenericOntology:hasEducation>High School</GenericOntology:hasEducation>
