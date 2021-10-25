@@ -2,14 +2,13 @@ package server.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.jsonldjava.shaded.com.google.common.base.Splitter;
+import org.semanticweb.owlapi.model.OWLNamedIndividual;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static server.utils.PathadoraConfig.ServerConfig.CHARSET;
 
@@ -34,6 +33,13 @@ public class ParserUtils {
         return new HashMap<>();
     }
 
+    public static List<String> individualsToList(Set<OWLNamedIndividual> indSet){
+        List<String> output = new ArrayList<>();
+        for (OWLNamedIndividual value : indSet) {
+            output.add(value.toString().split("#")[1].replaceFirst(".$",""));
+        }
+        return output;
+    }
 
     public static String paramsToString(BufferedReader br) throws IOException {
         String line;

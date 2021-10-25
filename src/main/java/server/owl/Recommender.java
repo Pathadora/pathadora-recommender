@@ -6,10 +6,10 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
-
+import static server.utils.ParserUtils.*;
+import static server.utils.PathadoraConfig.OntologyConfig.*;
 import java.util.*;
 
-import static server.utils.PathadoraConfig.OntologyConfig.*;
 
 public class Recommender {
 
@@ -23,11 +23,10 @@ public class Recommender {
         RuleBasedModel model = new RuleBasedModel(manager);
         Map<String, List<String>> output = new HashMap<>();
 
-        List<String> faculties = recommendedFaculties(model, individual);
-
+        List<String> faculties = recommend(model,
+                "Faculties", Rules.facultyRule(),  "recommendedFaculty", individual);
         for(String fac : faculties){
-            System.out.println("Faculty: " + fac);
-            List<String> departments =  recommendedDepartmentsOfFaculty(model, individual, fac);
+            List<String> departments = recommendedDepartment(model, individual, fac);
             output.put(fac, departments);
         }
 
@@ -35,29 +34,18 @@ public class Recommender {
     }
 
 
-    private List<String> recommendedFaculties(RuleBasedModel model, String learner) throws OWLOntologyCreationException, SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
-        model.applyRule("Faculties", Rules.facultyRule());
-
-        Set<OWLNamedIndividual> values = extractIndividualsBy(learner, "recommendedFaculty");
-        List<String> output = new ArrayList<>();
-        for (OWLNamedIndividual value : values) {
-            System.out.println("value " + value.toString());
-            output.add(value.toString().split("#")[1].replaceFirst(".$","")); // remove last char >
-        }
-        return output;
+    private List<String> recommend(RuleBasedModel model, String ruleName, String rule, String property, String learner) throws OWLOntologyCreationException, SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
+        model.applyRule(ruleName, rule);
+        Set<OWLNamedIndividual> values = extractIndividualsBy(learner, property);
+        return individualsToList(values);
     }
 
 
-    private List<String> recommendedDepartmentsOfFaculty(RuleBasedModel model, String learner, String faculty) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
-        model.applyRule("Departments", Rules.departmentRule(learner, faculty));
-
-        Set<OWLNamedIndividual> values = extractIndividualsBy(learner, "recommendedDepartment");
-        List<String> output = new ArrayList<>();
-        for (OWLNamedIndividual value : values) {
-            System.out.println("value " + value.toString());
-            output.add(value.toString().split("#")[1].replaceFirst(".$",""));
-        }
-        return output;
+    private List<String> recommendedDepartment(RuleBasedModel model, String learner, String faculty) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
+        List<String> recDeps = recommend(model,
+                "Departments", Rules.departmentRule(learner,faculty), "recommendedDepartment", learner);
+        recDeps.retainAll(individualsToList(extractIndividualsBy(faculty, "facultyHasDepartment")));
+        return recDeps;
     }
 
 
