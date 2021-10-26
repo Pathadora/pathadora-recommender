@@ -67,20 +67,18 @@ public class PathadoraManager {
     public String recommendFacAndDep(Map<String, String> params) throws OWLOntologyCreationException, SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
         Recommender rec = new Recommender(this);
         String learner = params.get("learner");
-
-        if(params.containsValue(FAC_DEP_GENERATION)){
-            Map<String, List<String>> output = rec.recommendedFacultiesAndDepartments(learner);
-            System.out.println("output : " +output.size());
-            return OutputToJson.facDepJsonResponse(learner, output);
-        }else {
-            System.out.println("Error on action");
-            return String.valueOf(STATUS_ERROR);
-        }
+        String degree = params.get("degree");
+        Map<String, List<String>> output = rec.recommendedFaculties(learner, degree);
+        return OutputToJson.facDepJsonResponse(learner, output);
     }
 
-    public String recommendCourses(Map<String, String> params){
+    public String recommendCourses(Map<String, String> params) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
         Recommender rec = new Recommender(this);
-        Map<String, String> output = rec.recommendCourses();
+        String learner = params.get("learner");
+        String degree = params.get("degree");
+        String year = params.get("year");
+        String faculty = params.get("faculty");
+        Map<String, String> output = rec.recommendCourses(learner, faculty, degree, year);
         return OutputToJson.coursesJsonResponse(output);
     }
 

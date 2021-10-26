@@ -17,9 +17,9 @@ public class OutputToJson {
         for (Map.Entry v : data.entrySet()) {
             indexDep++;
             response.append("\t'" + indexDep + "'")
-                    .append(":{\n\t\t'faculty': ")
+                    .append(":{\n\t\t'department': ")
                     .append("'" + v.getKey() + "',\n\t\t")
-                    .append("'departments' :{\n")
+                    .append("'faculties' :{\n")
                     .append(listToJson((List<String>) v.getValue()))
                     .append("\n");
         }
