@@ -3943,99 +3943,81 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DIMEC_Nursing_DIMEC -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIN_Advanced_automotive_engineering -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DIMEC_Nursing_DIMEC">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Nursing_DIMEC"/>
-        <pathadora-ontology:isBachelorCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DIMES_Techniques_of_medical_radiology_imaging_and_radiotherapy -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DIMES_Techniques_of_medical_radiology_imaging_and_radiotherapy">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Techniques_of_medical_radiology_imaging_and_radiotherapy"/>
-        <pathadora-ontology:isBachelorCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DIN_Advanced_automotive_engineering -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DIN_Advanced_automotive_engineering">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIN_Advanced_automotive_engineering">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Advanced_automotive_engineering"/>
         <pathadora-ontology:isMasterCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Master"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DIN_Mechanical_engineerig_DIN -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIN_Mechanical_engineerig_DIN -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DIN_Mechanical_engineerig_DIN">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIN_Mechanical_engineerig_DIN">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Mechanical_engineerig_DIN"/>
         <pathadora-ontology:isMasterCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Master"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DISA_Business_Economics -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DISA_Business_Economics -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DISA_Business_Economics">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DISA_Business_Economics">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Business_Economics"/>
         <pathadora-ontology:isBachelorCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DISA_Financial_Markets_and_Institutions -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DISA_Financial_Markets_and_Institutions -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DISA_Financial_Markets_and_Institutions">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DISA_Financial_Markets_and_Institutions">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Financial_Markets_and_Institutions"/>
         <pathadora-ontology:isMasterCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Master"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DISA_Management_and_Marketing -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DISA_Management_and_Marketing -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DISA_Management_and_Marketing">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DISA_Management_and_Marketing">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Management_and_Marketing"/>
         <pathadora-ontology:isBachelorCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DISA_Management_for_Social_Economy -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DISA_Management_for_Social_Economy -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DISA_Management_for_Social_Economy">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DISA_Management_for_Social_Economy">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Management_for_Social_Economy"/>
         <pathadora-ontology:isMasterCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Master"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DISCI_Cultural_Anthropology_and_Ethnology -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DISCI_Cultural_Anthropology_and_Ethnology -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_DISCI_Cultural_Anthropology_and_Ethnology">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DISCI_Cultural_Anthropology_and_Ethnology">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Cultural_Anthropology_and_Ethnology"/>
         <pathadora-ontology:isMasterCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Master"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_FaBiT_Pharmaceutical_Biotechnology -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_FaBiT_Pharmaceutical_Biotechnology -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_FaBiT_Pharmaceutical_Biotechnology">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_FaBiT_Pharmaceutical_Biotechnology">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmaceutical_Biotechnology"/>
         <pathadora-ontology:isMasterCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Master"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_FaBiT_Pharmacy -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_FaBiT_Pharmacy -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Coruse_FaBiT_Pharmacy">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_FaBiT_Pharmacy">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy"/>
         <pathadora-ontology:isMasterCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Master"/>
     </owl:NamedIndividual>
@@ -4616,6 +4598,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIMEC_Nursing_DIMEC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIMEC_Nursing_DIMEC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Nursing_DIMEC"/>
+        <pathadora-ontology:isBachelorCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIMEC_Nursing_and_Midwifery_Sciences -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIMEC_Nursing_and_Midwifery_Sciences">
@@ -4674,6 +4665,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIMES_Nursing">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Nursing"/>
+        <pathadora-ontology:isBachelorCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIMES_Techniques_of_medical_radiology_imaging_and_radiotherapy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_DIMES_Techniques_of_medical_radiology_imaging_and_radiotherapy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Techniques_of_medical_radiology_imaging_and_radiotherapy"/>
         <pathadora-ontology:isBachelorCourse rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
     </owl:NamedIndividual>
     
