@@ -25704,7 +25704,9 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#University"/>
     </owl:Class>
     
-
+	<owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+	</owl:Class> 
 
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#CourseType -->
 
@@ -25712,6 +25714,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#University"/>
     </owl:Class>
     
+
 
 
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Criminology_for_Investigation_and_Security -->
@@ -28510,12 +28513,6 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#COURSE_SSD_MAT">
         <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#MAT"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA"/>
     
 
 

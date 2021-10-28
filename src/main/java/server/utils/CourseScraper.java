@@ -42,6 +42,8 @@ public class CourseScraper {
             }
             output.add(courseData);
         }
+
+
         String coursesToOwl = parseToOWL(output,  faculty, year, obligatory);
 
         writer.append(coursesToOwl);
@@ -52,14 +54,14 @@ public class CourseScraper {
 
 
     private static String parseToOWL(List<Map<String, String>> output, String faculty, int year,  String obligatory){
-        System.out.println("output" + output.size() + "\n\n\n\n\n\n\n\n\"");
-
         String courseC = "";
         String courseSSDClass  = "";
         String updateOwl = "";
+        String courseSSDIndividual = "";
+
 
         for(Map<String, String> course : output) {
-            for (Map.Entry e : course.entrySet()) {
+            if (course.get("course") != null || course.get("scientificArea") != null) {
                 String courseName = course.get("course");
                 String period = course.get("period");
                 String type = course.get("type");
@@ -72,30 +74,37 @@ public class CourseScraper {
                 System.out.println("scientificArea: " + scientificArea);
                 System.out.println("");
 
-                courseC += " <owl:Class rdf:about=\""+ pathadoraUrl + courseName + "\">\n" +
-                        "           <rdfs:subClassOf rdf:resource=\""+pathadoraUrl + faculty + "\"/>\n" +
-                        "</owl:Class>";
+                if (!scientificArea.isEmpty()) {
+                    courseC += " <owl:Class rdf:about=\"" + pathadoraUrl + courseName + "\">\n" +
+                            "           <rdfs:subClassOf rdf:resource=\"" + pathadoraUrl + faculty + "\"/>\n" +
+                            "</owl:Class>\n";
 
-                courseSSDClass += " <owl:Class rdf:about=\""+pathadoraUrl + scientificArea+"\"> \n" +
-                        "<rdfs:subClassOf rdf:resource=\""+pathadoraUrl+"CourseSSD\"/> </owl:Class>\n";
+                    courseSSDClass += " <owl:Class rdf:about=\"" + pathadoraUrl + scientificArea + "\"> \n" +
+                            "<rdfs:subClassOf rdf:resource=\"" + pathadoraUrl + "CourseSSD\"/> </owl:Class>\n";
 
-                updateOwl +=" \n\n" +
-                          "<owl:NamedIndividual rdf:about=\"" + pathadoraUrl + "Course_" + courseName + "\">\n" +
-                                "<rdf:type rdf:resource=\"" + pathadoraUrl + courseName + "\"/>\n" +
-                                "<" + pathadoraOWL + "courseSSD rdf:resource=\"" + pathadoraUrl + "Course_SSD_" + scientificArea + "\"/>\n" +
-                                "<" + pathadoraOWL + "courseType rdf:resource=\"" + pathadoraUrl + "Course_Type_"+type+"\"/>\n" +
-                                "<" + pathadoraOWL + "isCourseObligatory rdf:resource=\"" + pathadoraUrl + obligatory+"\"/>\n" +
-                                "<" + pathadoraOWL + "courseCFU rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">" + cfu + "</" + pathadoraOWL + "courseCFU>\n" +
-                                "<" + pathadoraOWL + "coursePeriod rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">" + period + "</" + pathadoraOWL + "coursePeriod>\n" +
-                                "<" + pathadoraOWL + "courseYear rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">" + year + "</" + pathadoraOWL + "courseYear>\n" +
-                           "</owl:NamedIndividual>\n";
+                    courseSSDIndividual += "<owl:NamedIndividual rdf:about=\"" + pathadoraUrl + "Course_SSD_" + scientificArea + "\">\n" +
+                            "        <rdf:type rdf:resource=\"" + pathadoraUrl + scientificArea + "\"/>\n" +
+                            "</owl:NamedIndividual>";
 
-                System.out.println(courseC);
-                System.out.println(courseSSDClass);
-                System.out.println(updateOwl);
+
+                    updateOwl += " \n\n" +
+                            "<owl:NamedIndividual rdf:about=\"" + pathadoraUrl + "Course_" + courseName + "\">\n" +
+                            "<rdf:type rdf:resource=\"" + pathadoraUrl + courseName + "\"/>\n" +
+                            "<" + pathadoraOWL + "courseSSD rdf:resource=\"" + pathadoraUrl + "Course_SSD_" + scientificArea + "\"/>\n" +
+                            "<" + pathadoraOWL + "courseType rdf:resource=\"" + pathadoraUrl + "Course_Type_" + type + "\"/>\n" +
+                            "<" + pathadoraOWL + "isCourseObligatory rdf:resource=\"" + pathadoraUrl + obligatory + "\"/>\n" +
+                            "<" + pathadoraOWL + "courseCFU rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">" + cfu + "</" + pathadoraOWL + "courseCFU>\n" +
+                            "<" + pathadoraOWL + "coursePeriod rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">" + period + "</" + pathadoraOWL + "coursePeriod>\n" +
+                            "<" + pathadoraOWL + "courseYear rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">" + year + "</" + pathadoraOWL + "courseYear>\n" +
+                            "</owl:NamedIndividual>\n";
+
+                }
             }
         }
-        return courseC + "\n " + courseSSDClass + "\n "  + updateOwl;
+        System.out.println(courseC);
+        System.out.println(courseSSDClass);
+        System.out.println(updateOwl);
+        return courseSSDIndividual + " \n " +  courseC + "\n " + courseSSDClass + "\n "  + updateOwl + "\n ";
     }
 
 
@@ -110,22 +119,23 @@ public class CourseScraper {
 
 
     private String getKeyByHeader(int index, int rowSize){
-        if(rowSize>=5)
+        if(rowSize>=5) {
             if (index == 1) return "course";
-        if (index == 2) return "period";
-        if (index == 3) return "type";
-        if (index == 4) return "scientificArea";
-        if (index == 5) return "cfu";
-        else return "Default";
+            if (index == 2) return "period";
+            if (index == 3) return "type";
+            if (index == 4) return "scientificArea";
+            if (index == 5) return "cfu";
+        }
+        return "Default";
     }
 
 
     public static void main(String[] args) throws IOException {
         new CourseScraper().extractCourses(
-                0,
+                2,
                 "https://corsi.unibo.it/laurea/EconomiaMarketingAgroIndustriale/insegnamenti/piano/2021/5833/000/000/2021",
                 "Marketing_and_Economics_of_the_Agro-Industrial_System",
-                    1,
+                    2,
                 "yes"
                 );
     }
