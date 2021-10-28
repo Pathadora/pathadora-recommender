@@ -28,7 +28,8 @@ import static server.utils.PathadoraConfig.ServerConfig.*;
  */
 public class PathadoraServer {
 
-    public static void initializeAndStart() throws IOException, OWLOntologyCreationException, OWLOntologyStorageException {
+    public static void initializeAndStart() throws IOException,
+            OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
         final HttpServer server = HttpServer.create(new InetSocketAddress(HOSTNAME, PORT), BACKLOG);
         final PathadoraManager pathadoraManager = new PathadoraManager();
 
@@ -90,7 +91,8 @@ class PathadoraHandler implements HttpHandler {
         }
     }
 
-    private String computeRequest(String paramsString) throws IOException, OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
+    private String computeRequest(String paramsString) throws IOException,
+            OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
         Map<String, String> params = paramsToMap(paramsString);
 
         if (params.containsKey(ACTION)) {

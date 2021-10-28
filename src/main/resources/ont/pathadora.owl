@@ -2337,39 +2337,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#courseCFU -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#courseCFU">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topAcademicProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#coursePeriod -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#coursePeriod">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topAcademicProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#courseSSD -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#courseSSD">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topAcademicProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#courseType -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#courseType">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topAcademicProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#departmentArea -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#departmentArea">
@@ -2384,7 +2351,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#departmentHasFaculty">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topAcademicProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#facultyOfDepartment"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
     </owl:ObjectProperty>
     
@@ -2615,14 +2581,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#isBachelorFaculty">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topAcademicProperty"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#isCourseObligatory -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#isCourseObligatory">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#owl:topAcademicProperty"/>
     </owl:ObjectProperty>
     
 
@@ -5972,30 +5930,6 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#area">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#University"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#courseCFU -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#courseCFU">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#coursePeriod -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#coursePeriod">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#courseYear -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#courseYear">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -24732,22 +24666,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#A -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#A">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseType"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#AGR -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#A_Animals -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#A_Animals">
@@ -24957,12 +24875,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Answers -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Answers"/>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Anthropology_Religions_Oriental_Civilizations -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Anthropology_Religions_Oriental_Civilizations">
@@ -25089,22 +25001,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Automation_Engineering_DEI">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DEI"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#B -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#B">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseType"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#BIO -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIO">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/>
     </owl:Class>
     
 
@@ -25497,22 +25393,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#C -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#C">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseType"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#CHIM -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIM">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Chemical_Innovation_and_Regulation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Chemical_Innovation_and_Regulation">
@@ -25557,14 +25437,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Chemistry_and_Materials_Chemistry">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_CHIM"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Chimica -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Chimica">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
     </owl:Class>
     
 
@@ -25698,22 +25570,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#University"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#CourseType -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseType">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#University"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Criminology_for_Investigation_and_Security -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Criminology_for_Investigation_and_Security">
@@ -25751,14 +25607,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CurrentPursuingCourse">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AccademicInformation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#D -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#D">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseType"/>
     </owl:Class>
     
 
@@ -25865,14 +25713,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Doctoral">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#DegreeType"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#E -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#E">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseType"/>
     </owl:Class>
     
 
@@ -26168,14 +26008,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#F -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#F">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_DISTAL_Agricultural_Technology -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_DISTAL_Agricultural_Technology">
@@ -26399,14 +26231,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Human_nutrition_well-being_and_health">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_QUVI"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#IUS -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#IUS">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/>
     </owl:Class>
     
 
@@ -26690,14 +26514,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Local_and_global_development">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_SPS"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#MAT -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#MAT">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/>
     </owl:Class>
     
 
@@ -27062,14 +26878,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Maybe -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Maybe">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Answers"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Mechanical_engineerig_DIN -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Mechanical_engineerig_DIN">
@@ -27211,14 +27019,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Neuroscience_and_neuropsychological_rehabilitation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_PSI"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#No -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#No">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Answers"/>
     </owl:Class>
     
 
@@ -27541,22 +27341,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Resource_Economics_and_Sustainable_Development">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Master_DSE"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#S -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#S">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseType"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#SECS-S -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#SECS-S">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/>
     </owl:Class>
     
 
@@ -28039,14 +27823,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Yes -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Yes">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Answers"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#for_Life_Quality_Studies_QUVI -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#for_Life_Quality_Studies_QUVI">
@@ -28505,104 +28281,51 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#COURSE_SSD_MAT -->
+    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_FaBiT_Genomics -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#COURSE_SSD_MAT">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#MAT"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA"/>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_BIO -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_BIO">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#BIO"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_CHIM -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_CHIM">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIM"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_IUS -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_IUS">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#IUS"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#A"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#B"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_C -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_C">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#C"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_D -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_D">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#D"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_E -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_E">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#E"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_F -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_F">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#F"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_S -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_S">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#S"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_FaBiT_Genomics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FaBiT"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Genomics"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy_and_Biotechnology_FaBiT"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#University"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_BC"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_BIBINEM"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_BiGeA"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_CHIM"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DA"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DAR"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DEI"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DICAM"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEC"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMES"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIMEVET"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DIN"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISA"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISCI"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISI"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DISTAL"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSE"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_DSG"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_EDU"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FICLIT"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FILCOM"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FaBiT"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_LILEC"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_MAT"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_PSI"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_QUVI"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_SDE"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_SPS"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_STAT"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <pathadora-ontology:isBachelorFaculty rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
+        <owl1:topAcademicProperty rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
     </owl:NamedIndividual>
     
 
@@ -31959,20 +31682,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_FaBiT_Genomics -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_FaBiT_Genomics">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Bachelor_FaBiT"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Departments"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Genomics"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Pharmacy_and_Biotechnology_FaBiT"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#University"/>
-        <pathadora-ontology:isBachelorFaculty rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
-        <owl1:topAcademicProperty rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Bachelor"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_FaBiT_Health_Biology -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Faculty_FaBiT_Health_Biology">
@@ -33179,7 +32888,6 @@
         <pathadora-ontology:hasGolas rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Goal_PathDriven"/>
         <pathadora-ontology:isPathDriven rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Goal_PathDriven"/>
         <pathadora-ontology:passionateOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Tech"/>
-        <pathadora-ontology:passionateOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Passion_Nature"/>
         <pathadora-ontology:speaks rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Language_Italian"/>
         <pathadora-ontology:speaks rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Languange_English"/>
         <owl1:topStudentProperty rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Area_Tech"/>
@@ -33545,19 +33253,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#no -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#no">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#No"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/learning-path/pathadora-ontology#yes -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#yes">
-        <rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Yes"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
     
 
 
@@ -34069,6 +33767,676 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#isScoreDriven"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#isTimeDriven"/>
         </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#dep">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#passion">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#sArea">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#school">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended Faculties</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedDepartment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#dep"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#facultyOfDepartment"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedFaculty"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended Schools</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#passionateOf"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#passion"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#passionArea"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#passion"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#sArea"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#schoolArea"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#school"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#sArea"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedSchool"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#school"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schools</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#passionateOf"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#passion"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#passionArea"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#passion"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#sArea"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#schoolArea"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#school"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#sArea"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedSchool"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#school"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recommended Departments</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedSchool"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#school"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#schoolHasDepartment"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#school"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculties</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Agricultural"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#facultyOfDepartment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedFaculty"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Albert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculties</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Classical_Philology"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#facultyOfDepartment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedFaculty"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Albert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculties</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Cultural_Heritage"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#facultyOfDepartment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedFaculty"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Albert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculties</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_History_Culture"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#facultyOfDepartment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedFaculty"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Albert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculties</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_The_Arts"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#facultyOfDepartment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedFaculty"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Albert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculties</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#learner"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Department_Veterinary"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#facultyOfDepartment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedFaculty"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Albert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#fac"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Departments</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedSchool"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Albert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#school"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#schoolHasDepartment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#School_of_Agriculture_Veterinary"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Albert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Departments</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedSchool"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Albert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#school"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#schoolHasDepartment"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#School_of_Arts_Humanities_Cultural_Heritage"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#recommendedDepartment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Albert"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#depart"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
 </rdf:RDF>
 

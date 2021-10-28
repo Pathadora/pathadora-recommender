@@ -17,7 +17,8 @@ public class RuleBasedModel {
         this.pathadoraManager = manager;
     }
 
-    public void applyRule(String ruleName, String rule) throws OWLOntologyCreationException, SWRLBuiltInException, SWRLParseException, OWLOntologyStorageException {
+    public void applyRule(String ruleName, String rule) throws OWLOntologyCreationException,
+            SWRLBuiltInException, SWRLParseException, OWLOntologyStorageException {
         SWRLRuleEngine engine = initializeQueryEngine();
         engine.createSWRLRule(ruleName, rule);
         engine.infer();

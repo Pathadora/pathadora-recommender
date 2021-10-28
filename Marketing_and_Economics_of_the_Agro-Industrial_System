@@ -1,0 +1,752 @@
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_MATEMATICA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_MATEMATICA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_MATEMATICA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_MATEMATICA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_MATEMATICA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#METODI_STATISTICI_E_DATA_MINING">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#METODI_STATISTICI_E_DATA_MINING">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#METODI_STATISTICI_E_DATA_MINING">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#METODI_STATISTICI_E_DATA_MINING">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#METODI_STATISTICI_E_DATA_MINING">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_BIOLOGIA_VEGETALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_BIOLOGIA_VEGETALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_BIOLOGIA_VEGETALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_BIOLOGIA_VEGETALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_BIOLOGIA_VEGETALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGRONOMIA_GENERALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGRONOMIA_GENERALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGRONOMIA_GENERALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGRONOMIA_GENERALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGRONOMIA_GENERALE">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class> <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA">
+           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Marketing_and_Economics_of_the_Agro-Industrial_System"/>
+</owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIM"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIM"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIM"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIM"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIM"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#MAT"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#MAT"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#MAT"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#MAT"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#MAT"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#SECS-S"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#SECS-S"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#SECS-S"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#SECS-S"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#SECS-S"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIO"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIO"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIO"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIO"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#BIO"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+ <owl:Class rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#AGR"> 
+<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CourseSSD"/> </owl:Class>
+
+  
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_CHIM"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_CHIM"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_CHIM"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_CHIM"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_CHIM"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_MATEMATICA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_MATEMATICA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_MAT"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_MATEMATICA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_MATEMATICA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_MAT"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_MATEMATICA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_MATEMATICA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_MAT"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_MATEMATICA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_MATEMATICA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_MAT"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_MATEMATICA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_MATEMATICA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_MAT"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_METODI_STATISTICI_E_DATA_MINING">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#METODI_STATISTICI_E_DATA_MINING"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_SECS-S"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_METODI_STATISTICI_E_DATA_MINING">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#METODI_STATISTICI_E_DATA_MINING"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_SECS-S"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_METODI_STATISTICI_E_DATA_MINING">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#METODI_STATISTICI_E_DATA_MINING"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_SECS-S"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_METODI_STATISTICI_E_DATA_MINING">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#METODI_STATISTICI_E_DATA_MINING"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_SECS-S"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_METODI_STATISTICI_E_DATA_MINING">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#METODI_STATISTICI_E_DATA_MINING"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_SECS-S"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#PRINCIPI_DI_ECONOMIA_ED_ECONOMIA_DELL'IMPRESA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#BIOLOGIA_VEGETALE_E_GENETICA_AGRARIA_(C.I.)"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_BIOLOGIA_VEGETALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_BIOLOGIA_VEGETALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_BIO"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_BIOLOGIA_VEGETALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_BIOLOGIA_VEGETALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_BIO"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_BIOLOGIA_VEGETALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_BIOLOGIA_VEGETALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_BIO"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_BIOLOGIA_VEGETALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_BIOLOGIA_VEGETALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_BIO"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_BIOLOGIA_VEGETALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_BIOLOGIA_VEGETALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_BIO"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#ELEMENTI_DI_GENETICA_AGRARIA_E_MIGLIORAMENTO_GENETICO"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_A"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA_E_AGRONOMIA_GENERALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_AGRONOMIA_GENERALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AGRONOMIA_GENERALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_AGRONOMIA_GENERALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AGRONOMIA_GENERALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_AGRONOMIA_GENERALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AGRONOMIA_GENERALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_AGRONOMIA_GENERALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AGRONOMIA_GENERALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_AGRONOMIA_GENERALE">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#AGRONOMIA_GENERALE"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA_AGRARIA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA_AGRARIA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA_AGRARIA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA_AGRARIA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
+ 
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_CHIMICA_AGRARIA">
+<rdf:type rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#CHIMICA_AGRARIA"/>
+<pathadora-ontology:courseSSD rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_SSD_AGR"/>
+<pathadora-ontology:courseType rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#Course_Type_B"/>
+<pathadora-ontology:isCourseObligatory rdf:resource="http://www.semanticweb.org/learning-path/pathadora-ontology#yes"/>
+<pathadora-ontology:courseCFU rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pathadora-ontology:courseCFU>
+<pathadora-ontology:coursePeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pathadora-ontology:coursePeriod>
+<pathadora-ontology:courseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pathadora-ontology:courseYear>
+</owl:NamedIndividual>
