@@ -66,7 +66,7 @@ public class CourseScraper {
         for(Map<String, String> course : output) {
             if (course.get("course") != null  || course.get("scientificArea") != null) {
                 String courseName = course.get("course");
-                String period = course.get("period");
+                String period = "0"; //course.get("period");
                 String type = course.get("type");
                 if(type==null){type = "DEFAULT";}
 
@@ -146,19 +146,18 @@ public class CourseScraper {
 
 
     public static void main(String[] args) throws IOException {
-        String url = "https://corsi.unibo.it/2cycle/euHealthEconomicsManagement/course-structure-diagram/piano/2021/8880/000/000/1";
-        String faculty = "Health_Economics_and_Management";
+        String url = "https://corsi.unibo.it/magistrale/EconomiaCommercio/insegnamenti/piano/2021/0905/000/000/2020";
+        String faculty = "Economics_and_Commerce";
         final String yes = "yes";
         final String no = "no";
         final String italian = "Italian";
         final String english = "English";
 
-        List<String> languages = Arrays.asList(english);
+        List<String> languages = Arrays.asList(italian);
 
         new CourseScraper().extractCourses(0, url, faculty,1, yes,  languages);
-        new CourseScraper().extractCourses(1, url, faculty,1, no,  languages);
-        new CourseScraper().extractCourses(4, url, faculty,2, yes,  languages);
-        new CourseScraper().extractCourses(6, url, faculty,2, no,  languages);
+        new CourseScraper().extractCourses(6, url, faculty,2, yes,  languages);
+
 
 
     }
