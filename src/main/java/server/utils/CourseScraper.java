@@ -141,14 +141,14 @@ public class CourseScraper {
 
 
     public static void main(String[] args) throws IOException {
-        String url = "https://corsi.unibo.it/magistrale/DidatticaComunicazioneScienzeNaturali/insegnamenti/piano/2021/5704/B93/000/2021";
-        String faculty = "Teaching_and_Communication_of_Natural_Sciences";
+        String url = "https://corsi.unibo.it/2cycle/ScienceForConservation/course-structure-diagram/piano/2021/8537/000/000/2021";
+        String faculty = "Science_for_the_Conservation-Restoration_of_Cultural_Heritage";
         final String yes = "yes";
         final String no = "no";
         final String italian = "Italian";
         final String english = "English";
 
-        List<String> languages = Arrays.asList(italian);
+        List<String> languages = Arrays.asList(english);
 
         new CourseScraper().extractCourses(0,url,faculty,1,yes,  languages);
         new CourseScraper().extractCourses(1,url,faculty,2,yes,  languages);
