@@ -68,6 +68,8 @@ public class CourseScraper {
                 String courseName = course.get("course");
                 String period = course.get("period");
                 String type = course.get("type");
+                if(type==null){type = "DEFAULT";}
+
                 String scientificArea = course.get("scientificArea");
                 String cfu = course.get("cfu");
 
@@ -127,20 +129,25 @@ public class CourseScraper {
 
 
     private String getKeyByHeader(int index, int rowSize){
-        if(rowSize>=5) {
+        if(rowSize>=6) {
             if (index == 1) return "course";
             if (index == 2) return "period";
             if (index == 3) return "type";
             if (index == 4) return "scientificArea";
             if (index == 5) return "cfu";
+        }else {
+            if (index == 1) return "course";
+            if (index == 2) return "period";
+            if (index == 3) return "scientificArea";
+            if (index == 4) return "cfu";
         }
         return "Default";
     }
 
 
     public static void main(String[] args) throws IOException {
-        String url = "https://corsi.unibo.it/2cycle/DigitalTransformationManagement/course-structure-diagram/piano/2021/5815/000/000/2021";
-        String faculty = "Digital_transformation_management";
+        String url = "https://corsi.unibo.it/2cycle/euHealthEconomicsManagement/course-structure-diagram/piano/2021/8880/000/000/1";
+        String faculty = "Health_Economics_and_Management";
         final String yes = "yes";
         final String no = "no";
         final String italian = "Italian";
@@ -150,8 +157,9 @@ public class CourseScraper {
 
         new CourseScraper().extractCourses(0, url, faculty,1, yes,  languages);
         new CourseScraper().extractCourses(1, url, faculty,1, no,  languages);
-        new CourseScraper().extractCourses(2, url, faculty,2, yes,  languages);
-        new CourseScraper().extractCourses(3, url, faculty,2, no,  languages);
+        new CourseScraper().extractCourses(4, url, faculty,2, yes,  languages);
+        new CourseScraper().extractCourses(6, url, faculty,2, no,  languages);
+
 
     }
 
