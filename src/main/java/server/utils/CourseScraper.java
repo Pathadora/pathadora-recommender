@@ -9,16 +9,13 @@ import org.jsoup.select.Elements;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CourseScraper {
     static String pathadoraUrl = "http://www.semanticweb.org/learning-path/pathadora-ontology#";
     static String pathadoraOWL = "pathadora-ontology:";
 
-    public List<Map<String, String>> extractCourses(int index, String url, String faculty, int year, String obligatory) throws IOException {
+    public List<Map<String, String>> extractCourses(int index, String url, String faculty, int year, String obligatory, List<String> languages) throws IOException {
         List<Map<String, String>> output = new ArrayList<>();
 
         FileWriter writer = new FileWriter(index+"_"+faculty);
@@ -50,7 +47,7 @@ public class CourseScraper {
         }
 
 
-        String coursesToOwl = parseToOWL(output,  faculty, year, obligatory);
+        String coursesToOwl = parseToOWL(output,  faculty, year, obligatory, languages);
 
         writer.append(coursesToOwl);
         writer.close();
@@ -59,7 +56,7 @@ public class CourseScraper {
     }
 
 
-    private static String parseToOWL(List<Map<String, String>> output, String faculty, int year,  String obligatory){
+    private static String parseToOWL(List<Map<String, String>> output, String faculty, int year,  String obligatory, List<String> languages){
         String courseC = "";
         String courseSSDClass  = "";
         String updateOwl = "";
@@ -93,6 +90,11 @@ public class CourseScraper {
                             "        <rdf:type rdf:resource=\"" + pathadoraUrl + scientificArea + "\"/>\n" +
                             "</owl:NamedIndividual>";
 
+                    String languagesOWL = "";
+                    for(String lang : languages){
+                            languagesOWL +=  "<" + pathadoraOWL +"courseLanguage rdf:resource=\""+pathadoraUrl+"Language_"+lang+"\"/>\n";
+
+                    }
 
                     updateOwl += " \n\n" +
                             "<owl:NamedIndividual rdf:about=\"" + pathadoraUrl + "Course_" + courseName + "\">\n" +
@@ -103,6 +105,7 @@ public class CourseScraper {
                             "<" + pathadoraOWL + "courseCFU rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">" + cfu + "</" + pathadoraOWL + "courseCFU>\n" +
                             "<" + pathadoraOWL + "coursePeriod rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">" + period + "</" + pathadoraOWL + "coursePeriod>\n" +
                             "<" + pathadoraOWL + "courseYear rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">" + year + "</" + pathadoraOWL + "courseYear>\n" +
+                                languagesOWL+
                             "</owl:NamedIndividual>\n";
 
                 }
@@ -138,14 +141,18 @@ public class CourseScraper {
 
 
     public static void main(String[] args) throws IOException {
-        String url = "https://corsi.unibo.it/magistrale/IngegneriaSistemiProcessiEdilizi/insegnamenti/piano/2021/8829/597/000/2021";
-        String faculty = "Process_and_building_systems_engineering";
+        String url = "https://corsi.unibo.it/magistrale/DidatticaComunicazioneScienzeNaturali/insegnamenti/piano/2021/5704/B93/000/2021";
+        String faculty = "Teaching_and_Communication_of_Natural_Sciences";
         final String yes = "yes";
         final String no = "no";
+        final String italian = "Italian";
+        final String english = "English";
 
-        new CourseScraper().extractCourses(0,url,faculty,1,yes);
-        new CourseScraper().extractCourses(1,url,faculty,2,yes);
-        new CourseScraper().extractCourses(4,url,faculty,2,no);
+        List<String> languages = Arrays.asList(italian);
+
+        new CourseScraper().extractCourses(0,url,faculty,1,yes,  languages);
+        new CourseScraper().extractCourses(1,url,faculty,2,yes,  languages);
+        new CourseScraper().extractCourses(2,url,faculty,2,no,  languages);
 
     }
 
