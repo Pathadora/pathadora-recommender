@@ -6,9 +6,9 @@
     <uri id="Imports Wizard Entry" name="http://purl.org/ontology/edu/eso/0.9" uri="eso.ttl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/ontology/edu/eao/0.9" uri="eao.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1635419742517" name="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl" uri="lom_ontology_ods.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1635419742517" name="http://purl.org/accessible_ocw_ontology" uri="accessible.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1635419742517" name="duplicate:http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24" uri="pathadora-ontology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1635419742517" name="duplicate:http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24" uri="pathadora.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1635493030854" name="http://data.opendiscoveryspace.eu/lom_ontology_ods.owl" uri="lom_ontology_ods.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1635493030854" name="http://purl.org/accessible_ocw_ontology" uri="accessible.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1635493030854" name="duplicate:http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24" uri="pathadora-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1635493030854" name="duplicate:http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24" uri="pathadora.owl"/>
     </group>
 </catalog>

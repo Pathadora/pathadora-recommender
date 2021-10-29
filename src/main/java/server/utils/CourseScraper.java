@@ -21,7 +21,7 @@ public class CourseScraper {
     public List<Map<String, String>> extractCourses(int index, String url, String faculty, int year, String obligatory) throws IOException {
         List<Map<String, String>> output = new ArrayList<>();
 
-        FileWriter writer = new FileWriter(faculty);
+        FileWriter writer = new FileWriter(index+"_"+faculty);
         Document doc = Jsoup.connect(url).get();
         Element tableElement = doc.select("table").get(index);
 
@@ -34,7 +34,11 @@ public class CourseScraper {
 
             Map<String, String> courseData = new HashMap<>();
             for (int j = 1; j < rowItems.size(); j++) {
-                courseData.put(getKeyByHeader(j, rowItems.size()), cleanString(rowItems.get(j).text()));
+                String key = getKeyByHeader(j, rowItems.size());
+                String value = cleanString(key,rowItems.get(j).text());
+                courseData.put(key, value);
+                System.out.println(""+key +" value: "+ value);
+
 
                 if (j != rowItems.size() - 1) {
                   //  writer.append(',');
@@ -72,6 +76,7 @@ public class CourseScraper {
                 System.out.println("period: " + period);
                 System.out.println("type: " + type);
                 System.out.println("scientificArea: " + scientificArea);
+                System.out.println("cfu: " + cfu);
                 System.out.println("");
 
                 if (!scientificArea.isEmpty()) {
@@ -104,14 +109,14 @@ public class CourseScraper {
         System.out.println(courseC);
         System.out.println(courseSSDClass);
         System.out.println(updateOwl);
-        return courseSSDIndividual + " \n " +  courseC + "\n " + courseSSDClass + "\n "  + updateOwl + "\n ";
+        return " \n " +  courseC + "\n " + courseSSDClass + "\n "  + updateOwl + "\n " + courseSSDIndividual;
     }
 
 
-    private String cleanString(String data){
-        if(data.length()<2) return data; // do not ignore period (one char)
+    private String cleanString(String key, String data){
+        if(key.equals("period") || key.equals("cfu") || key.equals("year")) return data; // do not ignore period (one char)
 
-        String cleaned = data.replaceAll(" ", "_").replaceAll("[0-9, /]", "");
+        String cleaned = data.replaceAll(" ", "_").replaceAll("[0-9, /']", "");
 
         if(cleaned.length()>1 && cleaned.substring(0,1).contains("_")) return cleaned.substring(1);
         else return cleaned;
@@ -131,13 +136,14 @@ public class CourseScraper {
 
 
     public static void main(String[] args) throws IOException {
-        new CourseScraper().extractCourses(
-                2,
-                "https://corsi.unibo.it/laurea/EconomiaMarketingAgroIndustriale/insegnamenti/piano/2021/5833/000/000/2021",
-                "Marketing_and_Economics_of_the_Agro-Industrial_System",
-                    2,
-                "yes"
-                );
+        String url = "https://corsi.unibo.it/2cycle/PreciseSustainableAgriculture/course-structure-diagram/piano/2021/5705/B90/000/2021";
+        String faculty = "Precise_and_Sustainable_Agriculture";
+        final String yes = "yes";
+        final String no = "no";
+
+        new CourseScraper().extractCourses(0,url,faculty,1,yes);
+        new CourseScraper().extractCourses(2,url,faculty,2,yes);
+        new CourseScraper().extractCourses(3,url,faculty,2,no);
     }
 
 }
