@@ -36,7 +36,9 @@ public class CourseScraper {
             for (int j = 1; j < rowItems.size(); j++) {
                 String key = getKeyByHeader(j, rowItems.size());
                 String value = cleanString(key,rowItems.get(j).text());
-                courseData.put(key, value);
+                if(!value.isEmpty()) {
+                    courseData.put(key, value);
+                }
                 System.out.println(""+key +" value: "+ value);
 
 
@@ -65,7 +67,7 @@ public class CourseScraper {
 
 
         for(Map<String, String> course : output) {
-            if (course.get("course") != null || course.get("scientificArea") != null) {
+            if (course.get("course") != null  || course.get("scientificArea") != null) {
                 String courseName = course.get("course");
                 String period = course.get("period");
                 String type = course.get("type");
@@ -79,7 +81,7 @@ public class CourseScraper {
                 System.out.println("cfu: " + cfu);
                 System.out.println("");
 
-                if (!scientificArea.isEmpty()) {
+                if (scientificArea != null) {
                     courseC += " <owl:Class rdf:about=\"" + pathadoraUrl + courseName + "\">\n" +
                             "           <rdfs:subClassOf rdf:resource=\"" + pathadoraUrl + faculty + "\"/>\n" +
                             "</owl:Class>\n";
@@ -136,14 +138,15 @@ public class CourseScraper {
 
 
     public static void main(String[] args) throws IOException {
-        String url = "https://corsi.unibo.it/2cycle/PreciseSustainableAgriculture/course-structure-diagram/piano/2021/5705/B90/000/2021";
-        String faculty = "Precise_and_Sustainable_Agriculture";
+        String url = "https://corsi.unibo.it/magistrale/IngegneriaSistemiProcessiEdilizi/insegnamenti/piano/2021/8829/597/000/2021";
+        String faculty = "Process_and_building_systems_engineering";
         final String yes = "yes";
         final String no = "no";
 
         new CourseScraper().extractCourses(0,url,faculty,1,yes);
-        new CourseScraper().extractCourses(2,url,faculty,2,yes);
-        new CourseScraper().extractCourses(3,url,faculty,2,no);
+        new CourseScraper().extractCourses(1,url,faculty,2,yes);
+        new CourseScraper().extractCourses(4,url,faculty,2,no);
+
     }
 
 }
