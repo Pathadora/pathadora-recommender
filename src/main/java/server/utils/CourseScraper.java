@@ -111,9 +111,7 @@ public class CourseScraper {
                 }
             }
         }
-        System.out.println(courseC);
-        System.out.println(courseSSDClass);
-        System.out.println(updateOwl);
+
         return " \n " +  courseC + "\n " + courseSSDClass + "\n "  + updateOwl + "\n " + courseSSDIndividual;
     }
 
@@ -141,23 +139,19 @@ public class CourseScraper {
 
 
     public static void main(String[] args) throws IOException {
-        String url = "https://corsi.unibo.it/magistrale/civile/insegnamenti/piano/2021/0930/856/000/2020";
-        String faculty = "Civil_engineering_DICAM";
+        String url = "https://corsi.unibo.it/2cycle/DigitalTransformationManagement/course-structure-diagram/piano/2021/5815/000/000/2021";
+        String faculty = "Digital_transformation_management";
         final String yes = "yes";
         final String no = "no";
         final String italian = "Italian";
         final String english = "English";
 
-        List<String> languages = Arrays.asList(italian);
+        List<String> languages = Arrays.asList(english);
 
         new CourseScraper().extractCourses(0, url, faculty,1, yes,  languages);
         new CourseScraper().extractCourses(1, url, faculty,1, no,  languages);
-
         new CourseScraper().extractCourses(2, url, faculty,2, yes,  languages);
-        new CourseScraper().extractCourses(8, url, faculty,2, no,   languages);
-        new CourseScraper().extractCourses(10, url, faculty,2, no,   languages);
-
-
+        new CourseScraper().extractCourses(3, url, faculty,2, no,  languages);
 
     }
 
