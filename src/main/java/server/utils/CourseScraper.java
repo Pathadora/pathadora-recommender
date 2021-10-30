@@ -146,8 +146,8 @@ public class CourseScraper {
 
 
     public static void main(String[] args) throws IOException {
-        String url = "https://corsi.unibo.it/magistrale/EconomiaCommercio/insegnamenti/piano/2021/0905/000/000/2020";
-        String faculty = "Economics_and_Commerce";
+        String url = "https://corsi.unibo.it/magistralecu/MedicinaVeterinaria/insegnamenti/piano/2021/8617/000/000/2020";
+        String faculty = "Veterinary_medicine";
         final String yes = "yes";
         final String no = "no";
         final String italian = "Italian";
@@ -156,8 +156,8 @@ public class CourseScraper {
         List<String> languages = Arrays.asList(italian);
 
         new CourseScraper().extractCourses(0, url, faculty,1, yes,  languages);
-        new CourseScraper().extractCourses(6, url, faculty,2, yes,  languages);
-
+        new CourseScraper().extractCourses(1, url, faculty,2, yes,  languages);
+        new CourseScraper().extractCourses(2, url, faculty,3, yes,  languages);
 
 
     }
