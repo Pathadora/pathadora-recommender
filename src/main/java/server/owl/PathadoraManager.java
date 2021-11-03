@@ -19,11 +19,10 @@ public class PathadoraManager {
 
     private OWLOntologyManager manager;
     private OWLOntology pathadora;
-    private Inserter inserter;
-    private Recommender recommender;
+    //private Inserter inserter;
+    //private Recommender recommender;
 
-    public PathadoraManager() throws OWLOntologyCreationException,
-            OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
+    public PathadoraManager() throws OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
         initialize();
     }
 
@@ -51,11 +50,11 @@ public class PathadoraManager {
 
         manager.saveOntology(pathadora);
 
-        inserter = new Inserter(this);
-        recommender = new Recommender(this);
+        //inserter = new Inserter(this);
+        //recommender = new Recommender(this);
     }
 
-    public String addIndividual(Map<String, String> params) throws OWLOntologyCreationException,
+    public String addIndividual(Inserter inserter, Map<String, String> params) throws OWLOntologyCreationException,
             OWLOntologyStorageException {
         //Inserter indInserter = new Inserter(this);
         switch (params.get(TYPE)) {
@@ -69,23 +68,22 @@ public class PathadoraManager {
         return String.valueOf(STATUS_OK);
     }
 
-    public String recommendFacAndDep(Map<String, String> params) throws OWLOntologyCreationException,
+    public String recommendFacAndDep(Recommender recommender, Map<String, String> params) throws OWLOntologyCreationException,
             SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
-        Recommender rec = new Recommender(this);
+        //Recommender rec = new Recommender(this);
         String learner = params.get("learner");
         String degree = params.get("degree");
-        Map<String, List<String>> output = rec.recommendedFaculties(learner, degree);
+        Map<String, List<String>> output = recommender.recommendedFaculties(learner, degree);
         return OutputToJson.facDepJsonResponse(learner, output);
     }
 
-    public String recommendCourses(Map<String, String> params) throws SWRLParseException,
+    public String recommendCourses(Recommender recommender, Map<String, String> params) throws SWRLParseException,
             OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
-        Recommender rec = new Recommender(this);
         String learner = params.get("learner");
-        String degree = params.get("degree");
+        String degree = params.get("degree"); // todo USELESS
         String year = params.get("year");
         String faculty = params.get("faculty");
-        Map<String, String> output = rec.recommendedCourses(learner, faculty, degree, year);
+        Map<String, String> output = recommender.recommendedCourses(learner, faculty, degree, year);
         return OutputToJson.coursesJsonResponse(output);
     }
 

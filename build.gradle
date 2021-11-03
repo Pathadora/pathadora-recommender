@@ -5,26 +5,23 @@ plugins {
 
 repositories {
     jcenter()
+    maven {
+        url "https://maven.stardog.com"
+    }
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.jgrapht/jgrapht
-    /*implementation 'org.jgrapht:jgrapht:1.5.1'
-    def jgraphtVersion = '0.9.1'
-    compile "org.jgrapht:jgrapht-core:$jgraphtVersion" */
+
     implementation 'edu.stanford.swrl:swrlapi:2.0.11'
     implementation 'edu.stanford.swrl:swrlapi-drools-engine:2.0.11'
-    //compile group: 'net.sourceforge.owlapi', name: 'org.semanticweb.hermit', version: '1.3.8.500'
-
     implementation 'org.jsoup:jsoup:1.14.3'
-
-
-
-    compile group: 'org.glassfish.metro', name: 'webservices-extra', version: '2.1.1-b01'
-
-    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.29'
-
+    implementation group: 'com.stardog', name: 'stardog-spring', version: '7.1.0'
     implementation 'org.json:json:20171018'
+
+    compile "com.complexible.stardog:client-http:7.1.0@pom"
+    compile group: 'org.openrdf.sesame', name: 'sesame-queryresultio-api', version: '4.1.2'
+    compile group: 'org.glassfish.metro', name: 'webservices-extra', version: '2.1.1-b01'
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.29'
 
     testImplementation 'junit:junit:4.12'
 }

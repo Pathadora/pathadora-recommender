@@ -8,7 +8,9 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
+import server.owl.Inserter;
 import server.owl.PathadoraManager;
+import server.owl.Recommender;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -42,9 +44,15 @@ public class PathadoraServer {
 class PathadoraHandler implements HttpHandler {
 
     private final PathadoraManager pathadoraManager;
+    private final Inserter inserter;
+    private final Recommender recommender;
 
-    public PathadoraHandler(PathadoraManager pathadoraManager) {
+    public PathadoraHandler(PathadoraManager pathadoraManager) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
+        System.out.println("Server is loading the Pathadora ontology.");
         this.pathadoraManager = pathadoraManager;
+        this.inserter = new Inserter(pathadoraManager);
+        this.recommender = new Recommender(pathadoraManager);
+        System.out.println("Pathadora Ontology was loaded.");
     }
 
     @Override
@@ -65,7 +73,12 @@ class PathadoraHandler implements HttpHandler {
                     break;
 
                 case METHOD_POST:
-                    System.out.println("Entered");
+                    headers.set(HEADER_ALLOW, ALLOWED_METHODS);
+                    headers.add("Access-Control-Allow-Origin", "*");
+                    headers.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, x-auth-token");
+                    headers.add("Access-Control-Allow-Credentials", "true");
+                    headers.add("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS,HEAD");
+
                     String parameters = paramsToString(new BufferedReader(new InputStreamReader(exchange.getRequestBody())));
                     String response = computeRequest(parameters);
 
@@ -99,14 +112,14 @@ class PathadoraHandler implements HttpHandler {
             switch (params.get(ACTION)) {
                 case ADD:
                     System.out.println("Add individual was requested");
-                    return pathadoraManager.addIndividual(params);
+                    return pathadoraManager.addIndividual(inserter, params);
                 case FAC_DEP_GENERATION:
                     System.out.println("FAC_DEP_GENERATION was requested");
-                    return pathadoraManager.recommendFacAndDep(params);
+                    return pathadoraManager.recommendFacAndDep(recommender, params);
                 case COURSE_GENERATION:
                     System.out.println("COURSE_GENERATION was requested");
-                    pathadoraManager.recommendCourses(params);
-                    return "This is my response";
+                    //return pathadoraManager.recommendCourses(recommender, params);
+                    return "To be refactored with Stardog";
                 case RESOURCE_GENERATION:
                     System.out.println("RESOURCE_GENERATION was requested");
                     pathadoraManager.recommendResources(params);

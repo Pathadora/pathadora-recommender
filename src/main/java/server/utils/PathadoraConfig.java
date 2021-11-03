@@ -61,4 +61,6 @@ public class PathadoraConfig {
         public static final String ALLOWED_METHODS = METHOD_GET + "," + METHOD_OPTIONS;
     }
 
+
+
 }

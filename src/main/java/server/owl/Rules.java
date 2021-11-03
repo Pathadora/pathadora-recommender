@@ -58,8 +58,19 @@ public class Rules {
                     "pathadora-ontology:recommendedFaculty(?learner, ?fac)";
     }
 
-    public static String coursesRule(String learner, String faculty, String degree, String year){ return
-        "";
+    public static String recommendedCourses(){ return
+            "accessible_ocw_ontology:Learner(?learner) ^ " +
+                    "pathadora-ontology:Departments(?departments)" +
+                    "pathadora-ontology:recommendedFaculty(?learner, ?departments) ^ " +
+                    "pathadora-ontology:recommendedCourse(?learner, ?departments)";
     }
+
+    public static String recommendedCourses(String learner, String faculty, String degree, String year){ return
+            "accessible_ocw_ontology:Learner(?learner) ^ " +
+                    "pathadora-ontology:Departments(?departments)" +
+                    "pathadora-ontology:recommendedFaculty(?learner, ?departments) ^ " +
+                    "pathadora-ontology:recommendedCourse(?learner, ?departments)";
+    }
+
 
 }

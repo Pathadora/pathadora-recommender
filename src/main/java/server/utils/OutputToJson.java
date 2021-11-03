@@ -29,10 +29,12 @@ public class OutputToJson {
 
     public static String coursesJsonResponse(Map<String, String> output){
         StringBuilder response = new StringBuilder("{\n");
+        String course = output.get("course");
+
         response.append("'learner': 'ToBeControlled',\n")
                 .append("'degree': 'ToBeControlled',\n")
                 .append("'department': 'Agricultural and Food Sciences',\n")
-                .append("'faculty': 'Agricultural Technology'\n")
+                .append("'faculty': '"+course+"'\n")
                 .append("'year': 'I'\n")
                 .append("'courses': {\n");
 
@@ -68,7 +70,6 @@ public class OutputToJson {
         courseData.put("scientific area", "CHIM/03");
 
         System.out.println("Output: \n"+ coursesJsonResponse(courseData));
-
     }
 
 }

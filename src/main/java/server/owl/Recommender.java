@@ -26,15 +26,9 @@ public class Recommender {
 
     public Map<String, List<String>> recommendedFaculties(String individual, String degree) throws OWLOntologyCreationException,
             OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
-        System.out.println("Recommended");
 
         List<String> departments = extractIndividualsBy(individual, "recommendedDepartment");
-        System.out.println("Departments: " + departments.toString());
-
-        List<String> recommendedFacs =  recommend("Faculties",
-                Rules.recommendedFaculties(individual, degree), "recommendedFaculty", individual);
-
-        System.out.println("Faculties: " + recommendedFacs.toString());
+        List<String> recommendedFacs =  recommend("Faculties", Rules.recommendedFaculties(individual, degree),"recommendedFaculty", individual);
 
         Map<String, List<String>> output = new HashMap<>();
         for(String dep : departments){
@@ -48,8 +42,15 @@ public class Recommender {
     public Map<String, String> recommendedCourses(String learner, String faculty, String degree, String year) throws SWRLParseException,
             OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
         List<String> recCourses = recommend(
-                "Courses", Rules.coursesRule(learner, faculty, degree, year), "recommendedCourses", learner);
-        return new HashMap<>();
+                "Courses", Rules.recommendedCourses(learner, faculty, degree, year), "recommendedCourses", learner);
+        System.out.println("Recommended courses: " + recCourses.toString());
+
+        Map<String, String> output = new HashMap<>();
+        for(String course : recCourses){
+            /* Add other course data here */
+            output.put("course", course);
+        }
+        return output;
     }
 
 
@@ -74,10 +75,10 @@ public class Recommender {
 
     private List<String> nonDuplicatedFaculties(String department, List<String> faculties) throws OWLOntologyCreationException {
         List<String> facsOfDep = extractIndividualsBy(department, "departmentHasFaculty");
-        System.out.println("FacofDeps: " + facsOfDep.toString());
-        System.out.println("RecFacs: " + faculties.toString());
-        faculties.retainAll(facsOfDep);
-        return faculties;
+        List<String> common = new ArrayList<>(faculties);
+        common.retainAll(facsOfDep);
+        return common;
     }
 
 }
+

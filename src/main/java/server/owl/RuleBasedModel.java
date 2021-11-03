@@ -23,7 +23,7 @@ public class RuleBasedModel {
         engine.createSWRLRule(ruleName, rule);
         engine.infer();
         OWLOntology ontology = pathadoraManager.pathadoraOnt();
-        pathadoraManager.getManager().saveOntology(ontology);
+       // pathadoraManager.getManager().saveOntology(ontology);
     }
 
 
