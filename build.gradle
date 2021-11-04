@@ -1,9 +1,13 @@
 plugins {
     id 'java'
     id 'application'
+    // id 'maven-publish'
+
 }
 
 repositories {
+    mavenCentral()
+
     jcenter()
     maven {
         url "https://maven.stardog.com"
@@ -17,8 +21,10 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.14.3'
     implementation group: 'com.stardog', name: 'stardog-spring', version: '7.1.0'
     implementation 'org.json:json:20171018'
+    implementation 'com.complexible.stardog:client-http:5.2.3'
 
-    compile "com.complexible.stardog:client-http:7.1.0@pom"
+
+    //compile "com.complexible.stardog:client-http:7.1.0@pom"
     //compile group: 'org.openrdf.sesame', name: 'sesame-queryresultio-api', version: '4.1.2'
     compile group: 'org.glassfish.metro', name: 'webservices-extra', version: '2.1.1-b01'
     compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.29'
