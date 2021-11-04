@@ -1,20 +1,15 @@
 package server.stardog;
-import com.complexible.stardog.StardogException;
 import com.complexible.stardog.api.*;
 import com.complexible.stardog.api.admin.AdminConnection;
 import com.complexible.stardog.api.admin.AdminConnectionConfiguration;
-import org.openrdf.model.Graph;
-import com.stardog.stark.Resource;
-import com.stardog.stark.Statement;
-import com.stardog.stark.Values;
+
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.Collection;
-import java.util.Collections;
+
 import java.util.concurrent.TimeUnit;
 
 import com.stardog.stark.query.SelectQueryResult;
@@ -23,48 +18,29 @@ import com.complexible.common.rdf.query.resultio.TextTableQueryResultWriter;
 import com.complexible.stardog.api.Connection;
 import com.complexible.stardog.api.ConnectionConfiguration;
 import com.complexible.stardog.api.SelectQuery;
-import org.openrdf.model.Model;
-import org.openrdf.model.impl.ValueFactoryImpl;
 
 import static com.stardog.stark.io.RDFFormats.RDFXML;
-import static java.lang.Thread.sleep;
+import static server.utils.PathadoraConfig.OntologyConfig.PATHADORA_LOCAL_PATH;
 
 public class StardogDatabase {
-
-    private final String database;
     private final Connection connection;
 
-    public StardogDatabase(){
-        this.database = Provider.database;
+    public StardogDatabase() throws FileNotFoundException {
         this.connection = initializeConnection();
-    }
-
-    public StardogDatabase(String db){
-        this.database = db;
-        this.connection = initializeConnection();
+        this.importData();
     }
 
 
-    public void importData() throws FileNotFoundException {
+    private void importData() throws FileNotFoundException {
         connection.begin();
         connection.add().io()
                 .format(RDFXML)
-                .stream(new FileInputStream("src/main/resources/ont/pathadora-ontology.owl"));
+                .stream(new FileInputStream(PATHADORA_LOCAL_PATH));
         connection.commit();
     }
 
 
-    public void insertData() throws IOException {
-        String content = "  <owl:NamedIndividual rdf:about=\"http://www.semanticweb.org/learning-path/pathadora-ontology#Learner_Mateo\">\n" +
-                "        <rdf:type rdf:resource=\"http://purl.org/accessible_ocw_ontology#Learner\"/>\n" +
-                "        <rdf:type rdf:resource=\"http://www.AccessibleOntology.com/GenericOntology.owl#User\"/>\n" +
-                "        <pathadora-ontology:futureDegree rdf:resource=\"http://www.semanticweb.org/learning-path/pathadora-ontology#Degree_Master\"/>\n" +
-                "        <pathadora-ontology:gender rdf:resource=\"http://www.semanticweb.org/learning-path/pathadora-ontology#Gender_Male\"/>\n" +
-                "        <pathadora-ontology:isPathDriven rdf:resource=\"http://www.semanticweb.org/learning-path/pathadora-ontology#Goal_PathDriven\"/>\n"+
-        "<pathadora-ontology:hasSurname>Guri</pathadora-ontology:hasSurname>\n"+
-        "<rdfs:label>Learner_Albert</rdfs:label> \n"+
-    "</owl:NamedIndividual>";
-
+    public void insertData(String content) throws IOException {
         DataToOwl.toOWLFile(content);
 
         connection.begin();
@@ -90,7 +66,7 @@ public class StardogDatabase {
     public void queryDatabase(String sparqlQuery) throws IOException {
         SelectQuery query = connection.select(sparqlQuery);
         try(SelectQueryResult aResult = query.execute()) {
-            System.out.println("\nNow a particular slice...");
+            System.out.println("\n Now a particular slice...");
             QueryResultWriters.write(aResult, System.out, TextTableQueryResultWriter.FORMAT);
         }
     }
@@ -102,8 +78,8 @@ public class StardogDatabase {
                 .credentials(Provider.username, Provider.password)
                 .connect()) {
             aConn.list().forEach(System.out::println);
-            if (aConn.list().contains(database)) {aConn.drop(database);}
-            aConn.disk(database).create();
+            if (aConn.list().contains(Provider.database)) {aConn.drop(Provider.database);}
+            aConn.disk(Provider.database).create();
         }
     }
 
@@ -111,7 +87,7 @@ public class StardogDatabase {
     private Connection initializeConnection(){
         checkDuplicatedDatabases();
         ConnectionConfiguration connectionConfig = ConnectionConfiguration
-                .to(database)
+                .to(Provider.database)
                 .server(Provider.url)
                 .reasoning(false)
                 .credentials(Provider.username, Provider.password);
@@ -126,10 +102,10 @@ public class StardogDatabase {
         StardogDatabase database = new StardogDatabase();
         database.importData();
         //database.queryDatabase();
-        database.insertData();
-
+        //database.insertData();
         database.queryDatabase(Queries.individualsByClass("accessible_ocw_ontology","Learner"));
         //database.queryDatabase(Queries.individualsByClass("GenericOntology","User"));
 
     }
+
 }

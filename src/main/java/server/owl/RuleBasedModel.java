@@ -34,7 +34,7 @@ public class RuleBasedModel {
     }
 
 
-    private SWRLRuleEngine initializeRuleEngine() throws OWLOntologyCreationException {
+    private SWRLRuleEngine initializeRuleEngine() {
         return SWRLAPIFactory.createSWRLRuleEngine(pathadoraManager.pathadoraOnt());
     }
 

@@ -1,5 +1,8 @@
 package server.utils;
 
+import com.sun.net.httpserver.Headers;
+import com.sun.net.httpserver.HttpExchange;
+
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
@@ -59,6 +62,17 @@ public class PathadoraConfig {
         public static final String METHOD_POST = "POST";
         public static final String METHOD_OPTIONS = "OPTIONS";
         public static final String ALLOWED_METHODS = METHOD_GET + "," + METHOD_OPTIONS;
+
+
+        public static Headers setRequestHeaders(HttpExchange exchange){
+            Headers headers = exchange.getResponseHeaders();
+            headers.set(HEADER_ALLOW, ALLOWED_METHODS);
+            headers.add("Access-Control-Allow-Origin", "*");
+            headers.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, x-auth-token");
+            headers.add("Access-Control-Allow-Credentials", "true");
+            headers.add("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS,HEAD");
+            return headers;
+        }
     }
 
 

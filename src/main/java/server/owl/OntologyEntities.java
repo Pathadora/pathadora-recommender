@@ -20,28 +20,28 @@ public class OntologyEntities {
         this.manager = mng;
     }
 
-    private Set<OWLObjectProperty> objectProperties() throws OWLOntologyCreationException {
+    private Set<OWLObjectProperty> objectProperties()  {
         return manager.pathadoraOnt().getObjectPropertiesInSignature();
     }
 
-    private Set<OWLClass> classes() throws OWLOntologyCreationException {
+    private Set<OWLClass> classes()  {
         return manager.pathadoraOnt().getClassesInSignature();
     }
 
-    private Set<OWLDataProperty> dataProperties() throws OWLOntologyCreationException {
+    private Set<OWLDataProperty> dataProperties() {
         return manager.pathadoraOnt().getDataPropertiesInSignature();
     }
 
-    private Set<OWLNamedIndividual> namedIndividuals() throws OWLOntologyCreationException {
+    private Set<OWLNamedIndividual> namedIndividuals() {
         return manager.pathadoraOnt().getIndividualsInSignature();
     }
 
-    private Set<OWLAnnotationProperty> annotationProperties() throws OWLOntologyCreationException {
+    private Set<OWLAnnotationProperty> annotationProperties() {
         return manager.pathadoraOnt().getAnnotationPropertiesInSignature();
     }
 
 
-    public boolean checkAssertionAxiom(OWLClass iClass, OWLIndividual individual) throws OWLOntologyCreationException {
+    public boolean checkAssertionAxiom(OWLClass iClass, OWLIndividual individual) {
         OWLReasonerFactory reasonerFactory = new StructuralReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(manager.pathadoraOnt());
 
@@ -58,7 +58,7 @@ public class OntologyEntities {
         return false;
     }
 
-    public OWLLogicalEntity ontologyEntitiesBy(String type, String key) throws OWLOntologyCreationException {
+    public OWLLogicalEntity ontologyEntitiesBy(String type, String key) {
         OWLDataFactory df = manager.getManager().getOWLDataFactory();
         PrefixManager pm = new DefaultPrefixManager(PATHADORA_RESOURCE);
 
@@ -103,7 +103,7 @@ public class OntologyEntities {
         return null;
     }
 
-    public void ontologyEntitiesToConsole() throws OWLOntologyCreationException {
+    public void ontologyEntitiesToConsole() {
         OWLOntology ontology = manager.pathadoraOnt();
         Set<OWLClass> classes = classes();
         Set<OWLObjectProperty> objectProperties = objectProperties();

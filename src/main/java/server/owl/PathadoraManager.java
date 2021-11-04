@@ -5,10 +5,11 @@ import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
+import server.stardog.StardogDatabase;
 import server.utils.OutputToJson;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Map;
 
@@ -16,11 +17,9 @@ import static server.utils.PathadoraConfig.OntologyConfig.*;
 import static server.utils.PathadoraConfig.ServerConfig.*;
 
 public class PathadoraManager {
-
     private OWLOntologyManager manager;
     private OWLOntology pathadora;
-    //private Inserter inserter;
-    //private Recommender recommender;
+
 
     public PathadoraManager() throws OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
         initialize();
@@ -49,14 +48,10 @@ public class PathadoraManager {
         AddImport addImport3 = new AddImport(pathadora, importDeclaration3);
 
         manager.saveOntology(pathadora);
-
-        //inserter = new Inserter(this);
-        //recommender = new Recommender(this);
     }
 
     public String addIndividual(Inserter inserter, Map<String, String> params) throws OWLOntologyCreationException,
-            OWLOntologyStorageException {
-        //Inserter indInserter = new Inserter(this);
+            OWLOntologyStorageException, FileNotFoundException {
         switch (params.get(TYPE)) {
             case LEARNER:
                 return inserter.addLearner(params);
@@ -70,7 +65,6 @@ public class PathadoraManager {
 
     public String recommendFacAndDep(Recommender recommender, Map<String, String> params) throws OWLOntologyCreationException,
             SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
-        //Recommender rec = new Recommender(this);
         String learner = params.get("learner");
         String degree = params.get("degree");
         Map<String, List<String>> output = recommender.recommendedFaculties(learner, degree);

@@ -19,8 +19,8 @@ public class Recommender {
             OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
         this.manager = m;
         model = new RuleBasedModel(manager);
-        model.applyRule("School", Rules.schoolRule());
-        model.applyRule("Departments", Rules.departmentRule());
+        //model.applyRule("School", Rules.schoolRule());
+        //model.applyRule("Departments", Rules.departmentRule());
         //model.applyRule("Faculties", Rules.recommendedFaculties());
     }
 
