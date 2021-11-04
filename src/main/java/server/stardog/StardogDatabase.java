@@ -23,7 +23,7 @@ import static com.stardog.stark.io.RDFFormats.RDFXML;
 import static server.utils.PathadoraConfig.OntologyConfig.PATHADORA_LOCAL_PATH;
 
 public class StardogDatabase {
-    private final Connection connection;
+   /* private final Connection connection;
 
     public StardogDatabase() throws FileNotFoundException {
         this.connection = initializeConnection();
@@ -107,5 +107,5 @@ public class StardogDatabase {
         //database.queryDatabase(Queries.individualsByClass("GenericOntology","User"));
 
     }
-
+*/
 }

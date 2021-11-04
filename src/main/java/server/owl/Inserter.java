@@ -2,9 +2,7 @@ package server.owl;
 
 import org.semanticweb.owlapi.model.*;
 import server.stardog.StardogDatabase;
-import server.stardog.StardogRunnable;
 
-import java.io.IOException;
 import java.util.Map;
 
 import static server.utils.ParserUtils.*;
@@ -40,11 +38,12 @@ public class Inserter {
 
         ontManager.saveOntology(pathadora);
 
-        StardogRunnable stardog = new  StardogRunnable(database);
+        /*StardogRunnable stardog = new  StardogRunnable(database);
         new Thread(() -> {
             try {stardog.database().insertData(caOwl+opaOwl+apaOwl);
             } catch (IOException e) {e.printStackTrace();}
         }).start();
+        */
 
         return String.valueOf(STATUS_OK);
     }

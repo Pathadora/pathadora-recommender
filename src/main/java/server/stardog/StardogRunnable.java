@@ -1,7 +1,7 @@
 package server.stardog;
-
+ /*
 public class StardogRunnable implements Runnable {
-    private final StardogDatabase database;
+   private final StardogDatabase database;
 
     public StardogRunnable(StardogDatabase db){
         this.database = db;
@@ -12,3 +12,5 @@ public class StardogRunnable implements Runnable {
 
     public StardogDatabase database(){ return database;}
 }
+
+  */
