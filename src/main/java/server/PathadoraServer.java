@@ -13,9 +13,7 @@ import server.owl.PathadoraManager;
 import server.owl.Recommender;
 import server.stardog.StardogDatabase;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.InetSocketAddress;
 import java.util.Map;
 
@@ -35,9 +33,8 @@ public class PathadoraServer {
             OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
         final HttpServer server = HttpServer.create(new InetSocketAddress(HOSTNAME, PORT), BACKLOG);
         final PathadoraManager pathadoraManager = new PathadoraManager();
-        final StardogDatabase database = new StardogDatabase();
 
-        server.createContext("/pathadora", new PathadoraHandler(pathadoraManager, database));
+        server.createContext("/pathadora", new PathadoraHandler(pathadoraManager));
         server.start();
     }
 }
@@ -48,11 +45,13 @@ class PathadoraHandler implements HttpHandler {
     private final PathadoraManager pathadoraManager;
     private final Inserter inserter;
     private final Recommender recommender;
+    private final StardogDatabase database;
 
-    public PathadoraHandler(PathadoraManager pathadoraManager, StardogDatabase db) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
+    public PathadoraHandler(PathadoraManager pathadoraManager) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException, FileNotFoundException {
         this.pathadoraManager = pathadoraManager;
-        this.inserter = new Inserter(pathadoraManager, db);
         this.recommender = new Recommender(pathadoraManager);
+        this.database = new StardogDatabase();
+        this.inserter = new Inserter(pathadoraManager, database);
     }
 
     @Override
@@ -69,9 +68,11 @@ class PathadoraHandler implements HttpHandler {
                     String parameters = paramsToString(new BufferedReader(new InputStreamReader(exchange.getRequestBody())));
                     String response = computeRequest(parameters);
 
-                    final byte[] rawResponseBody = response.getBytes(CHARSET);
-                    exchange.sendResponseHeaders(STATUS_OK, rawResponseBody.length);
-                    exchange.getResponseBody().write(rawResponseBody);
+                    exchange.getResponseHeaders().set("Content-Type", "application/json");
+                    exchange.sendResponseHeaders(STATUS_OK, response.length());
+                    OutputStream os = exchange.getResponseBody();
+                    os.write(response.getBytes());
+                    os.close();
                     break;
 
                 default:
