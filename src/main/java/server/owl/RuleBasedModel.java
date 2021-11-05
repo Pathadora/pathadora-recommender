@@ -17,17 +17,17 @@ public class RuleBasedModel {
         this.pathadoraManager = manager;
     }
 
-    public void applyRule(String ruleName, String rule) throws OWLOntologyCreationException,
-            SWRLBuiltInException, SWRLParseException, OWLOntologyStorageException {
+    public void applyRule(String ruleName, String rule) throws SWRLBuiltInException, SWRLParseException, OWLOntologyStorageException {
+        System.out.println("\tRecommender applying rule: " + ruleName);
         SWRLRuleEngine engine = initializeQueryEngine();
         engine.createSWRLRule(ruleName, rule);
         engine.infer();
         OWLOntology ontology = pathadoraManager.pathadoraOnt();
-       // pathadoraManager.getManager().saveOntology(ontology);
+        pathadoraManager.getManager().saveOntology(ontology);
     }
 
 
-    public void applyQuery() throws OWLOntologyCreationException, SWRLParseException, SQWRLException {
+    public void applyQuery() throws SWRLParseException, SQWRLException {
         SQWRLQueryEngine queryEngine = initializeQueryEngine();
         SQWRLResult result = queryEngine.runSQWRLQuery("query 1","");
         if (result.next()) System.out.println("Name: " + result.getLiteral("x").getInteger());
@@ -39,7 +39,7 @@ public class RuleBasedModel {
     }
 
 
-    private SQWRLQueryEngine initializeQueryEngine() throws OWLOntologyCreationException {
+    private SQWRLQueryEngine initializeQueryEngine() {
         return SWRLAPIFactory.createSQWRLQueryEngine(pathadoraManager.pathadoraOnt());
     }
 
