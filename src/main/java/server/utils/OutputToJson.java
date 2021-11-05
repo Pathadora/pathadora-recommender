@@ -24,7 +24,7 @@ public class OutputToJson {
                     .append("\n");
         }
 
-        return response.toString().concat("}") ;
+        return response.toString().concat("}\n}") ;
     }
 
     public static String coursesJsonResponse(Map<String, String> output){
@@ -57,7 +57,7 @@ public class OutputToJson {
         for(int i=0; i<list.size(); i++){
             builder.append("\t\t\t\t\t\""+i+"\": ").append("\""+list.get(i)+"\",\n");
         }
-        String res = builder.substring(0, builder.length() - 5).concat("\n\t\t}");
+        String res = builder.substring(0, builder.length() - 5).concat("\"\n\t\t}");
         return  res;
     }
 
