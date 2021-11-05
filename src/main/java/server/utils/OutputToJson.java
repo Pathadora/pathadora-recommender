@@ -21,9 +21,9 @@ public class OutputToJson {
                     .append("\"" + v.getKey() + "\",\n\t\t")
                     .append("\"faculties\" :{\n")
                     .append(listToJson((List<String>) v.getValue()))
-                    .append("\n");
+                    .append("},\n");
         }
-
+        response.setLength(response.length()-2);
         return response.toString().concat("}\n}") ;
     }
 
@@ -47,7 +47,7 @@ public class OutputToJson {
             response.append("\n\t\t},\n");
         }
         response.setLength(response.length()-2);
-        return response.toString().concat("\n}");
+        return response.toString().concat("\n}\n}");
     }
 
     public void resourcesJsonResponse(){}
