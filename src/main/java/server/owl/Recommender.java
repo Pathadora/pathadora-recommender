@@ -1,33 +1,28 @@
 package server.owl;
 
 import org.semanticweb.owlapi.model.*;
-import org.semanticweb.owlapi.reasoner.OWLReasoner;
-import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
-import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
-import static server.utils.ParserUtils.*;
-import static server.utils.PathadoraConfig.OntologyConfig.*;
+
 import java.util.*;
 
 
 public class Recommender {
     final private PathadoraManager manager;
     final private RuleBasedModel model;
+    final private OntologyEntities entities;
 
-    public Recommender(PathadoraManager m) throws SWRLParseException,
-            OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
+    public Recommender(PathadoraManager m) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
         this.manager = m;
-        model = new RuleBasedModel(manager);
-        //model.applyRule("School", Rules.schoolRule());
-        //model.applyRule("Departments", Rules.departmentRule());
-        //model.applyRule("Faculties", Rules.recommendedFaculties());
+        this.entities = new OntologyEntities(manager);
+        this.model = new RuleBasedModel(manager);
+        initializeOntologyWithRules(model, false);
     }
 
     public Map<String, List<String>> recommendedFaculties(String individual, String degree) throws OWLOntologyCreationException,
             OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
 
-        List<String> departments = extractIndividualsBy(individual, "recommendedDepartment");
+        List<String> departments = entities.extractIndividualsBy(individual, "recommendedDepartment", manager);
         List<String> recommendedFacs =  recommend("Faculties", Rules.recommendedFaculties(individual, degree),"recommendedFaculty", individual);
 
         Map<String, List<String>> output = new HashMap<>();
@@ -57,27 +52,27 @@ public class Recommender {
     private List<String> recommend(String ruleName, String rule, String property, String learner) throws OWLOntologyCreationException,
             SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
         model.applyRule(ruleName, rule);
-        return extractIndividualsBy(learner, property);
-    }
-
-
-    private List<String> extractIndividualsBy(String individual, String property) throws OWLOntologyCreationException {
-        OntologyEntities entities = new OntologyEntities(manager);
-        OWLOntology ontology = manager.pathadoraOnt();
-        OWLObjectProperty objProperty = (OWLObjectProperty) entities.ontologyEntitiesBy(OBJECT_PROPERTIES, property);
-        OWLNamedIndividual namedInd = (OWLNamedIndividual) entities.ontologyEntitiesBy(INDIVIDUALS, individual);
-
-        OWLReasonerFactory reasonerFactory = new StructuralReasonerFactory();
-        OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
-        return individualsToList(reasoner.getObjectPropertyValues(namedInd, objProperty).getFlattened());
+        return entities.extractIndividualsBy(learner, property, manager);
     }
 
 
     private List<String> nonDuplicatedFaculties(String department, List<String> faculties) throws OWLOntologyCreationException {
-        List<String> facsOfDep = extractIndividualsBy(department, "departmentHasFaculty");
+        List<String> facsOfDep = entities.extractIndividualsBy(department, "departmentHasFaculty", manager);
         List<String> common = new ArrayList<>(faculties);
         common.retainAll(facsOfDep);
         return common;
+    }
+
+    private void initializeOntologyWithRules(RuleBasedModel model, boolean apply) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
+        if(apply){
+            System.out.println("Recommender applying rules, waiting ...");
+            model.applyRule("School", Rules.schoolRule());
+            model.applyRule("Departments", Rules.departmentRule());
+           // model.applyRule("Faculties", Rules.recommendedFaculties());
+            System.out.println("Recommender completed applying rules");
+        }else{
+            System.out.println("Recommender will not apply rules");
+        }
     }
 
 }

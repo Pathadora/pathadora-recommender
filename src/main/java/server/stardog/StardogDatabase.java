@@ -3,7 +3,6 @@ import com.complexible.stardog.api.*;
 import com.complexible.stardog.api.admin.AdminConnection;
 import com.complexible.stardog.api.admin.AdminConnectionConfiguration;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -23,11 +22,12 @@ import static com.stardog.stark.io.RDFFormats.RDFXML;
 import static server.utils.PathadoraConfig.OntologyConfig.PATHADORA_LOCAL_PATH;
 
 public class StardogDatabase {
-   /* private final Connection connection;
+  /*  private final Connection connection;
 
     public StardogDatabase() throws FileNotFoundException {
         this.connection = initializeConnection();
-        this.importData();
+       // this.importData();
+        System.out.println("\tOntology loaded to stardog database\n");
     }
 
 
@@ -46,10 +46,10 @@ public class StardogDatabase {
         connection.begin();
         connection.add().io()
                 .format(RDFXML)
-                .stream(new FileInputStream("newIndividuals"));
+                .stream(new FileInputStream("newIndividuals.txt"));
         connection.commit();
 
-        Files.deleteIfExists(new File("newIndividuals").toPath());
+        Files.deleteIfExists(new File("newIndividuals.txt").toPath());
     }
 
     private static ConnectionPool createConnectionPool(ConnectionConfiguration connectionConfig) {
@@ -77,7 +77,7 @@ public class StardogDatabase {
                 .toServer(Provider.url)
                 .credentials(Provider.username, Provider.password)
                 .connect()) {
-            aConn.list().forEach(System.out::println);
+            //aConn.list().forEach(System.out::println);
             if (aConn.list().contains(Provider.database)) {aConn.drop(Provider.database);}
             aConn.disk(Provider.database).create();
         }
@@ -107,5 +107,6 @@ public class StardogDatabase {
         //database.queryDatabase(Queries.individualsByClass("GenericOntology","User"));
 
     }
-*/
+
+   */
 }

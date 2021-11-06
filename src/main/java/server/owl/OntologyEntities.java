@@ -1,7 +1,6 @@
 package server.owl;
 
 import org.semanticweb.owlapi.model.*;
-import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
@@ -10,56 +9,90 @@ import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static server.utils.ParserUtils.individualsToList;
+import static server.utils.PathadoraConfig.*;
 import static server.utils.PathadoraConfig.OntologyConfig.*;
+import static server.utils.PathadoraConfig.annotation;
 
 public class OntologyEntities {
 
-    private final PathadoraManager manager;
+    private final PathadoraManager pathadoraManager;
+    private final OWLOntologyManager owlManager;
 
     public OntologyEntities(PathadoraManager mng) {
-        this.manager = mng;
-    }
-
-    private Set<OWLObjectProperty> objectProperties()  {
-        return manager.pathadoraOnt().getObjectPropertiesInSignature();
-    }
-
-    private Set<OWLClass> classes()  {
-        return manager.pathadoraOnt().getClassesInSignature();
-    }
-
-    private Set<OWLDataProperty> dataProperties() {
-        return manager.pathadoraOnt().getDataPropertiesInSignature();
-    }
-
-    private Set<OWLNamedIndividual> namedIndividuals() {
-        return manager.pathadoraOnt().getIndividualsInSignature();
-    }
-
-    private Set<OWLAnnotationProperty> annotationProperties() {
-        return manager.pathadoraOnt().getAnnotationPropertiesInSignature();
+        this.pathadoraManager = mng;
+        this.owlManager = pathadoraManager.getManager();
     }
 
 
-    public boolean checkAssertionAxiom(OWLClass iClass, OWLIndividual individual) {
-        OWLReasonerFactory reasonerFactory = new StructuralReasonerFactory();
-        OWLReasoner reasoner = reasonerFactory.createReasoner(manager.pathadoraOnt());
+    public String defineClassAssertion(Map<String, String> params, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
+        OWLDataFactory df = owlManager.getOWLDataFactory();
+        OWLClass learnerClass = (OWLClass) ontologyEntitiesBy(CLASSES, params.get(CLASS));
+        owlManager.addAxiom(pathadora, df.getOWLClassAssertionAxiom(learnerClass, tIndividual));
 
-        NodeSet<OWLNamedIndividual> individualsNodeSet = reasoner.getInstances(iClass, true);
-        Set<OWLNamedIndividual> individuals = individualsNodeSet.getFlattened();
+        return classAssertion(valName(tIndividual.toString()), valName(learnerClass.toString()));
+    }
 
-        for (OWLNamedIndividual ind : individuals) {
-            if (individual.toString().equals(individuals.toString())) {
-                return true;
+    public String defineObjectPropertyAssertions(Map<String, String> obj_prop, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
+        StringBuilder outBuild = new StringBuilder();
+        for (Map.Entry<String, String> obj : obj_prop.entrySet()) {
+            /* check for multiple object property values */
+            if(obj.getValue().contains(",")) {
+                Arrays.stream(obj.getValue().split(",")).forEach( o -> {
+                    outBuild.append(addProperty(obj.getKey(), o, tIndividual,  pathadora));});
+            }else {
+                outBuild.append(addProperty(obj.getKey(), obj.getValue(), tIndividual, pathadora));
             }
-            //String s = ind.toString();
-            //System.out.println(s.substring(s.indexOf("#") + 1, s.length() -1));
         }
-        return false;
+
+        return outBuild.toString();
     }
+
+
+    public String defineAnnotationPropertyAssertions(Map<String, String> ann_prop, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
+        StringBuilder outBuild = new StringBuilder();
+        for (Map.Entry<String, String> obj : ann_prop.entrySet()) {
+            /* check for multiple annotation property values */
+            if (obj.getValue().contains(",")) {
+                Arrays.stream(obj.getValue().split(",")).forEach(o -> {
+                    outBuild.append(addAnnotation(obj.getKey(), o, tIndividual, pathadora));});
+            } else {
+                String output = addAnnotation(obj.getKey(), obj.getValue(), tIndividual,  pathadora);
+                outBuild.append(output);
+            }
+        }
+
+        return outBuild.append(endIndividualDeclaration()).toString();
+    }
+
+
+    private String addProperty(String key, String value, OWLNamedIndividual tIndividual, OWLOntology pathadora){
+        OWLDataFactory df = owlManager.getOWLDataFactory();
+
+        OWLNamedIndividual val = (OWLNamedIndividual) this.ontologyEntitiesBy(INDIVIDUALS, value);
+        OWLObjectProperty prop = (OWLObjectProperty) this.ontologyEntitiesBy(OBJECT_PROPERTIES, key);
+        OWLObjectPropertyAssertionAxiom propertyAssertion = df.getOWLObjectPropertyAssertionAxiom(prop, tIndividual, val);
+        owlManager.addAxiom(pathadora, propertyAssertion);
+
+        return property(key, value);
+    }
+
+
+    private String addAnnotation(String key, String value, OWLNamedIndividual tIndividual, OWLOntology pathadora){
+        OWLDataFactory df = owlManager.getOWLDataFactory();
+
+        OWLAnnotationProperty annProp = (OWLAnnotationProperty) this.ontologyEntitiesBy(ANNOTATION_PROPERTIES, key);
+        OWLLiteral val = df.getOWLLiteral(value);
+        OWLAnnotation ann = df.getOWLAnnotation(annProp, val);
+        OWLAxiom propertyAssertion = df.getOWLAnnotationAssertionAxiom(tIndividual.getIRI(), ann);
+        owlManager.addAxiom(pathadora, propertyAssertion);
+
+        return annotation(key, value);
+    }
+
 
     public OWLLogicalEntity ontologyEntitiesBy(String type, String key) {
-        OWLDataFactory df = manager.getManager().getOWLDataFactory();
+        OWLDataFactory df = owlManager.getOWLDataFactory();
         PrefixManager pm = new DefaultPrefixManager(PATHADORA_RESOURCE);
 
         if (type.equals(CLASSES)) {
@@ -103,36 +136,51 @@ public class OntologyEntities {
         return null;
     }
 
-    public void ontologyEntitiesToConsole() {
+
+    public List<String> extractIndividualsBy(String individual, String property, PathadoraManager manager) {
         OWLOntology ontology = manager.pathadoraOnt();
-        Set<OWLClass> classes = classes();
-        Set<OWLObjectProperty> objectProperties = objectProperties();
-        Set<OWLDataProperty> dataProperties = dataProperties();
-        Set<OWLNamedIndividual> namedIndividuals = namedIndividuals();
+        OWLObjectProperty objProperty = (OWLObjectProperty) ontologyEntitiesBy(OBJECT_PROPERTIES, property);
+        OWLNamedIndividual namedInd = (OWLNamedIndividual) ontologyEntitiesBy(INDIVIDUALS, individual);
 
-        for (OWLClass cls : classes) {
-            System.out.println("+: " + cls.getIRI().getShortForm());
-
-            System.out.println(" \tObject Property Domain");
-            for (OWLObjectPropertyDomainAxiom op : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
-                if (op.getDomain().equals(cls)) {
-                    for (OWLObjectProperty oop : op.getObjectPropertiesInSignature()) {
-                        System.out.println("\t\t +: " + oop.getIRI().getShortForm());
-                    }
-                    System.out.println("\t\t +: " + op.getProperty().getNamedProperty().getIRI().getShortForm());
-                }
-            }
-
-            System.out.println(" \tData Property Domain");
-            for (OWLDataPropertyDomainAxiom dp : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
-                if (dp.getDomain().equals(cls)) {
-                    for (OWLDataProperty odp : dp.getDataPropertiesInSignature()) {
-                        System.out.println("\t\t +: " + odp.getIRI().getShortForm());
-                    }
-                    System.out.println("\t\t +:" + dp.getProperty());
-                }
-            }
-        }
+        OWLReasonerFactory reasonerFactory = new StructuralReasonerFactory();
+        OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
+        return individualsToList(reasoner.getObjectPropertyValues(namedInd, objProperty).getFlattened());
     }
 
+
+    private Set<OWLObjectProperty> objectProperties() {
+        return pathadoraManager.pathadoraOnt().getObjectPropertiesInSignature();
+    }
+
+    private Set<OWLClass> classes() {
+        return pathadoraManager.pathadoraOnt().getClassesInSignature();
+    }
+
+    private Set<OWLDataProperty> dataProperties() {
+        return pathadoraManager.pathadoraOnt().getDataPropertiesInSignature(); }
+
+    private Set<OWLNamedIndividual> namedIndividuals() {
+        return pathadoraManager.pathadoraOnt().getIndividualsInSignature(); }
+
+    private Set<OWLAnnotationProperty> annotationProperties() {
+        return pathadoraManager.pathadoraOnt().getAnnotationPropertiesInSignature();
+    }
+
+    private String propName(String prop) {
+        return prop.substring(0, prop.length() - 1).split("#")[1];
+    }
+
+
+    private String valName(String val){
+        return val.substring(1,val.length()-1);
+    }
+
+
+    private String annName(String ann){
+        return ann.split("#")[1].split(">")[0];
+    }
+
+
 }
+
+

@@ -12,6 +12,7 @@ public class PathadoraRecommender {
             OWLOntologyStorageException, IOException, SWRLParseException, SWRLBuiltInException {
         System.out.println("Pathadora Recommender Engine is listening at http://localhost:8080/pathadora");
         System.out.println("*******************************************************\n");
+
         PathadoraServer.initializeAndStart();
     }
 }

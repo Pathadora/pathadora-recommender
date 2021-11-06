@@ -5,11 +5,10 @@ import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
-import server.stardog.StardogDatabase;
 import server.utils.OutputToJson;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -51,12 +50,12 @@ public class PathadoraManager {
     }
 
     public String addIndividual(Inserter inserter, Map<String, String> params) throws OWLOntologyCreationException,
-            OWLOntologyStorageException, FileNotFoundException {
+            OWLOntologyStorageException, IOException {
         switch (params.get(TYPE)) {
             case LEARNER:
                 return inserter.addLearner(params);
             case LESSON:
-                return inserter.addLesson(params);
+                return inserter.addResource(params);
             default:
                 break;
         }

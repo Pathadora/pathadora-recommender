@@ -2,12 +2,10 @@ plugins {
     id 'java'
     id 'application'
     // id 'maven-publish'
-
 }
 
 repositories {
     mavenCentral()
-
     jcenter()
     maven {
         url "https://maven.stardog.com"

@@ -72,5 +72,4 @@ public class Rules {
                     "pathadora-ontology:recommendedCourse(?learner, ?departments)";
     }
 
-
 }

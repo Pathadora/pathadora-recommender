@@ -32,6 +32,7 @@ public class PathadoraConfig {
         public static final String LEARNER = "learner";
         public static final String COURSE = "course";
         public static final String LESSON = "lesson";
+        public static final String ID = "id";
 
         public static final String OBJECT_PROPERTIES = "object_properties";
         public static final String DATA_PROPERTIES = "data_properties";
@@ -75,6 +76,23 @@ public class PathadoraConfig {
         }
     }
 
+    public static String classAssertion(String individual, String iClass){
+        return new StringBuilder()
+                .append("<owl:NamedIndividual rdf:about=\""+individual+"\">\n")
+                .append("<rdf:type rdf:resource=\""+iClass+"\"/>\n")
+                .toString();
+    }
 
+    public static String property(String propName, String val){
+        return "<pathadora-ontology:"+ propName + " rdf:resource=\""+val+"\"/>\n";
+    }
+
+    public static String annotation(String annName, String val){
+        return "<pathadora-ontology:"+ annName + ">"+ val +"</pathadora-ontology:"+annName+">\n";
+    }
+
+    public static String endIndividualDeclaration(){
+        return " </owl:NamedIndividual>";
+    }
 
 }
