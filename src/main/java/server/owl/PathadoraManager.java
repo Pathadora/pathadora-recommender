@@ -8,7 +8,6 @@ import org.swrlapi.parser.SWRLParseException;
 import server.utils.OutputToJson;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -20,11 +19,11 @@ public class PathadoraManager {
     private OWLOntology pathadora;
 
 
-    public PathadoraManager() throws OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
+    public PathadoraManager() throws OWLOntologyCreationException, OWLOntologyStorageException {
         initialize();
     }
 
-    private void initialize() throws OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
+    private void initialize() throws OWLOntologyCreationException, OWLOntologyStorageException {
         this.manager = OWLManager.createOWLOntologyManager();
         manager.getIRIMappers().add(new SimpleIRIMapper(IRI.create(LOM_RESOURCE), IRI.create(LOM_LOCAL_PATH)));
         manager.getIRIMappers().add(new SimpleIRIMapper(IRI.create(ACC_RESOURCE), IRI.create(ACC_LOCAL_PATH)));
@@ -46,32 +45,24 @@ public class PathadoraManager {
         AddImport addImport2 = new AddImport(pathadora, importDeclaration2);
         AddImport addImport3 = new AddImport(pathadora, importDeclaration3);
 
-        manager.saveOntology(pathadora);
+        updatePathadoraOntology(pathadora);
     }
 
-    public String addIndividual(Inserter inserter, Map<String, String> params) throws OWLOntologyCreationException,
-            OWLOntologyStorageException, IOException {
-        switch (params.get(TYPE)) {
-            case LEARNER:
-                return inserter.addLearner(params);
-            case LESSON:
-                return inserter.addResource(params);
-            default:
-                break;
-        }
+    public String addIndividual(Inserter inserter, Map<String, String> params) throws OWLOntologyStorageException  {
+        inserter.addNewIndividual(params);
         return String.valueOf(STATUS_OK);
     }
 
-    public String recommendFacAndDep(Recommender recommender, Map<String, String> params) throws OWLOntologyCreationException,
-            SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
+    public String recommendFacAndDep(Recommender recommender, Map<String, String> params)
+            throws SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
         String learner = params.get("learner");
         String degree = params.get("degree");
         Map<String, List<String>> output = recommender.recommendedFaculties(learner, degree);
         return OutputToJson.facDepJsonResponse(learner, output);
     }
 
-    public String recommendCourses(Recommender recommender, Map<String, String> params) throws SWRLParseException,
-            OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
+    public String recommendCourses(Recommender recommender, Map<String, String> params)
+            throws SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
         String learner = params.get("learner");
         String degree = params.get("degree"); // todo USELESS
         String year = params.get("year");
@@ -80,12 +71,20 @@ public class PathadoraManager {
         return OutputToJson.coursesJsonResponse(output);
     }
 
-    public void recommendResources(Map<String, String> params) throws SWRLParseException,
-            OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
-        Recommender rec = new Recommender(this);
+    public void recommendResources(Map<String, String> params)
+            throws SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
+        //Recommender rec = new Recommender(this);
     }
 
-    public OWLOntology pathadoraOnt() { return this.pathadora; }
+    public void reset(){ }
+
+    public OWLOntology pathadoraOnt() {
+        return pathadora;
+    }
+
+    public void updatePathadoraOntology(OWLOntology updatedOnt) throws OWLOntologyStorageException {
+        manager.saveOntology(updatedOnt);
+    }
 
     public OWLOntologyManager getManager() { return manager;}
 

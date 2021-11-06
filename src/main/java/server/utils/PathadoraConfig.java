@@ -20,7 +20,8 @@ public class PathadoraConfig {
         public final static String LOM_RESOURCE = "http://data.opendiscoveryspace.eu/lom_ontology_ods.owl";
         public final static String ACC_RESOURCE = "http://purl.org/accessible_ocw_ontology";
         public final static String ESO_RESOURCE = "http://purl.org/ontology/edu/eso";
-        public final static String PATHADORA_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology/1.0";
+        //public final static String PATHADORA_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology/1.0";
+        public final static String PATHADORA_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology";
 
         /** TODO: to be discussed */
         public static final String ACTION = "action";
@@ -28,6 +29,7 @@ public class PathadoraConfig {
         public static final String FAC_DEP_GENERATION = "fac_dep_generation";
         public static final String COURSE_GENERATION = "course_generation";
         public static final String RESOURCE_GENERATION = "resource_generation";
+        public static final String FINISH = "finish";
         public static final String TYPE = "type";
         public static final String LEARNER = "learner";
         public static final String COURSE = "course";
@@ -41,6 +43,17 @@ public class PathadoraConfig {
         public static final String INDIVIDUALS = "individuals";
         public static final String CLASSES = "classes";
         public static final String CLASS = "class";
+
+        public static final String DEPARTMENT_PROPERTY = "recommendedDepartment";
+        public static final String FACULTY_PROPERTY = "recommendedFaculty";
+        public static final String COURSE_PROPERTY = "recommendedCourses";
+        public static final String DEPARTMENT_OF_PROPERTY = "departmentHasFaculty";
+
+        public static final String SCHOOLS = "Schools";
+        public static final String DEPARTMENTS = "Departments";
+        public static final String FACULTIES = "Faculties";
+        public static final String COURSES = "Courses";
+
     }
 
     public static class ServerConfig {

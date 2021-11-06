@@ -12,19 +12,13 @@ import static server.utils.PathadoraConfig.OntologyConfig.*;
 import static server.utils.PathadoraConfig.ServerConfig.STATUS_OK;
 
 public class Inserter {
-
     final private PathadoraManager manager;
-    final private OWLOntologyManager ontManager;
-    final private StardogDatabase database;
 
-
-    public Inserter(PathadoraManager m, StardogDatabase db) {
+    public Inserter(PathadoraManager m) {
         this.manager = m;
-        this.ontManager = m.getManager();
-        this.database = db;
     }
 
-    public String addLearner(Map<String, String> params) throws OWLOntologyStorageException, IOException {
+    public String addNewIndividual(Map<String, String> params) throws OWLOntologyStorageException {
         OntologyEntities entities = new OntologyEntities(manager);
         OWLOntology pathadora = manager.pathadoraOnt();
 
@@ -37,20 +31,11 @@ public class Inserter {
         String opaOwl = entities.defineObjectPropertyAssertions(obj_prop, tIndividual, pathadora);
         String apaOwl = entities.defineAnnotationPropertyAssertions(ann_prop, tIndividual, pathadora);
 
-        ontManager.saveOntology(pathadora);
-
-       /* StardogRunnable stardog = new  StardogRunnable(database);
-        new Thread(() -> {
-            try {stardog.database().insertData(caOwl+opaOwl+apaOwl);
-            } catch (IOException e) {e.printStackTrace();}
-        }).start();
-        */
+        manager.updatePathadoraOntology(pathadora);
 
         return String.valueOf(STATUS_OK);
     }
 
-
-    public String addResource(Map<String, String> p) { return String.valueOf(STATUS_OK); }
 
     private String label(Map<String, String> properties) { return properties.get(ID); }
 }

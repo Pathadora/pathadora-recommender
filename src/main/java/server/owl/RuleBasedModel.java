@@ -19,11 +19,12 @@ public class RuleBasedModel {
 
     public void applyRule(String ruleName, String rule) throws SWRLBuiltInException, SWRLParseException, OWLOntologyStorageException {
         System.out.println("\tRecommender applying rule: " + ruleName);
-        SWRLRuleEngine engine = initializeQueryEngine();
+        SWRLRuleEngine engine = initializeRuleEngine();
         engine.createSWRLRule(ruleName, rule);
         engine.infer();
-        OWLOntology ontology = pathadoraManager.pathadoraOnt();
-        pathadoraManager.getManager().saveOntology(ontology);
+        OWLOntology pathadora = pathadoraManager.pathadoraOnt();
+
+        pathadoraManager.updatePathadoraOntology(pathadora);
     }
 
 

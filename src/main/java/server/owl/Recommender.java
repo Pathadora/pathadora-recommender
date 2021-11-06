@@ -3,41 +3,49 @@ package server.owl;
 import org.semanticweb.owlapi.model.*;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
+import server.stardog.StardogDatabase;
+import server.stardog.StardogRunnable;
 
+import java.io.IOException;
 import java.util.*;
 
+import static server.utils.PathadoraConfig.OntologyConfig.*;
 
 public class Recommender {
     final private PathadoraManager manager;
     final private RuleBasedModel model;
-    final private OntologyEntities entities;
+    final private StardogDatabase database;
 
-    public Recommender(PathadoraManager m) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
+    public Recommender(PathadoraManager m, StardogDatabase db) {
         this.manager = m;
-        this.entities = new OntologyEntities(manager);
         this.model = new RuleBasedModel(manager);
-        initializeOntologyWithRules(model, false);
+        this.database = db;
     }
 
-    public Map<String, List<String>> recommendedFaculties(String individual, String degree) throws OWLOntologyCreationException,
-            OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
+    public Map<String, List<String>> recommendedFaculties(String learner, String degree)
+            throws OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
 
-        List<String> departments = entities.extractIndividualsBy(individual, "recommendedDepartment", manager);
-        List<String> recommendedFacs =  recommend("Faculties", Rules.recommendedFaculties(individual, degree),"recommendedFaculty", individual);
+        List<String> departments = updatedEntities().extractIndividualsBy(learner, DEPARTMENT_PROPERTY, manager);
+        List<String> recommendedFacs =  recommend(FACULTIES, Rules.recommendedFaculties(learner, degree), FACULTY_PROPERTY, learner);
 
         Map<String, List<String>> output = new HashMap<>();
         for(String dep : departments){
             output.put(dep, nonDuplicatedFaculties(dep, recommendedFacs));
         }
 
+        initializeStardogDatabase();
         return output;
     }
 
+    private List<String> recommend(String ruleName, String rule, String property, String learner)
+            throws SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
+        model.applyRule(ruleName, rule);
+        return updatedEntities().extractIndividualsBy(learner, property, manager);
+    }
 
-    public Map<String, String> recommendedCourses(String learner, String faculty, String degree, String year) throws SWRLParseException,
-            OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
-        List<String> recCourses = recommend(
-                "Courses", Rules.recommendedCourses(learner, faculty, degree, year), "recommendedCourses", learner);
+    public Map<String, String> recommendedCourses(String learner, String faculty, String degree, String year)
+            throws SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
+        List<String> recCourses = recommend(COURSES, Rules.recommendedCourses(learner, faculty, degree, year), COURSE_PROPERTY, learner);
         System.out.println("Recommended courses: " + recCourses.toString());
 
         Map<String, String> output = new HashMap<>();
@@ -49,31 +57,42 @@ public class Recommender {
     }
 
 
-    private List<String> recommend(String ruleName, String rule, String property, String learner) throws OWLOntologyCreationException,
-            SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
-        model.applyRule(ruleName, rule);
-        return entities.extractIndividualsBy(learner, property, manager);
-    }
 
 
-    private List<String> nonDuplicatedFaculties(String department, List<String> faculties) throws OWLOntologyCreationException {
-        List<String> facsOfDep = entities.extractIndividualsBy(department, "departmentHasFaculty", manager);
+    private List<String> nonDuplicatedFaculties(String department, List<String> faculties) {
+        List<String> facsOfDep = updatedEntities().extractIndividualsBy(department, DEPARTMENT_OF_PROPERTY, manager);
         List<String> common = new ArrayList<>(faculties);
         common.retainAll(facsOfDep);
         return common;
     }
 
-    private void initializeOntologyWithRules(RuleBasedModel model, boolean apply) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException {
+    public void initializeOntologyWithRules(boolean apply)
+            throws SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
         if(apply){
             System.out.println("Recommender applying rules, waiting ...");
-            model.applyRule("School", Rules.schoolRule());
-            model.applyRule("Departments", Rules.departmentRule());
-           // model.applyRule("Faculties", Rules.recommendedFaculties());
+            model.applyRule(SCHOOLS, Rules.schoolRule());
+            model.applyRule(DEPARTMENTS, Rules.departmentRule());
+            //model.applyRule(FACULTIES, Rules.recommendedFaculties());
             System.out.println("Recommender completed applying rules");
         }else{
             System.out.println("Recommender will not apply rules");
         }
     }
+
+    private void initializeStardogDatabase(){
+       /* StardogRunnable stardog = new  StardogRunnable(database);
+        new Thread(() -> {
+            try {
+               // stardog.database().insertData(caOwl+opaOwl+apaOwl);
+                stardog.database().importData();
+            }catch (IOException e) {
+                e.printStackTrace();
+            }
+        }).start();
+        */
+    }
+
+    private OntologyEntities updatedEntities(){ return new OntologyEntities(manager);}
 
 }
 

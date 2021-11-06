@@ -26,11 +26,11 @@ class PathadoraHandler implements HttpHandler {
     private final Recommender recommender;
     private final StardogDatabase database;
 
-    public PathadoraHandler(PathadoraManager pathadoraManager) throws SWRLParseException, OWLOntologyCreationException, SWRLBuiltInException, OWLOntologyStorageException, FileNotFoundException {
+    public PathadoraHandler(PathadoraManager pathadoraManager) throws FileNotFoundException {
         this.pathadoraManager = pathadoraManager;
-        this.recommender = new Recommender(pathadoraManager);
         this.database = new StardogDatabase();
-        this.inserter = new Inserter(pathadoraManager, database);
+        this.inserter = new Inserter(pathadoraManager);
+        this.recommender = new Recommender(pathadoraManager, database);
     }
 
     @Override
@@ -74,18 +74,28 @@ class PathadoraHandler implements HttpHandler {
             switch (params.get(ACTION)) {
                 case ADD:
                     System.out.println("Add individual was requested");
-                    return pathadoraManager.addIndividual(inserter, params);
+                    String output = pathadoraManager.addIndividual(inserter, params);
+                    recommender.initializeOntologyWithRules(true);
+                    return output;
+
                 case FAC_DEP_GENERATION:
-                    System.out.println("FAC_DEP_GENERATION was requested");
+                    System.out.println("Recommended department and faculties was requested");
                     return pathadoraManager.recommendFacAndDep(recommender, params);
+
                 case COURSE_GENERATION:
-                    System.out.println("COURSE_GENERATION was requested");
+                    System.out.println("Recommended courses was requested");
                     //return pathadoraManager.recommendCourses(recommender, params);
                     return "To be refactored with Stardog";
                 case RESOURCE_GENERATION:
-                    System.out.println("RESOURCE_GENERATION was requested");
+                    System.out.println("Recommended resources was was requested");
                     pathadoraManager.recommendResources(params);
                     return "This is my response";
+
+                case FINISH:
+                    System.out.println("Operation finished");
+                    pathadoraManager.reset();
+                    return String.valueOf(STATUS_OK);
+
                 default:
                     return "This is my response";
             }

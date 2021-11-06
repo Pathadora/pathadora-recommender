@@ -5,6 +5,8 @@ import java.io.IOException;
 
 public class DataToOwl {
 
+    public static final String TMP_FILE = "newIndividuals";
+
     public static final String docOpener =
       "<?xml version=\"1.0\"?> \n"+
             "<rdf:RDF xmlns=\"http://www.semanticweb.org/sokol/ontologies/2021/7/untitled-ontology-24#\" \n"+

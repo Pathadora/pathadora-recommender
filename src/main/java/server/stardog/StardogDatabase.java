@@ -19,24 +19,26 @@ import com.complexible.stardog.api.ConnectionConfiguration;
 import com.complexible.stardog.api.SelectQuery;
 
 import static com.stardog.stark.io.RDFFormats.RDFXML;
+import static server.stardog.DataToOwl.TMP_FILE;
+import static server.stardog.Provider.MAX_POOL;
+import static server.stardog.Provider.MIN_POOL;
 import static server.utils.PathadoraConfig.OntologyConfig.PATHADORA_LOCAL_PATH;
 
 public class StardogDatabase {
-  /*  private final Connection connection;
+ /*   private final Connection connection;
 
-    public StardogDatabase() throws FileNotFoundException {
+    public StardogDatabase() {
         this.connection = initializeConnection();
-       // this.importData();
-        System.out.println("\tOntology loaded to stardog database\n");
     }
 
 
-    private void importData() throws FileNotFoundException {
+    public void importData() throws FileNotFoundException {
         connection.begin();
         connection.add().io()
                 .format(RDFXML)
                 .stream(new FileInputStream(PATHADORA_LOCAL_PATH));
         connection.commit();
+        System.out.println("Stardog Database: Ontology loaded\n");
     }
 
 
@@ -46,17 +48,17 @@ public class StardogDatabase {
         connection.begin();
         connection.add().io()
                 .format(RDFXML)
-                .stream(new FileInputStream("newIndividuals.txt"));
+                .stream(new FileInputStream(TMP_FILE));
         connection.commit();
 
-        Files.deleteIfExists(new File("newIndividuals.txt").toPath());
+        Files.deleteIfExists(new File(TMP_FILE).toPath());
     }
 
     private static ConnectionPool createConnectionPool(ConnectionConfiguration connectionConfig) {
         ConnectionPoolConfig poolConfig = ConnectionPoolConfig
                 .using(connectionConfig)
-                .minPool(10)
-                .maxPool(100000)
+                .minPool(MIN_POOL)
+                .maxPool(MAX_POOL)
                 .expiration(1, TimeUnit.HOURS)
                 .blockAtCapacity(1, TimeUnit.MINUTES);
         return poolConfig.create();
@@ -95,18 +97,6 @@ public class StardogDatabase {
         return connectionPool.obtain();
     }
 
+  */
 
-    public static void main(String... args) throws IOException, InterruptedException {
-        System.out.println("Stardog Database");
-
-        StardogDatabase database = new StardogDatabase();
-        database.importData();
-        //database.queryDatabase();
-        //database.insertData();
-        database.queryDatabase(Queries.individualsByClass("accessible_ocw_ontology","Learner"));
-        //database.queryDatabase(Queries.individualsByClass("GenericOntology","User"));
-
-    }
-
-   */
 }

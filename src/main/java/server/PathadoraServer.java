@@ -18,8 +18,7 @@ import static server.utils.PathadoraConfig.ServerConfig.*;
  */
 public class PathadoraServer {
 
-    public static void initializeAndStart() throws IOException, OWLOntologyCreationException,
-            OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
+    public static void initializeAndStart() throws IOException, OWLOntologyCreationException, OWLOntologyStorageException {
 
         final HttpServer server = HttpServer.create(new InetSocketAddress(HOSTNAME, PORT), BACKLOG);
         final PathadoraManager pathadoraManager = new PathadoraManager();
