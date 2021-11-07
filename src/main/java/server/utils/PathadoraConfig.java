@@ -12,6 +12,7 @@ import java.nio.charset.StandardCharsets;
 public class PathadoraConfig {
 
     public static class OntologyConfig {
+        public final static String PATHADORA_TEMP_LOCAL_PATH = "./src/main/resources/ont/pathadora-ontology-temp.owl";
         public final static String PATHADORA_LOCAL_PATH = "./src/main/resources/ont/pathadora-ontology.owl";
         public final static String LOM_LOCAL_PATH = "./src/main/resources/ont/lom_ontology_ods.owl";
         public final static String ACC_LOCAL_PATH = "./src/main/resources/ont/AccessibleOCW.owl";
@@ -22,6 +23,7 @@ public class PathadoraConfig {
         public final static String ESO_RESOURCE = "http://purl.org/ontology/edu/eso";
         //public final static String PATHADORA_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology/1.0";
         public final static String PATHADORA_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology";
+        public final static String PATHADORA_TEMP_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology-temp";
 
         /** TODO: to be discussed */
         public static final String ACTION = "action";

@@ -10,7 +10,6 @@ import org.swrlapi.parser.SWRLParseException;
 import server.owl.Inserter;
 import server.owl.PathadoraManager;
 import server.owl.Recommender;
-import server.stardog.StardogDatabase;
 
 import java.io.*;
 import java.util.Map;
@@ -24,13 +23,11 @@ class PathadoraHandler implements HttpHandler {
     private final PathadoraManager pathadoraManager;
     private final Inserter inserter;
     private final Recommender recommender;
-    private final StardogDatabase database;
 
-    public PathadoraHandler(PathadoraManager pathadoraManager) throws FileNotFoundException {
+    public PathadoraHandler(PathadoraManager pathadoraManager) {
         this.pathadoraManager = pathadoraManager;
-        this.database = new StardogDatabase();
         this.inserter = new Inserter(pathadoraManager);
-        this.recommender = new Recommender(pathadoraManager, database);
+        this.recommender = new Recommender(pathadoraManager);
     }
 
     @Override
@@ -74,13 +71,14 @@ class PathadoraHandler implements HttpHandler {
             switch (params.get(ACTION)) {
                 case ADD:
                     System.out.println("Add individual was requested");
-                    String output = pathadoraManager.addIndividual(inserter, params);
-                    recommender.initializeOntologyWithRules(true);
-                    return output;
+                    String addOutput = pathadoraManager.addIndividual(inserter, params);
+                    return addOutput;
 
                 case FAC_DEP_GENERATION:
                     System.out.println("Recommended department and faculties was requested");
-                    return pathadoraManager.recommendFacAndDep(recommender, params);
+                    recommender.initializeOntologyWithRules(true);
+                    String facOutput = pathadoraManager.recommendFacAndDep(recommender, params);
+                    return facOutput;
 
                 case COURSE_GENERATION:
                     System.out.println("Recommended courses was requested");

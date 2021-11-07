@@ -18,25 +18,24 @@ import com.complexible.stardog.api.Connection;
 import com.complexible.stardog.api.ConnectionConfiguration;
 import com.complexible.stardog.api.SelectQuery;
 
-import static com.stardog.stark.io.RDFFormats.RDFXML;
+import static com.stardog.stark.io.RDFFormats.*;
 import static server.stardog.DataToOwl.TMP_FILE;
 import static server.stardog.Provider.MAX_POOL;
 import static server.stardog.Provider.MIN_POOL;
-import static server.utils.PathadoraConfig.OntologyConfig.PATHADORA_LOCAL_PATH;
 
 public class StardogDatabase {
- /*   private final Connection connection;
+   /* private final Connection connection;
 
     public StardogDatabase() {
         this.connection = initializeConnection();
     }
 
 
-    public void importData() throws FileNotFoundException {
+    public void importData(String path) throws FileNotFoundException {
         connection.begin();
         connection.add().io()
                 .format(RDFXML)
-                .stream(new FileInputStream(PATHADORA_LOCAL_PATH));
+                .stream(new FileInputStream(path));
         connection.commit();
         System.out.println("Stardog Database: Ontology loaded\n");
     }
@@ -85,6 +84,14 @@ public class StardogDatabase {
         }
     }
 
+    public void removeDatabase(){
+        try (final AdminConnection aConn = AdminConnectionConfiguration
+                .toServer(Provider.url).credentials(Provider.username, Provider.password)
+                .connect()) {
+            if (aConn.list().contains(Provider.database)) {aConn.drop(Provider.database);}
+        }
+    }
+
 
     private Connection initializeConnection(){
         checkDuplicatedDatabases();
@@ -96,7 +103,5 @@ public class StardogDatabase {
         ConnectionPool connectionPool = createConnectionPool(connectionConfig);
         return connectionPool.obtain();
     }
-
-  */
-
+*/
 }

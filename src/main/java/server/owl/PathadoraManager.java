@@ -5,9 +5,12 @@ import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
+import server.stardog.StardogDatabase;
+import server.stardog.StardogRunnable;
 import server.utils.OutputToJson;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -17,9 +20,11 @@ import static server.utils.PathadoraConfig.ServerConfig.*;
 public class PathadoraManager {
     private OWLOntologyManager manager;
     private OWLOntology pathadora;
+    private StardogDatabase database;
 
 
     public PathadoraManager() throws OWLOntologyCreationException, OWLOntologyStorageException {
+        this.database = new StardogDatabase();
         initialize();
     }
 
@@ -45,10 +50,10 @@ public class PathadoraManager {
         AddImport addImport2 = new AddImport(pathadora, importDeclaration2);
         AddImport addImport3 = new AddImport(pathadora, importDeclaration3);
 
-        updatePathadoraOntology(pathadora);
+        savePathadoraOntology(pathadora, false);
     }
 
-    public String addIndividual(Inserter inserter, Map<String, String> params) throws OWLOntologyStorageException  {
+    public String addIndividual(Inserter inserter, Map<String, String> params) throws OWLOntologyStorageException {
         inserter.addNewIndividual(params);
         return String.valueOf(STATUS_OK);
     }
@@ -62,7 +67,7 @@ public class PathadoraManager {
     }
 
     public String recommendCourses(Recommender recommender, Map<String, String> params)
-            throws SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
+            throws SWRLParseException, SWRLBuiltInException {
         String learner = params.get("learner");
         String degree = params.get("degree"); // todo USELESS
         String year = params.get("year");
@@ -76,16 +81,41 @@ public class PathadoraManager {
         //Recommender rec = new Recommender(this);
     }
 
-    public void reset(){ }
+    public void reset() {
+    }
+
+
+    public void savePathadoraOntology(OWLOntology updatedOnt, boolean temporary) throws OWLOntologyStorageException {
+        if (temporary) {
+            OWLDocumentFormat format = manager.getOntologyFormat(updatedOnt);
+            assert format != null;
+
+            manager.saveOntology(updatedOnt, format, IRI.create(new File(PATHADORA_TEMP_LOCAL_PATH).toURI()));
+            initializeStardogDatabase(PATHADORA_TEMP_LOCAL_PATH);
+        } else {
+            manager.saveOntology(updatedOnt);
+        }
+    }
+
+    private void initializeStardogDatabase(String owlFile) {
+       /* StardogRunnable stardog = new StardogRunnable(database);
+        new Thread(() -> {
+            try {
+                // stardog.database().insertData(caOwl+opaOwl+apaOwl);
+                stardog.database().importData(owlFile);
+                new File(owlFile).delete();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }).start();
+        */
+    }
+
+    public OWLOntologyManager getManager() { return manager;
+    }
 
     public OWLOntology pathadoraOnt() {
         return pathadora;
     }
-
-    public void updatePathadoraOntology(OWLOntology updatedOnt) throws OWLOntologyStorageException {
-        manager.saveOntology(updatedOnt);
-    }
-
-    public OWLOntologyManager getManager() { return manager;}
 
 }

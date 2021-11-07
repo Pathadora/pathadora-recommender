@@ -1,10 +1,7 @@
 package server.owl;
 
 import org.semanticweb.owlapi.model.*;
-import server.stardog.StardogDatabase;
-import server.stardog.StardogRunnable;
 
-import java.io.IOException;
 import java.util.Map;
 
 import static server.utils.ParserUtils.*;
@@ -31,7 +28,7 @@ public class Inserter {
         String opaOwl = entities.defineObjectPropertyAssertions(obj_prop, tIndividual, pathadora);
         String apaOwl = entities.defineAnnotationPropertyAssertions(ann_prop, tIndividual, pathadora);
 
-        manager.updatePathadoraOntology(pathadora);
+        manager.savePathadoraOntology(pathadora, false);
 
         return String.valueOf(STATUS_OK);
     }

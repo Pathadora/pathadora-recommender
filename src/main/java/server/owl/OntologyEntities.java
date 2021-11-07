@@ -35,10 +35,11 @@ public class OntologyEntities {
         StringBuilder outBuild = new StringBuilder();
         for (Map.Entry<String, String> obj : obj_prop.entrySet()) {
             /* check for multiple object property values */
-            if(obj.getValue().contains(",")) {
-                Arrays.stream(obj.getValue().split(",")).forEach( o -> {
-                    outBuild.append(addProperty(obj.getKey(), o, tIndividual,  pathadora));});
-            }else {
+            if (obj.getValue().contains(",")) {
+                Arrays.stream(obj.getValue().split(",")).forEach(o -> {
+                    outBuild.append(addProperty(obj.getKey(), o, tIndividual, pathadora));
+                });
+            } else {
                 outBuild.append(addProperty(obj.getKey(), obj.getValue(), tIndividual, pathadora));
             }
         }
@@ -53,9 +54,10 @@ public class OntologyEntities {
             /* check for multiple annotation property values */
             if (obj.getValue().contains(",")) {
                 Arrays.stream(obj.getValue().split(",")).forEach(o -> {
-                    outBuild.append(addAnnotation(obj.getKey(), o, tIndividual, pathadora));});
+                    outBuild.append(addAnnotation(obj.getKey(), o, tIndividual, pathadora));
+                });
             } else {
-                outBuild.append(addAnnotation(obj.getKey(), obj.getValue(), tIndividual,  pathadora));
+                outBuild.append(addAnnotation(obj.getKey(), obj.getValue(), tIndividual, pathadora));
             }
         }
 
@@ -63,7 +65,7 @@ public class OntologyEntities {
     }
 
 
-    private String addProperty(String key, String value, OWLNamedIndividual tIndividual, OWLOntology pathadora){
+    private String addProperty(String key, String value, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
         OWLDataFactory df = pathadoraManager.getManager().getOWLDataFactory();
 
         OWLNamedIndividual val = (OWLNamedIndividual) this.ontologyEntitiesBy(INDIVIDUALS, value);
@@ -75,7 +77,7 @@ public class OntologyEntities {
     }
 
 
-    private String addAnnotation(String key, String value, OWLNamedIndividual tIndividual, OWLOntology pathadora){
+    private String addAnnotation(String key, String value, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
         OWLDataFactory df = pathadoraManager.getManager().getOWLDataFactory();
 
         OWLAnnotationProperty annProp = (OWLAnnotationProperty) this.ontologyEntitiesBy(ANNOTATION_PROPERTIES, key);
