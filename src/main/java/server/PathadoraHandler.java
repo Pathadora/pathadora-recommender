@@ -71,23 +71,20 @@ class PathadoraHandler implements HttpHandler {
             switch (params.get(ACTION)) {
                 case ADD:
                     System.out.println("Add individual was requested");
-                    String addOutput = pathadoraManager.addIndividual(inserter, params);
-                    return addOutput;
+                    return  pathadoraManager.addIndividual(inserter, params);
 
-                case FAC_DEP_GENERATION:
-                    System.out.println("Recommended department and faculties was requested");
+                case FACULTIES_GENERATION:
+                    System.out.println("Recommended faculties was requested");
                     recommender.initializeOntologyWithRules(true);
-                    String facOutput = pathadoraManager.recommendFacAndDep(recommender, params);
-                    return facOutput;
+                    return pathadoraManager.recommendFacAndDep(recommender, params);
 
                 case COURSE_GENERATION:
                     System.out.println("Recommended courses was requested");
-                    //return pathadoraManager.recommendCourses(recommender, params);
-                    return "To be refactored with Stardog";
+                    return pathadoraManager.recommendCourses(recommender, params);
+
                 case RESOURCE_GENERATION:
                     System.out.println("Recommended resources was was requested");
-                    pathadoraManager.recommendResources(params);
-                    return "This is my response";
+                    return pathadoraManager.recommendResources(params);
 
                 case FINISH:
                     System.out.println("Operation finished");
@@ -95,7 +92,7 @@ class PathadoraHandler implements HttpHandler {
                     return String.valueOf(STATUS_OK);
 
                 default:
-                    return "This is my response";
+                    return "No correct action";
             }
         } else {
             System.out.println("Error on request");

@@ -1,19 +1,26 @@
 package server.owl;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
+import server.stardog.Queries;
 import server.stardog.StardogDatabase;
 import server.stardog.StardogRunnable;
 import server.utils.OutputToJson;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static server.owl.Rules.recommendedCourses;
+import static server.stardog.DataToOwl.TMP_FILE;
 import static server.utils.PathadoraConfig.OntologyConfig.*;
 import static server.utils.PathadoraConfig.ServerConfig.*;
 
@@ -63,22 +70,32 @@ public class PathadoraManager {
         String learner = params.get("learner");
         String degree = params.get("degree");
         Map<String, List<String>> output = recommender.recommendedFaculties(learner, degree);
-        return OutputToJson.facDepJsonResponse(learner, output);
+        return OutputToJson.facultiesJsonResponse(learner, output);
     }
 
-    public String recommendCourses(Recommender recommender, Map<String, String> params)
-            throws SWRLParseException, SWRLBuiltInException {
-        String learner = params.get("learner");
-        String degree = params.get("degree"); // todo USELESS
-        String year = params.get("year");
-        String faculty = params.get("faculty");
-        Map<String, String> output = recommender.recommendedCourses(learner, faculty, degree, year);
-        return OutputToJson.coursesJsonResponse(output);
+    public String recommendCourses(Recommender recommender, Map<String, String> params) {
+        String learner = params.get(LEARNER);
+        String degree = params.get(DEGREE);
+        String year = params.get(YEAR);
+        String faculty =params.get(FACULTY);
+
+        Map<String, String> learnerData = new HashMap<>();
+        learnerData.put(LEARNER, learner);
+        learnerData.put(DEGREE,degree);
+        learnerData.put(YEAR, year);
+        learnerData.put(FACULTY, faculty);
+
+        List<Map<String,String>>  result = recommender.recommendedCourses(learner,faculty,degree,year, database);
+        result.add(0, learnerData);
+
+        return OutputToJson.coursesJsonResponse(result);
     }
 
-    public void recommendResources(Map<String, String> params)
+
+    public String recommendResources(Map<String, String> params)
             throws SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
         //Recommender rec = new Recommender(this);
+        return "Resource recommender tobedone";
     }
 
     public void reset() {
@@ -103,12 +120,12 @@ public class PathadoraManager {
             try {
                 // stardog.database().insertData(caOwl+opaOwl+apaOwl);
                 stardog.database().importData(owlFile);
-                new File(owlFile).delete();
+                Files.deleteIfExists(new File(owlFile).toPath());
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }).start();
-        */
+    */
     }
 
     public OWLOntologyManager getManager() { return manager;

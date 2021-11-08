@@ -3,6 +3,9 @@ package server.owl;
 import org.semanticweb.owlapi.model.*;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
+import server.stardog.Queries;
+import server.stardog.StardogDatabase;
+import server.utils.OutputToJson;
 
 import java.util.*;
 
@@ -38,8 +41,8 @@ public class Recommender {
             throws SWRLParseException, SWRLBuiltInException {
         if (apply) {
             System.out.println("Recommender applying rules, waiting ...");
-            model.applyRule(SCHOOLS, Rules.schoolRule());
-            model.applyRule(DEPARTMENTS, Rules.departmentRule());
+            model.applyRule(SCHOOL, Rules.schoolRule());
+            model.applyRule(DEPARTMENT, Rules.departmentRule());
             //model.applyRule(FACULTIES, Rules.recommendedFaculties());
             System.out.println("Recommender completed applying rules");
         } else {
@@ -48,17 +51,15 @@ public class Recommender {
     }
 
 
-    public Map<String, String> recommendedCourses(String learner, String faculty, String degree, String year)
-            throws SWRLParseException, SWRLBuiltInException {
-        List<String> recCourses = recommend(COURSES, Rules.recommendedCourses(learner, faculty, degree, year), COURSE_PROPERTY, learner);
-        System.out.println("Recommended courses: " + recCourses.toString());
+    public List<Map<String, String>> recommendedCourses(String learner,
+                                                  String faculty,
+                                                  String degree,
+                                                  String year,
+                                                  StardogDatabase database){
 
-        Map<String, String> output = new HashMap<>();
-        for (String course : recCourses) {
-            /* Add other course data here */
-            output.put("course", course);
-        }
-        return output;
+       // return database.queryDatabase(Queries.courses());
+        return new ArrayList<>();
+
     }
 
 

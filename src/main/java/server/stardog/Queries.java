@@ -24,4 +24,55 @@ public class Queries {
     }
 
 
+    public static String courses(){ return  PREFIXES +
+            "\n" +
+            "         SELECT  ?course \n" +
+            "         (SAMPLE(?year) AS ?year)     \n" +
+            "         (SAMPLE(?cfu) AS ?cfu)\n" +
+            "         (SAMPLE(?ssd) AS ?ssd)\n" +
+            "         (SAMPLE(?type) AS ?type)\n" +
+            "         (SAMPLE(?period) AS ?period)\n" +
+            "         (SAMPLE(?isObbligatory) AS ?isObbligatory)\n" +
+            "         ?language\n" +
+            "\n" +
+            "         WHERE {\n" +
+            "            {\n" +
+            "               SELECT ?department ?faculty ?course_degree \n" +
+            "               WHERE {\n" +
+            "                  ?learner a accessible_ocw_ontology:Learner .\n" +
+            "                  ?learner rdfs:label \"Learner_Luca\" .\n" +
+            "   \n" +
+            "                  ?school a pathadora-ontology:School .\n" +
+            "                  ?learner pathadora-ontology:recommendedSchool ?school .\n" +
+            "\n" +
+            "                  ?department a pathadora-ontology:Departments .\n" +
+            "                  ?school pathadora-ontology:schoolHasDepartment ?department .\n" +
+            "  \n" +
+            "                  ?faculty pathadora-ontology:facultyOfDepartment ?department .\n" +
+            "   \n" +
+            "                  ?faculty a ?course_degree .\n" +
+            "                  FILTER (regex(str(?course_degree), \"Bachelor\")) .\n" +
+            "               }\n" +
+            "            }\n" +
+            "      \n" +
+            "         ?course a ?course_degree .\n" +
+            "         ?course pathadora-ontology:isCourseObligatory ?isObbligatory .\n" +
+            "         ?isObbligatory a pathadora-ontology:No .\n" +
+            "         \n" +
+            "         ?course pathadora-ontology:courseYear ?year .\n" +
+            "         ?course pathadora-ontology:courseCFU ?cfu .\n" +
+            "         ?course pathadora-ontology:courseSSD ?ssd .\n" +
+            "         ?course pathadora-ontology:courseType ?type .\n" +
+            "         ?course pathadora-ontology:coursePeriod ?period .\n" +
+            "         ?course pathadora-ontology:isCourseObligatory ?isObbligatory .\n" +
+            "         ?course pathadora-ontology:courseLanguage ?language\n" +
+            "      }\n" +
+            "   \n" +
+            "  GROUP BY ?course ?language\n" +
+            "\n" +
+            "\n" +
+            "\n";
+    }
+
+
 }

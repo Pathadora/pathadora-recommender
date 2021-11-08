@@ -9,19 +9,18 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 
+import java.util.*;
 import java.util.concurrent.TimeUnit;
-
 import com.stardog.stark.query.SelectQueryResult;
-import com.stardog.stark.query.io.QueryResultWriters;
-import com.complexible.common.rdf.query.resultio.TextTableQueryResultWriter;
 import com.complexible.stardog.api.Connection;
 import com.complexible.stardog.api.ConnectionConfiguration;
 import com.complexible.stardog.api.SelectQuery;
-
+import server.utils.OutputToJson;
 import static com.stardog.stark.io.RDFFormats.*;
-import static server.stardog.DataToOwl.TMP_FILE;
-import static server.stardog.Provider.MAX_POOL;
-import static server.stardog.Provider.MIN_POOL;
+
+import static server.stardog.DataToOwl.*;
+import static server.stardog.Provider.*;
+import static server.utils.PathadoraConfig.OntologyConfig.*;
 
 public class StardogDatabase {
    /* private final Connection connection;
@@ -64,11 +63,21 @@ public class StardogDatabase {
     }
 
 
-    public void queryDatabase(String sparqlQuery) throws IOException {
+    public List<Map<String, String>>  queryDatabase(String sparqlQuery) {
         SelectQuery query = connection.select(sparqlQuery);
         try(SelectQueryResult aResult = query.execute()) {
-            System.out.println("\n Now a particular slice...");
-            QueryResultWriters.write(aResult, System.out, TextTableQueryResultWriter.FORMAT);
+            List<Map<String, String>> output = new ArrayList<>();
+            while (aResult.hasNext()) {
+                Map<String, String> mapInfo = new HashMap<>();
+
+                aResult.next()
+                        .stream()
+                        .map(Object::toString)
+                        .forEach(e -> mapInfo.put(extractKey(e), extractValue(e)));
+
+                output.add(mapInfo);
+            }
+            return output;
         }
     }
 
@@ -103,5 +112,39 @@ public class StardogDatabase {
         ConnectionPool connectionPool = createConnectionPool(connectionConfig);
         return connectionPool.obtain();
     }
-*/
+
+
+    private String extractKey(String data){
+        System.out.println("String: " +data);
+        return data.substring(1, data.indexOf("="));
+    }
+
+
+    private String extractValue(String data){
+        if(data.contains("pathadora-ontology")){
+            return data.split("#")[1];
+        }else{
+            return data.substring(data.indexOf("\"")+1, data.indexOf("^")-1);
+        }
+    }
+
+    public static void main(String... args) throws IOException {
+        StardogDatabase db = new StardogDatabase();
+       // db.importData(PATHADORA_TEMP_LOCAL_PATH);
+
+        db.queryDatabase(Queries.courses());
+
+
+        Map<String, String> learnerData = new HashMap<>();
+        learnerData.put(LEARNER, "Hello");
+        learnerData.put(DEGREE,  "Hello");
+        learnerData.put(YEAR,  "Hello");
+        learnerData.put(FACULTY,  "Hello");
+
+        List<Map<String, String>> result = db.queryDatabase(Queries.courses());
+        result.add(0,learnerData);
+
+        System.out.println(OutputToJson.coursesJsonResponse(result));
+    }*/
+
 }
