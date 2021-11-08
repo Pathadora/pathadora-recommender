@@ -28,15 +28,24 @@ public class PathadoraConfig {
         /** TODO: to be discussed */
         public static final String ACTION = "action";
         public static final String ADD = "add";
-        public static final String FAC_DEP_GENERATION = "fac_dep_generation";
+        public static final String FACULTIES_GENERATION = "faculties_generation";
         public static final String COURSE_GENERATION = "course_generation";
         public static final String RESOURCE_GENERATION = "resource_generation";
         public static final String FINISH = "finish";
+
         public static final String TYPE = "type";
         public static final String LEARNER = "learner";
         public static final String COURSE = "course";
         public static final String LESSON = "lesson";
+        public static final String FACULTY = "faculty";
         public static final String ID = "id";
+        public static final String DATA = "data";
+        public static final String DEGREE = "degree";
+        public static final String SCHOOL = "school";
+        public static final String DEPARTMENT = "department";
+        public static final String FACULTIES = "faculties";
+        public static final String COURSES = "courses";
+        public static final String YEAR = "year";
 
         public static final String OBJECT_PROPERTIES = "object_properties";
         public static final String DATA_PROPERTIES = "data_properties";
@@ -51,10 +60,7 @@ public class PathadoraConfig {
         public static final String COURSE_PROPERTY = "recommendedCourses";
         public static final String DEPARTMENT_OF_PROPERTY = "departmentHasFaculty";
 
-        public static final String SCHOOLS = "Schools";
-        public static final String DEPARTMENTS = "Departments";
-        public static final String FACULTIES = "Faculties";
-        public static final String COURSES = "Courses";
+
 
     }
 
