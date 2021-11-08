@@ -77,6 +77,7 @@ public class ParserUtils {
                 dataToList.add(s);
             }
         }
+
         return validateValuesList(dataToList);
     }
 
@@ -105,9 +106,9 @@ public class ParserUtils {
     }
 
     private static String validateString(String value){
-        return (!value.contains("{") || !value.contains("}"))
+        return (!value.contains("[") || !value.contains("]"))
                 ? value.replaceAll("[^a-zA-Z0-9/_]", "")
-                : value.replaceAll("[{} ]", "");
+                : value.replaceAll("[^a-zA-Z0-9/_,]", "");
     }
 
     /* remove numeric id of nested camps */
