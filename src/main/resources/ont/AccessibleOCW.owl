@@ -1,767 +1,1295 @@
-@prefix : <http://purl.org/accessible_ocw_ontology#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix GenericOntology: <http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#> .
-
-<http://purl.org/accessible_ocw_ontology> a owl:Ontology ;
-	dc:creator "Mirette Elias" ;
-	dc:description "This ontology is designed for accessible OpenCourseWare. It is built on the accessibilty concepts of IMS Learning Global Consortium (https://www.imsglobal.org/activity/accessibility) and the vocabulary structure of the ACCESSIBLE ontology (http://www.accessible-eu.org/index.php/ontology.html)." ;
-	rdfs:label "accessible_ocw_ontology Ontology"@en ;
-	dc:contributor "Steffen Lohmann" ;
-	dc:title "Accessible OCW" ;
-	owl:versionInfo "Version 1.0" .
-# 
-# 
-# #################################################################
-# #
-# #    Annotation properties
-# #
-# #################################################################
-# 
-# 
-# http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#Meet
-
-GenericOntology:Meet a owl:AnnotationProperty .
-# 
-# http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#TechnologyUsage
-
-GenericOntology:TechnologyUsage a owl:AnnotationProperty .
-# 
-# http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#User_has_Disability
-
-GenericOntology:User_has_Disability a owl:AnnotationProperty .
-# 
-# http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasAge
-
-GenericOntology:hasAge a owl:AnnotationProperty .
-# 
-# http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasEducation
-
-GenericOntology:hasEducation a owl:AnnotationProperty .
-# 
-# http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasJob
-
-GenericOntology:hasJob a owl:AnnotationProperty .
-# 
-# http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasLocation
-
-GenericOntology:hasLocation a owl:AnnotationProperty .
-# 
-# http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasMaritalStatus
-
-GenericOntology:hasMaritalStatus a owl:AnnotationProperty .
-# 
-# http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasName
-
-GenericOntology:hasName a owl:AnnotationProperty .
-# 
-# http://purl.org/accessible_ocw_ontology#User_has_Disability
-
-:User_has_Disability a owl:AnnotationProperty .
-# 
-# http://purl.org/accessible_ocw_ontology#hasMaritalStatus
-
-:hasMaritalStatus a owl:AnnotationProperty .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Object Properties
-# #
-# #################################################################
-# 
-# 
-# http://purl.org/accessible_ocw_ontology#AccessMode
-
-:AccessMode a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#accessModeAdapted
-
-:accessModeAdapted a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#accessModeOrnamental
-
-:accessModeOrnamental a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#accessModeReq
-
-:accessModeReq a owl:ObjectProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range :AccessModeRequired .
-# 
-# http://purl.org/accessible_ocw_ontology#accessMode_adaptionRequest
-
-:accessMode_adaptionRequest a owl:ObjectProperty ;
-	rdfs:domain :AccessModeRequired ;
-	rdfs:range :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#accessMode_existingAccessMode
-
-:accessMode_existingAccessMode a owl:ObjectProperty ;
-	rdfs:domain :AccessModeRequired ;
-	rdfs:range :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationDetail
-
-:adaptationDetail a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :AdaptationDetailValue .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationDetailReq
-
-:adaptationDetailReq a owl:ObjectProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range :AdaptationDetailRequired .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationDetail_adaptationRequest
-
-:adaptationDetail_adaptationRequest a owl:ObjectProperty ;
-	rdfs:domain :AdaptationDetailRequired ;
-	rdfs:range :AdaptationDetailValue .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationDetail_existingAccessMode
-
-:adaptationDetail_existingAccessMode a owl:ObjectProperty ;
-	rdfs:domain :AdaptationDetailRequired ;
-	rdfs:range :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationMediaReq
-
-:adaptationMediaReq a owl:ObjectProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range :AdaptationMediaRequired .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationMediaType
-
-:adaptationMediaType a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationMedia_adaptationRequest
-
-:adaptationMedia_adaptationRequest a owl:ObjectProperty ;
-	rdfs:domain :AdaptationMediaRequired ;
-	rdfs:range :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationMedia_existingAccessMode
-
-:adaptationMedia_existingAccessMode a owl:ObjectProperty ;
-	rdfs:domain :AdaptationMediaRequired ;
-	rdfs:range :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationType
-
-:adaptationType a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationTypeReq
-
-:adaptationTypeReq a owl:ObjectProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range :AdaptationTypeRequired .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationType_adaptationRequest
-
-:adaptationType_adaptationRequest a owl:ObjectProperty ;
-	rdfs:domain :AdaptationTypeRequired ;
-	rdfs:range :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#adaptationType_existingAccessMode
-
-:adaptationType_existingAccessMode a owl:ObjectProperty ;
-	rdfs:domain :AdaptationTypeRequired ;
-	rdfs:range :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#apiInteroperable
-
-:apiInteroperable a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#controlFlexibility
-
-:controlFlexibility a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :ControlFlexibilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#displayTransformability
-
-:displayTransformability a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#dr_educationalComplexityOfAdaptation
-
-:dr_educationalComplexityOfAdaptation a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :EducationalComplexityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#educationalComplexityOfAdaptation
-
-:educationalComplexityOfAdaptation a owl:ObjectProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range :EducationalComplexityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#hazard
-
-:hazard a owl:ObjectProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range :HazardValue .
-# 
-# http://purl.org/accessible_ocw_ontology#hazardAvoidance
-
-:hazardAvoidance a owl:ObjectProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range :HazardValue .
-# 
-# http://purl.org/accessible_ocw_ontology#inputRequirements
-
-:inputRequirements a owl:ObjectProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range :ControlFlexibilityValue .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Data properties
-# #
-# #################################################################
-# 
-# 
-# http://purl.org/accessible_ocw_ontology#atInteroperable
-
-:atInteroperable a owl:DatatypeProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range xsd:boolean .
-# 
-# http://purl.org/accessible_ocw_ontology#dr_atInteroperable
-
-:dr_atInteroperable a owl:DatatypeProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range xsd:boolean .
-# 
-# http://purl.org/accessible_ocw_ontology#dr_educationalLevelOfAdaptation
-
-:dr_educationalLevelOfAdaptation a owl:DatatypeProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range xsd:normalizedString .
-# 
-# http://purl.org/accessible_ocw_ontology#dr_languageOfAdaptation
-
-:dr_languageOfAdaptation a owl:DatatypeProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range xsd:normalizedString .
-# 
-# http://purl.org/accessible_ocw_ontology#educationalLevelOfAdaptation
-
-:educationalLevelOfAdaptation a owl:DatatypeProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range xsd:normalizedString .
-# 
-# http://purl.org/accessible_ocw_ontology#hasAdaptation
-
-:hasAdaptation a owl:DatatypeProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range xsd:anyURI .
-# 
-# http://purl.org/accessible_ocw_ontology#isAdaptationOf
-
-:isAdaptationOf a owl:DatatypeProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range xsd:anyURI .
-# 
-# http://purl.org/accessible_ocw_ontology#isFullAdaptationOf
-
-:isFullAdaptationOf a owl:DatatypeProperty ;
-	rdfs:domain :DigitalResource ;
-	rdfs:range xsd:anyURI .
-# 
-# http://purl.org/accessible_ocw_ontology#isPartialAdaptationOf
-
-:isPartialAdaptationOf a owl:DatatypeProperty ;
-	rdfs:domain :DigitalResource .
-# 
-# http://purl.org/accessible_ocw_ontology#languageOfAdaptation
-
-:languageOfAdaptation a owl:DatatypeProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range xsd:normalizedString .
-# 
-# http://purl.org/accessible_ocw_ontology#languageOfInterface
-
-:languageOfInterface a owl:DatatypeProperty ;
-	rdfs:domain :Learner ;
-	rdfs:range xsd:normalizedString .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Classes
-# #
-# #################################################################
-# 
-# 
-# http://purl.org/accessible_ocw_ontology#AccessModeRequired
-
-:AccessModeRequired a owl:Class ;
-	rdfs:label "AccessModeRequired" .
-# 
-# http://purl.org/accessible_ocw_ontology#AccessModeValue
-
-:AccessModeValue a owl:Class ;
-	rdfs:label "AccessModeValue" .
-# 
-# http://purl.org/accessible_ocw_ontology#AccessibilityAPI
-
-:AccessibilityAPI a owl:Class ;
-	rdfs:label "AccessibilityAPI" .
-# 
-# http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired
-
-:AdaptationDetailRequired a owl:Class ;
-	rdfs:label "AdaptationDetailRequired" .
-# 
-# http://purl.org/accessible_ocw_ontology#AdaptationDetailValue
-
-:AdaptationDetailValue a owl:Class ;
-	rdfs:label "AdaptationDetailValue" .
-# 
-# http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired
-
-:AdaptationMediaRequired a owl:Class ;
-	rdfs:label "AdaptationMediaRequired" .
-# 
-# http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue
-
-:AdaptationMediaTypeValue a owl:Class ;
-	rdfs:label "AdaptationMediaTypeValue" .
-# 
-# http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired
-
-:AdaptationTypeRequired a owl:Class ;
-	rdfs:label "AdaptationTypeRequired" .
-# 
-# http://purl.org/accessible_ocw_ontology#AdaptationTypeValue
-
-:AdaptationTypeValue a owl:Class ;
-	rdfs:label "AdaptationTypeValue" .
-# 
-# http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue
-
-:ControlFlexibilityValue a owl:Class ;
-	rdfs:label "ControlFlexibilityValue" .
-# 
-# http://purl.org/accessible_ocw_ontology#DigitalResource
-
-:DigitalResource a owl:Class ;
-	rdfs:label "DigitalResource" .
-# 
-# http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue
-
-:DisplayTransformabilityValue a owl:Class ;
-	rdfs:label "DisabilityTransformabilityValue" .
-# 
-# http://purl.org/accessible_ocw_ontology#EducationalComplexityValue
-
-:EducationalComplexityValue a owl:Class ;
-	rdfs:label "EducationalComplexityValue" .
-# 
-# http://purl.org/accessible_ocw_ontology#HazardValue
-
-:HazardValue a owl:Class ;
-	rdfs:label "HazardValue" .
-# 
-# http://purl.org/accessible_ocw_ontology#Learner
-
-:Learner a owl:Class ;
-	rdfs:subClassOf <http://www.AccessibleOntology.com/GenericOntology.owl#User> ;
-	rdfs:label "Learner" .
-# 
-# http://www.AccessibleOntology.com/GenericOntology.owl#User
-
-<http://www.AccessibleOntology.com/GenericOntology.owl#User> a owl:Class ;
-	rdfs:label "User" .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Individuals
-# #
-# #################################################################
-# 
-# 
-# http://purl.org/accessible_ocw_ontology#ARIAv1
-
-:ARIAv1 a owl:NamedIndividual , :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#AT-SPI
-
-:AT-SPI a owl:NamedIndividual , :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#ATK
-
-:ATK a owl:NamedIndividual , :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#AndroidAccessibility
-
-:AndroidAccessibility a owl:NamedIndividual , :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#BlackberryAccessibility
-
-:BlackberryAccessibility a owl:NamedIndividual , :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#ChemML
-
-:ChemML a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#Daisy
-
-:Daisy a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#EPUB3
-
-:EPUB3 a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#JavaAccessibility
-
-:JavaAccessibility a owl:NamedIndividual , :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#LIT
-
-:LIT a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#LaTeX
-
-:LaTeX a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#Learner_1
-
-:Learner_1 a owl:NamedIndividual , :Learner ;
-	:accessModeReq :visual_textual ;
-	:adaptationTypeReq :visual_alternativeText , :visual_audioDiscription ;
-	:atInteroperable "true"^^xsd:boolean ;
-	:languageOfAdaptation "Spanish"^^xsd:string ;
-	:languageOfInterface "Spanish"^^xsd:string ;
-	GenericOntology:Meet "Lena was born blind. She completed her high</br>school but she couldn't find a job." ;
-	GenericOntology:TechnologyUsage "Lena uses her PC (Windows XP) on a daily basis to check her email and apply for jobs. She uses the Jaws screenreader and she also</br>uses OCR software, a Braille embosser and Adobe reader speech output. "^^xsd:string ;
-	GenericOntology:User_has_Disability :Blindness ;
-	GenericOntology:hasAge "20"^^xsd:int ;
-	GenericOntology:hasEducation "High school"^^xsd:string ;
-	GenericOntology:hasJob "Unemployed"^^xsd:string ;
-	GenericOntology:hasLocation "Spain"^^xsd:string ;
-	GenericOntology:hasMaritalStatus "Single"^^xsd:string ;
-	GenericOntology:hasName "Lena Fox"^^xsd:string .
-# 
-# http://purl.org/accessible_ocw_ontology#Learner_2
-
-:Learner_2 a owl:NamedIndividual , :Learner ;
-	:hazardAvoidance :flashing ;
-	:languageOfAdaptation "English"^^xsd:string ;
-	:languageOfInterface "English"^^xsd:string ;
-	GenericOntology:Meet "James have problems with some colors. He is working as an engineer."^^xsd:string ;
-	GenericOntology:TechnologyUsage "He works on his desktop PC every day, most of the day and is responsible of the network admistration in his company."^^xsd:string ;
-	GenericOntology:User_has_Disability :Colour_Blindness ;
-	GenericOntology:hasAge "25"^^xsd:int ;
-	GenericOntology:hasEducation "Bachelor&rsquo;s degree in Network and Communication"^^xsd:string ;
-	GenericOntology:hasJob "Employed"^^xsd:string ;
-	GenericOntology:hasLocation "Belgium"^^xsd:string ;
-	GenericOntology:hasMaritalStatus "Married"^^xsd:string ;
-	GenericOntology:hasName "James Van"^^xsd:string .
-# 
-# http://purl.org/accessible_ocw_ontology#Learner_3
-
-:Learner_3 a owl:NamedIndividual , :Learner ;
-	:accessModeReq :auditory_textual ;
-	:adaptationDetailReq :auditory_verbatim ;
-	:adaptationTypeReq :auditory_caption ;
-	:languageOfAdaptation "Spanish"^^xsd:string ;
-	:languageOfInterface "Spanish"^^xsd:string ;
-	GenericOntology:Meet "Tomasa is completely deaf. She holds a</br>master&rsquo;s degree in Law, and she works in a consulting firm in Belgium. </br>Since her teenage years, Tomasa is completely deaf. At first, it was very</br>difficult to communicate with other people, but she has learned to cope</br>with her deafness: she mostly uses lip reading to communicate with</br>other people. Sometimes, she also uses some sign language when she is</br>in a company where people also understand it. But as many people don&rsquo;t</br>understand sign language, she doesn&rsquo;t use it very often."^^xsd:string ;
-	GenericOntology:TechnologyUsage "Tomasa is quite a heavy technology user. For work, she has a standard Windows</br>Vista laptop, which she also uses at home and sometimes even in</br>train stations and airports when she is waiting. She spends about 50 hours</br>per week using her computer, it is an important tool for her. At work, </br>Tomasa creates and edits word and excel documents, and searches for</br>information on the internet. She is also a heavy e-mail user, as she has to</br>keep a close contact with her clients without being able to make</br>phonecalls. At home, she manages the pictures of her children growing</br>up and occasionally plays a casual computer game like Tetris. She</br>has already considered switching to Firefox, but still uses Internet</br>Explorer to surf the internet on a daily basis. Tomasa uses Google, </br>Gmail, updates her blog, uses instant messaging to talk to her friends, takes</br>quizzes on Facebook, sometimes watching a video on Youtube, etc. </br>The mobile phone is also very important for Tomasa: she couldn&rsquo;t miss it as</br>a tool. But it is also part of her life style, and she carries is around all the</br>time. She uses it to videocall her husband if she will be home late, and to</br>keep up with her friends. Most important about her phone is the look and</br>feel. It has a big screen displaying clear letters, and it feeds pretty good</br>images when she uses the phone in video calls. Although her</br>smartphone was quite expensive, the device, with all its functionalities, </br>was worth the investment. She mostly uses the phone as any other user</br>would, but as she can&rsquo;t make any regular calls, the video call</br>functionality is very important to her. Besides video call, she uses</br>texting, e-mail (she likes the Qwerty keypad!), and sometimes internet. </br>As the phone has so many features, she thinks it is a pity she can&rsquo;t use all of</br>them, such as the built-in radio receiver, MP3 player, etc. Tomasa uses no</br>assistive technology with her phone."^^xsd:string ;
-	GenericOntology:User_has_Disability :Communication_Disability , :Deafness ;
-	GenericOntology:hasAge "34"^^xsd:int ;
-	GenericOntology:hasEducation "Master's degree in law"^^xsd:string ;
-	GenericOntology:hasJob "Employed"^^xsd:string ;
-	GenericOntology:hasLocation "Barcelona, Spain"^^xsd:string ;
-	GenericOntology:hasMaritalStatus "Married"^^xsd:string ;
-	GenericOntology:hasName "Tomasa Almaraz"^^xsd:string .
-# 
-# http://purl.org/accessible_ocw_ontology#MSAA
-
-:MSAA a owl:NamedIndividual , :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#MacOSXAccessibility
-
-:MacOSXAccessibility a owl:NamedIndividual , :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#MathML
-
-:MathML a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#NIMAS
-
-:NIMAS a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#Nemeth
-
-:Nemeth a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#OEBPS
-
-:OEBPS a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#PDF
-
-:PDF a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#UIAutomation
-
-:UIAutomation a owl:NamedIndividual , :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#alternativeText
-
-:alternativeText a owl:NamedIndividual , :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#audioDescription
-
-:audioDescription a owl:NamedIndividual , :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#auditory
-
-:auditory a owl:NamedIndividual , :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#auditory_caption
-
-:auditory_caption a owl:NamedIndividual , :AdaptationTypeRequired ;
-	:adaptationType_adaptationRequest :captions ;
-	:adaptationType_existingAccessMode :auditory .
-# 
-# http://purl.org/accessible_ocw_ontology#auditory_textual
-
-:auditory_textual a owl:NamedIndividual , :AccessModeRequired ;
-	:accessMode_adaptionRequest :textual ;
-	:accessMode_existingAccessMode :auditory .
-# 
-# http://purl.org/accessible_ocw_ontology#auditory_verbatim
-
-:auditory_verbatim a owl:NamedIndividual , :AdaptationDetailRequired ;
-	:adaptationDetail_adaptationRequest :verbatim ;
-	:adaptationDetail_existingAccessMode :auditory .
-# 
-# http://purl.org/accessible_ocw_ontology#backgroundColour
-
-:backgroundColour a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#braille
-
-:braille a owl:NamedIndividual , :AdaptationMediaTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#captions
-
-:captions a owl:NamedIndividual , :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#color
-
-:color a owl:NamedIndividual , :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#color_textual
-
-:color_textual a owl:NamedIndividual , :AccessModeRequired ;
-	:accessMode_adaptionRequest :textual ;
-	:accessMode_existingAccessMode :color .
-# 
-# http://purl.org/accessible_ocw_ontology#cursorPresentation
-
-:cursorPresentation a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#e-book
-
-:e-book a owl:NamedIndividual , :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#enhanced
-
-:enhanced a owl:NamedIndividual , :AdaptationDetailValue .
-# 
-# http://purl.org/accessible_ocw_ontology#enriched
-
-:enriched a owl:NamedIndividual , :EducationalComplexityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#flashing
-
-:flashing a owl:NamedIndividual , :HazardValue .
-# 
-# http://purl.org/accessible_ocw_ontology#fontFace
-
-:fontFace a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#fontSize
-
-:fontSize a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#fontWeight
-
-:fontWeight a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#foregroundColour
-
-:foregroundColour a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#fullKeyboardControl
-
-:fullKeyboardControl a owl:NamedIndividual , :ControlFlexibilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#fullMouseControl
-
-:fullMouseControl a owl:NamedIndividual , :ControlFlexibilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#haptic
-
-:haptic a owl:NamedIndividual , :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#highContrast
-
-:highContrast a owl:NamedIndividual , :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#highlightPresentation
-
-:highlightPresentation a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#iAccessible2
-
-:iAccessible2 a owl:NamedIndividual , :AccessibilityAPI .
-# 
-# http://purl.org/accessible_ocw_ontology#itemsize
-
-:itemsize a owl:NamedIndividual , :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#layout
-
-:layout a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#letterSpacing
-
-:letterSpacing a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#lineHeight
-
-:lineHeight a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#longDescription
-
-:longDescription a owl:NamedIndividual , :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#motionSimulation
-
-:motionSimulation a owl:NamedIndividual , :HazardValue .
-# 
-# http://purl.org/accessible_ocw_ontology#olfactory
-
-:olfactory a owl:NamedIndividual , :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#olfactoryHazard
-
-:olfactoryHazard a owl:NamedIndividual , :HazardValue .
-# 
-# http://purl.org/accessible_ocw_ontology#orientation
-
-:orientation a owl:NamedIndividual , :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#position
-
-:position a owl:NamedIndividual , :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#realTime
-
-:realTime a owl:NamedIndividual , :AdaptationDetailValue .
-# 
-# http://purl.org/accessible_ocw_ontology#recorded
-
-:recorded a owl:NamedIndividual , :AdaptationDetailValue .
-# 
-# http://purl.org/accessible_ocw_ontology#signLanguage
-
-:signLanguage a owl:NamedIndividual , :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#simplified
-
-:simplified a owl:NamedIndividual , :EducationalComplexityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#sound
-
-:sound a owl:NamedIndividual , :HazardValue .
-# 
-# http://purl.org/accessible_ocw_ontology#structurePresentation
-
-:structurePresentation a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# http://purl.org/accessible_ocw_ontology#symbolic
-
-:symbolic a owl:NamedIndividual , :AdaptationDetailValue .
-# 
-# http://purl.org/accessible_ocw_ontology#synthesized
-
-:synthesized a owl:NamedIndividual , :AdaptationDetailValue .
-# 
-# http://purl.org/accessible_ocw_ontology#tactile
-
-:tactile a owl:NamedIndividual , :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#textOnImage
-
-:textOnImage a owl:NamedIndividual , :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#textual
-
-:textual a owl:NamedIndividual , :AccessModeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#transcript
-
-:transcript a owl:NamedIndividual , :AdaptationTypeValue .
-# 
-# http://purl.org/accessible_ocw_ontology#verbatim
-
-:verbatim a owl:NamedIndividual , :AdaptationDetailValue .
-# 
-# http://purl.org/accessible_ocw_ontology#visual
-
-:visual a owl:NamedIndividual , :AccessModeValue ;
-	:accessMode_adaptionRequest :textual .
-# 
-# http://purl.org/accessible_ocw_ontology#visual_alternativeText
-
-:visual_alternativeText a owl:NamedIndividual , :AdaptationTypeRequired ;
-	:adaptationType_adaptationRequest :alternativeText ;
-	:adaptationType_existingAccessMode :visual .
-# 
-# http://purl.org/accessible_ocw_ontology#visual_audioDiscription
-
-:visual_audioDiscription a owl:NamedIndividual , :AdaptationTypeRequired ;
-	:adaptationType_adaptationRequest :audioDescription ;
-	:adaptationType_existingAccessMode :visual .
-# 
-# http://purl.org/accessible_ocw_ontology#visual_textual
-
-:visual_textual a owl:NamedIndividual , :AccessModeRequired ;
-	:accessMode_adaptionRequest :textual ;
-	:accessMode_existingAccessMode :visual .
-# 
-# http://purl.org/accessible_ocw_ontology#wordSpacing
-
-:wordSpacing a owl:NamedIndividual , :DisplayTransformabilityValue .
-# 
-# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/accessible_ocw_ontology#"
+     xml:base="http://purl.org/accessible_ocw_ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:GenericOntology="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#">
+    <owl:Ontology rdf:about="http://purl.org/accessible_ocw_ontology">
+        <dc:contributor>Steffen Lohmann</dc:contributor>
+        <dc:creator>Mirette Elias</dc:creator>
+        <dc:description>This ontology is designed for accessible OpenCourseWare. It is built on the accessibilty concepts of IMS Learning Global Consortium (https://www.imsglobal.org/activity/accessibility) and the vocabulary structure of the ACCESSIBLE ontology (http://www.accessible-eu.org/index.php/ontology.html).</dc:description>
+        <dc:title>Accessible OCW</dc:title>
+        <rdfs:label xml:lang="en">accessible_ocw_ontology Ontology</rdfs:label>
+        <owl:versionInfo>Version 1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#Meet -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#Meet"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#TechnologyUsage -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#TechnologyUsage"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#User_has_Disability -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#User_has_Disability"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasAge -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasAge"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasEducation -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasEducation"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasJob -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasJob"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasLocation -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasLocation"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasMaritalStatus -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasMaritalStatus"/>
+    
+
+
+    <!-- http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasName -->
+
+    <owl:AnnotationProperty rdf:about="http://160.40.50.89/Accessible_Ontology/Version5.1/OWLs/GenericOntology.owl#hasName"/>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#User_has_Disability -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/accessible_ocw_ontology#User_has_Disability"/>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#hasMaritalStatus -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/accessible_ocw_ontology#hasMaritalStatus"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AccessMode -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#AccessMode">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#accessModeAdapted -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#accessModeAdapted">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#accessModeOrnamental -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#accessModeOrnamental">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#accessModeReq -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#accessModeReq">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#accessMode_adaptionRequest -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#accessMode_adaptionRequest">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#accessMode_existingAccessMode -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#accessMode_existingAccessMode">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationDetail -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationDetail">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationDetailReq -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationDetailReq">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationDetail_adaptationRequest -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationDetail_adaptationRequest">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationDetail_existingAccessMode -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationDetail_existingAccessMode">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationMediaReq -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationMediaReq">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationMediaType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationMediaType">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationMedia_adaptationRequest -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationMedia_adaptationRequest">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationMedia_existingAccessMode -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationMedia_existingAccessMode">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationType">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationTypeReq -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationTypeReq">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationType_adaptationRequest -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationType_adaptationRequest">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#adaptationType_existingAccessMode -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#adaptationType_existingAccessMode">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#apiInteroperable -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#apiInteroperable">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#controlFlexibility -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#controlFlexibility">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#displayTransformability -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#displayTransformability">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#dr_educationalComplexityOfAdaptation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#dr_educationalComplexityOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#EducationalComplexityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#educationalComplexityOfAdaptation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#educationalComplexityOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#EducationalComplexityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#hazard -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#hazard">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#hazardAvoidance -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#hazardAvoidance">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#inputRequirements -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/accessible_ocw_ontology#inputRequirements">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#atInteroperable -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#atInteroperable">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#dr_atInteroperable -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#dr_atInteroperable">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#dr_educationalLevelOfAdaptation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#dr_educationalLevelOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#dr_languageOfAdaptation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#dr_languageOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#educationalLevelOfAdaptation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#educationalLevelOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#hasAdaptation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#hasAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#isAdaptationOf -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#isAdaptationOf">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#isFullAdaptationOf -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#isFullAdaptationOf">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#isPartialAdaptationOf -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#isPartialAdaptationOf">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#DigitalResource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#languageOfAdaptation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#languageOfAdaptation">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#languageOfInterface -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/accessible_ocw_ontology#languageOfInterface">
+        <rdfs:domain rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AccessModeRequired -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AccessModeRequired">
+        <rdfs:label>AccessModeRequired</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AccessModeValue -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AccessModeValue">
+        <rdfs:label>AccessModeValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AccessibilityAPI -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AccessibilityAPI">
+        <rdfs:label>AccessibilityAPI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired">
+        <rdfs:label>AdaptationDetailRequired</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationDetailValue -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue">
+        <rdfs:label>AdaptationDetailValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationMediaRequired">
+        <rdfs:label>AdaptationMediaRequired</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue">
+        <rdfs:label>AdaptationMediaTypeValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired">
+        <rdfs:label>AdaptationTypeRequired</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AdaptationTypeValue -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue">
+        <rdfs:label>AdaptationTypeValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue">
+        <rdfs:label>ControlFlexibilityValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#DigitalResource -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#DigitalResource">
+        <rdfs:label>DigitalResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue">
+        <rdfs:label>DisabilityTransformabilityValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#EducationalComplexityValue -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#EducationalComplexityValue">
+        <rdfs:label>EducationalComplexityValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#HazardValue -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#HazardValue">
+        <rdfs:label>HazardValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Learner -->
+
+    <owl:Class rdf:about="http://purl.org/accessible_ocw_ontology#Learner">
+        <rdfs:subClassOf rdf:resource="http://www.AccessibleOntology.com/GenericOntology.owl#User"/>
+        <rdfs:label>Learner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.AccessibleOntology.com/GenericOntology.owl#User -->
+
+    <owl:Class rdf:about="http://www.AccessibleOntology.com/GenericOntology.owl#User">
+        <rdfs:label>User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#ARIAv1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#ARIAv1">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AT-SPI -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#AT-SPI">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#ATK -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#ATK">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#AndroidAccessibility -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#AndroidAccessibility">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#BlackberryAccessibility -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#BlackberryAccessibility">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#ChemML -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#ChemML">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Daisy -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Daisy">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#EPUB3 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#EPUB3">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#JavaAccessibility -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#JavaAccessibility">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#LIT -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#LIT">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#LaTeX -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#LaTeX">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Learner_1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Learner_1">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <accessModeReq rdf:resource="http://purl.org/accessible_ocw_ontology#visual_textual"/>
+        <adaptationTypeReq rdf:resource="http://purl.org/accessible_ocw_ontology#visual_alternativeText"/>
+        <adaptationTypeReq rdf:resource="http://purl.org/accessible_ocw_ontology#visual_audioDescription"/>
+        <atInteroperable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</atInteroperable>
+        <languageOfAdaptation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</languageOfAdaptation>
+        <languageOfInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</languageOfInterface>
+        <GenericOntology:Meet>Lena was born blind. She completed her high&lt;/br&gt;school but she couldn&apos;t find a job.</GenericOntology:Meet>
+        <GenericOntology:TechnologyUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lena uses her PC (Windows XP) on a daily basis to check her email and apply for jobs. She uses the Jaws screenreader and she also&lt;/br&gt;uses OCR software, a Braille embosser and Adobe reader speech output. </GenericOntology:TechnologyUsage>
+        <GenericOntology:User_has_Disability rdf:resource="http://purl.org/accessible_ocw_ontology#Blindness"/>
+        <GenericOntology:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</GenericOntology:hasAge>
+        <GenericOntology:hasEducation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High school</GenericOntology:hasEducation>
+        <GenericOntology:hasJob rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unemployed</GenericOntology:hasJob>
+        <GenericOntology:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</GenericOntology:hasLocation>
+        <GenericOntology:hasMaritalStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</GenericOntology:hasMaritalStatus>
+        <GenericOntology:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lena Fox</GenericOntology:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Learner_2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Learner_2">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <hazardAvoidance rdf:resource="http://purl.org/accessible_ocw_ontology#flashing"/>
+        <languageOfAdaptation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</languageOfAdaptation>
+        <languageOfInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</languageOfInterface>
+        <GenericOntology:Meet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James have problems with some colors. He is working as an engineer.</GenericOntology:Meet>
+        <GenericOntology:TechnologyUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He works on his desktop PC every day, most of the day and is responsible of the network admistration in his company.</GenericOntology:TechnologyUsage>
+        <GenericOntology:User_has_Disability rdf:resource="http://purl.org/accessible_ocw_ontology#Colour_Blindness"/>
+        <GenericOntology:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</GenericOntology:hasAge>
+        <GenericOntology:hasEducation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor&amp;rsquo;s degree in Network and Communication</GenericOntology:hasEducation>
+        <GenericOntology:hasJob rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employed</GenericOntology:hasJob>
+        <GenericOntology:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belgium</GenericOntology:hasLocation>
+        <GenericOntology:hasMaritalStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Married</GenericOntology:hasMaritalStatus>
+        <GenericOntology:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Van</GenericOntology:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Learner_3 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Learner_3">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#Learner"/>
+        <accessModeReq rdf:resource="http://purl.org/accessible_ocw_ontology#auditory_textual"/>
+        <adaptationDetailReq rdf:resource="http://purl.org/accessible_ocw_ontology#auditory_verbatim"/>
+        <adaptationTypeReq rdf:resource="http://purl.org/accessible_ocw_ontology#auditory_caption"/>
+        <languageOfAdaptation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</languageOfAdaptation>
+        <languageOfInterface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</languageOfInterface>
+        <GenericOntology:Meet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomasa is completely deaf. She holds a&lt;/br&gt;master&amp;rsquo;s degree in Law, and she works in a consulting firm in Belgium. &lt;/br&gt;Since her teenage years, Tomasa is completely deaf. At first, it was very&lt;/br&gt;difficult to communicate with other people, but she has learned to cope&lt;/br&gt;with her deafness: she mostly uses lip reading to communicate with&lt;/br&gt;other people. Sometimes, she also uses some sign language when she is&lt;/br&gt;in a company where people also understand it. But as many people don&amp;rsquo;t&lt;/br&gt;understand sign language, she doesn&amp;rsquo;t use it very often.</GenericOntology:Meet>
+        <GenericOntology:TechnologyUsage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomasa is quite a heavy technology user. For work, she has a standard Windows&lt;/br&gt;Vista laptop, which she also uses at home and sometimes even in&lt;/br&gt;train stations and airports when she is waiting. She spends about 50 hours&lt;/br&gt;per week using her computer, it is an important tool for her. At work, &lt;/br&gt;Tomasa creates and edits word and excel documents, and searches for&lt;/br&gt;information on the internet. She is also a heavy e-mail user, as she has to&lt;/br&gt;keep a close contact with her clients without being able to make&lt;/br&gt;phonecalls. At home, she manages the pictures of her children growing&lt;/br&gt;up and occasionally plays a casual computer game like Tetris. She&lt;/br&gt;has already considered switching to Firefox, but still uses Internet&lt;/br&gt;Explorer to surf the internet on a daily basis. Tomasa uses Google, &lt;/br&gt;Gmail, updates her blog, uses instant messaging to talk to her friends, takes&lt;/br&gt;quizzes on Facebook, sometimes watching a video on Youtube, etc. &lt;/br&gt;The mobile phone is also very important for Tomasa: she couldn&amp;rsquo;t miss it as&lt;/br&gt;a tool. But it is also part of her life style, and she carries is around all the&lt;/br&gt;time. She uses it to videocall her husband if she will be home late, and to&lt;/br&gt;keep up with her friends. Most important about her phone is the look and&lt;/br&gt;feel. It has a big screen displaying clear letters, and it feeds pretty good&lt;/br&gt;images when she uses the phone in video calls. Although her&lt;/br&gt;smartphone was quite expensive, the device, with all its functionalities, &lt;/br&gt;was worth the investment. She mostly uses the phone as any other user&lt;/br&gt;would, but as she can&amp;rsquo;t make any regular calls, the video call&lt;/br&gt;functionality is very important to her. Besides video call, she uses&lt;/br&gt;texting, e-mail (she likes the Qwerty keypad!), and sometimes internet. &lt;/br&gt;As the phone has so many features, she thinks it is a pity she can&amp;rsquo;t use all of&lt;/br&gt;them, such as the built-in radio receiver, MP3 player, etc. Tomasa uses no&lt;/br&gt;assistive technology with her phone.</GenericOntology:TechnologyUsage>
+        <GenericOntology:User_has_Disability rdf:resource="http://purl.org/accessible_ocw_ontology#Communication_Disability"/>
+        <GenericOntology:User_has_Disability rdf:resource="http://purl.org/accessible_ocw_ontology#Deafness"/>
+        <GenericOntology:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">34</GenericOntology:hasAge>
+        <GenericOntology:hasEducation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master&apos;s degree in law</GenericOntology:hasEducation>
+        <GenericOntology:hasJob rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employed</GenericOntology:hasJob>
+        <GenericOntology:hasLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barcelona, Spain</GenericOntology:hasLocation>
+        <GenericOntology:hasMaritalStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Married</GenericOntology:hasMaritalStatus>
+        <GenericOntology:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomasa Almaraz</GenericOntology:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#MSAA -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#MSAA">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#MacOSXAccessibility -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#MacOSXAccessibility">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#MathML -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#MathML">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#NIMAS -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#NIMAS">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#Nemeth -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#Nemeth">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#OEBPS -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#OEBPS">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#PDF -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#PDF">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#UIAutomation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#UIAutomation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#alternativeText -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#alternativeText">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#audioDescription -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#audioDescription">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#auditory -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#auditory">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#auditory_caption -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#auditory_caption">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+        <adaptationType_adaptationRequest rdf:resource="http://purl.org/accessible_ocw_ontology#captions"/>
+        <adaptationType_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#auditory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#auditory_textual -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#auditory_textual">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+        <accessMode_adaptionRequest rdf:resource="http://purl.org/accessible_ocw_ontology#textual"/>
+        <accessMode_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#auditory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#auditory_verbatim -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#auditory_verbatim">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailRequired"/>
+        <adaptationDetail_adaptationRequest rdf:resource="http://purl.org/accessible_ocw_ontology#verbatim"/>
+        <adaptationDetail_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#auditory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#backgroundColour -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#backgroundColour">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#braille -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#braille">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationMediaTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#captions -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#captions">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#color -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#color">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#color_textual -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#color_textual">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+        <accessMode_adaptionRequest rdf:resource="http://purl.org/accessible_ocw_ontology#textual"/>
+        <accessMode_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#cursorPresentation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#cursorPresentation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#e-book -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#e-book">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#enhanced -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#enhanced">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#enriched -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#enriched">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#EducationalComplexityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#flashing -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#flashing">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#fontFace -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#fontFace">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#fontSize -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#fontSize">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#fontWeight -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#fontWeight">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#foregroundColour -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#foregroundColour">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#fullKeyboardControl -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#fullKeyboardControl">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#fullMouseControl -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#fullMouseControl">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#ControlFlexibilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#haptic -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#haptic">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#highContrast -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#highContrast">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#highlightPresentation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#highlightPresentation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#iAccessible2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#iAccessible2">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessibilityAPI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#itemsize -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#itemsize">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#layout -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#layout">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#letterSpacing -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#letterSpacing">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#lineHeight -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#lineHeight">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#longDescription -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#longDescription">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#motionSimulation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#motionSimulation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#olfactory -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#olfactory">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#olfactoryHazard -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#olfactoryHazard">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#orientation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#orientation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#position -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#position">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#realTime -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#realTime">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#recorded -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#recorded">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#signLanguage -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#signLanguage">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#simplified -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#simplified">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#EducationalComplexityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#sound -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#sound">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#HazardValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#structurePresentation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#structurePresentation">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#symbolic -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#symbolic">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#synthesized -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#synthesized">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#tactile -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#tactile">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#textOnImage -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#textOnImage">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#textual -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#textual">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#transcript -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#transcript">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#verbatim -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#verbatim">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationDetailValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#visual -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#visual">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeValue"/>
+        <accessMode_adaptionRequest rdf:resource="http://purl.org/accessible_ocw_ontology#textual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#visual_alternativeText -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#visual_alternativeText">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+        <adaptationType_adaptationRequest rdf:resource="http://purl.org/accessible_ocw_ontology#alternativeText"/>
+        <adaptationType_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#visual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#visual_audioDescription -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#visual_audioDescription">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AdaptationTypeRequired"/>
+        <adaptationType_adaptationRequest rdf:resource="http://purl.org/accessible_ocw_ontology#audioDescription"/>
+        <adaptationType_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#visual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#visual_textual -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#visual_textual">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#AccessModeRequired"/>
+        <accessMode_adaptionRequest rdf:resource="http://purl.org/accessible_ocw_ontology#textual"/>
+        <accessMode_existingAccessMode rdf:resource="http://purl.org/accessible_ocw_ontology#visual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/accessible_ocw_ontology#wordSpacing -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/accessible_ocw_ontology#wordSpacing">
+        <rdf:type rdf:resource="http://purl.org/accessible_ocw_ontology#DisplayTransformabilityValue"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
