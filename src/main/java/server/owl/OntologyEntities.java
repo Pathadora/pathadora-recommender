@@ -48,6 +48,17 @@ public class OntologyEntities {
     }
 
 
+    public String defineDataPropertyAssertions(Map<String, String> obj_prop, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
+        StringBuilder outBuild = new StringBuilder();
+        for (Map.Entry<String, String> obj : obj_prop.entrySet()) {
+            /* check for multiple object property values */
+            outBuild.append(addDataProperty(obj.getKey(), obj.getValue(), tIndividual, pathadora));
+        }
+
+        return outBuild.toString();
+    }
+
+
     public String defineAnnotationPropertyAssertions(Map<String, String> ann_prop, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
         StringBuilder outBuild = new StringBuilder();
         for (Map.Entry<String, String> obj : ann_prop.entrySet()) {
@@ -89,6 +100,16 @@ public class OntologyEntities {
         return annotation(key, value);
     }
 
+    private String addDataProperty(String key, String value, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
+        OWLDataFactory df = pathadoraManager.getManager().getOWLDataFactory();
+
+        OWLDataProperty dataProp = (OWLDataProperty) this.ontologyEntitiesBy(DATA_PROPERTIES, key);
+        OWLLiteral val = df.getOWLLiteral(value);
+        OWLDataPropertyAssertionAxiom propertyAssertion = df.getOWLDataPropertyAssertionAxiom(dataProp, tIndividual, val);
+        pathadoraManager.getManager().addAxiom(pathadora, propertyAssertion);
+
+        return dataProperty(key, value);
+    }
 
     public OWLLogicalEntity ontologyEntitiesBy(String type, String key) {
         OWLDataFactory df = pathadoraManager.getManager().getOWLDataFactory();
@@ -126,12 +147,13 @@ public class OntologyEntities {
             return (annProps.isEmpty()) ? df.getOWLAnnotationProperty("#" + key, pm) : annProps.get(0);
         }
 
-        /*if(type.equals(DATA_PROPERTIES)){
-            return dataProperties().stream()
+        if(type.equals(DATA_PROPERTIES)){
+            List<OWLLogicalEntity> dataProps =
+                    dataProperties().stream()
                     .filter(c -> c.toString().contains(key))
                     .sorted(Comparator.comparing(c -> c.toString().length())).collect(Collectors.toList());
+            return (dataProps.isEmpty()) ? df.getOWLDataProperty("#" + key, pm) : dataProps.get(0);
         }
-        return new ArrayList<>();*/
         return null;
     }
 

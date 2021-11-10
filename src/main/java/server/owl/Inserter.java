@@ -21,12 +21,14 @@ public class Inserter {
 
         Map<String, String> obj_prop = paramsToMapByKey(OBJECT_PROPERTIES, params);
         Map<String, String> ann_prop = paramsToMapByKey(ANNOTATION_PROPERTIES, params);
+        Map<String, String> data_prop = paramsToMapByKey(DATA_PROPERTIES, params);
 
         OWLNamedIndividual tIndividual = (OWLNamedIndividual) entities.ontologyEntitiesBy(INDIVIDUALS, label(ann_prop));
 
         String caOwl  = entities.defineClassAssertion(params, tIndividual, pathadora);
         String opaOwl = entities.defineObjectPropertyAssertions(obj_prop, tIndividual, pathadora);
         String apaOwl = entities.defineAnnotationPropertyAssertions(ann_prop, tIndividual, pathadora);
+        String dpaPwl = entities.defineDataPropertyAssertions(data_prop, tIndividual, pathadora);
 
         manager.savePathadoraOntology(pathadora, false);
 

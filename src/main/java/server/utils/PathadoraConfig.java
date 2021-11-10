@@ -112,6 +112,11 @@ public class PathadoraConfig {
         return "<pathadora-ontology:"+ annName + ">"+ val +"</pathadora-ontology:"+annName+">\n";
     }
 
+    public static String dataProperty(String propName, String val){
+        return "<pathadora-ontology:"+propName+" rdf:datatype=\"http://www.w3.org/2001/XMLSchema#int\">"
+                +Integer.valueOf(val)+"</pathadora-ontology:"+propName+">\n";
+    }
+
     public static String endIndividualDeclaration(){
         return " </owl:NamedIndividual>";
     }
