@@ -92,10 +92,16 @@ public class PathadoraManager {
     }
 
 
-    public String recommendResources(Map<String, String> params)
-            throws SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
-        //Recommender rec = new Recommender(this);
-        return "Resource recommender tobedone";
+    public String recommendResources(Recommender recommender, Map<String, String> params) {
+        Map<String, String> learnerData = new HashMap<>();
+        learnerData.put(LEARNER, "Cokle");
+        learnerData.put(DEGREE, "bachelor");
+        learnerData.put(YEAR, "1");
+        learnerData.put(FACULTY, "Facolta di merda");
+
+        List<Map<String,String>>  result = recommender.recommendResources(database);
+        result.add(0, learnerData);
+        return OutputToJson.resourcesJsonResponse(result);
     }
 
     public void reset() {
@@ -115,17 +121,16 @@ public class PathadoraManager {
     }
 
     private void initializeStardogDatabase(String owlFile) {
-       /* StardogRunnable stardog = new StardogRunnable(database);
+        StardogRunnable stardog = new StardogRunnable(database);
         new Thread(() -> {
             try {
                 // stardog.database().insertData(caOwl+opaOwl+apaOwl);
                 stardog.database().importData(owlFile);
-                Files.deleteIfExists(new File(owlFile).toPath());
+                //Files.deleteIfExists(new File(owlFile).toPath());
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }).start();
-    */
     }
 
     public OWLOntologyManager getManager() { return manager;

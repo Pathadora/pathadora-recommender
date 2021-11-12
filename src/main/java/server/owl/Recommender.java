@@ -30,11 +30,22 @@ public class Recommender {
         for (String dep : departments) {
             output.put(dep, nonDuplicatedFaculties(dep, recommendedFacs));
         }
-
         manager.savePathadoraOntology(manager.pathadoraOnt(), true);
         return output;
 
     }
+
+
+    public List<Map<String, String>> recommendedCourses(String l, String f, String d, String y,StardogDatabase database){
+        return database.queryDatabase(Queries.courses());
+    }
+
+
+    public List<Map<String, String>> recommendResources(StardogDatabase database){
+        return database.queryDatabase(Queries.resources());
+    }
+
+
 
 
     public void initializeOntologyWithRules(boolean apply)
@@ -48,18 +59,6 @@ public class Recommender {
         } else {
             System.out.println("Recommender will not apply rules");
         }
-    }
-
-
-    public List<Map<String, String>> recommendedCourses(String learner,
-                                                  String faculty,
-                                                  String degree,
-                                                  String year,
-                                                  StardogDatabase database){
-
-       // return database.queryDatabase(Queries.courses());
-        return new ArrayList<>();
-
     }
 
 

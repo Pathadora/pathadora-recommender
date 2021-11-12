@@ -45,6 +45,7 @@ public class PathadoraConfig {
         public static final String DEPARTMENT = "department";
         public static final String FACULTIES = "faculties";
         public static final String COURSES = "courses";
+        public static final String RESOURCES = "resources";
         public static final String YEAR = "year";
 
         public static final String OBJECT_PROPERTIES = "object_properties";

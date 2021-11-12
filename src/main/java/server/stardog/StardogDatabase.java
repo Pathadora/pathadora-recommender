@@ -11,6 +11,8 @@ import java.nio.file.Files;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
+
 import com.stardog.stark.query.SelectQueryResult;
 import com.complexible.stardog.api.Connection;
 import com.complexible.stardog.api.ConnectionConfiguration;
@@ -23,7 +25,7 @@ import static server.stardog.Provider.*;
 import static server.utils.PathadoraConfig.OntologyConfig.*;
 
 public class StardogDatabase {
-   /* private final Connection connection;
+   private final Connection connection;
 
     public StardogDatabase() {
         this.connection = initializeConnection();
@@ -69,12 +71,10 @@ public class StardogDatabase {
             List<Map<String, String>> output = new ArrayList<>();
             while (aResult.hasNext()) {
                 Map<String, String> mapInfo = new HashMap<>();
-
                 aResult.next()
                         .stream()
                         .map(Object::toString)
                         .forEach(e -> mapInfo.put(extractKey(e), extractValue(e)));
-
                 output.add(mapInfo);
             }
             return output;
@@ -115,36 +115,24 @@ public class StardogDatabase {
 
 
     private String extractKey(String data){
-        System.out.println("String: " +data);
         return data.substring(1, data.indexOf("="));
     }
 
 
     private String extractValue(String data){
-        if(data.contains("pathadora-ontology")){
-            return data.split("#")[1];
-        }else{
+        String value = data.split("=")[1];
+        if(value.contains("^")){
             return data.substring(data.indexOf("\"")+1, data.indexOf("^")-1);
+        }else{
+            return data.split("#")[1];
         }
     }
 
     public static void main(String... args) throws IOException {
         StardogDatabase db = new StardogDatabase();
-       // db.importData(PATHADORA_TEMP_LOCAL_PATH);
+        db.importData(PATHADORA_TEMP_LOCAL_PATH);
 
-        db.queryDatabase(Queries.courses());
-
-
-        Map<String, String> learnerData = new HashMap<>();
-        learnerData.put(LEARNER, "Hello");
-        learnerData.put(DEGREE,  "Hello");
-        learnerData.put(YEAR,  "Hello");
-        learnerData.put(FACULTY,  "Hello");
-
-        List<Map<String, String>> result = db.queryDatabase(Queries.courses());
-        result.add(0,learnerData);
-
-        System.out.println(OutputToJson.coursesJsonResponse(result));
-    }*/
-
+        List<Map<String, String>> result = db.queryDatabase(Queries.resources());
+        System.out.println(OutputToJson.resourcesJsonResponse(result));
+    }
 }

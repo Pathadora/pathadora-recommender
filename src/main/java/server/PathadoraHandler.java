@@ -84,7 +84,7 @@ class PathadoraHandler implements HttpHandler {
 
                 case RESOURCE_GENERATION:
                     System.out.println("Recommended resources was was requested");
-                    return pathadoraManager.recommendResources(params);
+                    return pathadoraManager.recommendResources(recommender, params);
 
                 case FINISH:
                     System.out.println("Operation finished");
