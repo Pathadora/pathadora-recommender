@@ -95,6 +95,7 @@ public class ParserUtils {
         return out;
     }
 
+
     private static List<String> validateValuesList(List<String> data){
         String last = data.get(data.size()-1);
         if(last.charAt(0) == ','){
@@ -104,6 +105,7 @@ public class ParserUtils {
         }
         return data;
     }
+
 
     private static String validateString(String value){
         return (!value.contains("[") || !value.contains("]"))

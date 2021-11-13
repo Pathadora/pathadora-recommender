@@ -10,11 +10,6 @@ public class Rules {
                     "pathadora-ontology:recommendedSchool(?learner, ?school)";
     }
 
-    public static String departmentRule(String learner, String school){ return
-            "pathadora-ontology:recommendedSchool(pathadora-ontology:"+learner+", ?school) ^ " +
-                    "pathadora-ontology:schoolHasDepartment(pathadora-ontology:"+school+", ?depart) " +
-                    "-> pathadora-ontology:recommendedDepartment(pathadora-ontology:"+learner+", ?depart)";
-    }
 
     public static String departmentRule(){ return
             "accessible_ocw_ontology:Learner(?learner) ^ " +
@@ -23,19 +18,6 @@ public class Rules {
                     "pathadora-ontology:recommendedDepartment(?learner, ?depart)";
     }
 
-
-    /*public static String recommendedFaculties(String learner, String department, String degree){
-        String degreeProperty = "";
-        if(degree.contains("Bachelor")){ degreeProperty = "isBachelorFaculty";}
-        if(degree.contains("Master")){ degreeProperty = "isMasterFaculty";}
-        if(degree.contains("Doctoral")){ degreeProperty = "isDoctoralFaculty";}
-
-        return
-            "pathadora-ontology:recommendedDepartment(?learner, pathadora-ontology:"+department+") ^ " +
-                    "pathadora-ontology:facultyOfDepartment(?fac, ?depart) ^  " +
-                    "pathadora-ontology:"+degreeProperty+"(?fac, pathadora-ontology:"+degree+") -> " +
-                     "pathadora-ontology:recommendedFaculty(pathadora-ontology:"+learner+", ?fac)";
-    }*/
 
     public static String recommendedFaculties(String learner, String degree){
         String degreeProperty = "";
@@ -50,26 +32,4 @@ public class Rules {
                         "pathadora-ontology:"+degreeProperty+"(?fac, pathadora-ontology:"+degree+") -> " +
                         "pathadora-ontology:recommendedFaculty(pathadora-ontology:"+learner+", ?fac)";
     }
-
-    public static String recommendedFaculties(){ return
-            "accessible_ocw_ontology:Learner(?learner) ^ " +
-                    "pathadora-ontology:recommendedDepartment(?learner, ?dep) ^ " +
-                    "pathadora-ontology:facultyOfDepartment(?fac, ?depart) -> " +
-                    "pathadora-ontology:recommendedFaculty(?learner, ?fac)";
-    }
-
-    public static String recommendedCourses(){ return
-            "accessible_ocw_ontology:Learner(?learner) ^ " +
-                    "pathadora-ontology:Departments(?departments)" +
-                    "pathadora-ontology:recommendedFaculty(?learner, ?departments) ^ " +
-                    "pathadora-ontology:recommendedCourse(?learner, ?departments)";
-    }
-
-    public static String recommendedCourses(String learner, String faculty, String degree, String year){ return
-            "accessible_ocw_ontology:Learner(?learner) ^ " +
-                    "pathadora-ontology:Departments(?departments)" +
-                    "pathadora-ontology:recommendedFaculty(?learner, ?departments) ^ " +
-                    "pathadora-ontology:recommendedCourse(?learner, ?departments)";
-    }
-
 }

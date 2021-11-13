@@ -31,7 +31,6 @@ public class Inserter {
         String dpaPwl = entities.defineDataPropertyAssertions(data_prop, tIndividual, pathadora);
 
         manager.savePathadoraOntology(pathadora, false);
-
         return String.valueOf(STATUS_OK);
     }
 

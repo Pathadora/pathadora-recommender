@@ -21,11 +21,9 @@ public class PathadoraConfig {
         public final static String LOM_RESOURCE = "http://data.opendiscoveryspace.eu/lom_ontology_ods.owl";
         public final static String ACC_RESOURCE = "http://purl.org/accessible_ocw_ontology";
         public final static String ESO_RESOURCE = "http://purl.org/ontology/edu/eso";
-        //public final static String PATHADORA_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology/1.0";
         public final static String PATHADORA_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology";
         public final static String PATHADORA_TEMP_RESOURCE = "http://www.semanticweb.org/learning-path/pathadora-ontology-temp";
 
-        /** TODO: to be discussed */
         public static final String ACTION = "action";
         public static final String ADD = "add";
         public static final String FACULTIES_GENERATION = "faculties_generation";
@@ -60,10 +58,8 @@ public class PathadoraConfig {
         public static final String FACULTY_PROPERTY = "recommendedFaculty";
         public static final String COURSE_PROPERTY = "recommendedCourses";
         public static final String DEPARTMENT_OF_PROPERTY = "departmentHasFaculty";
-
-
-
     }
+
 
     public static class ServerConfig {
         public static final String HOSTNAME = "localhost";

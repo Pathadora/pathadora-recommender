@@ -47,7 +47,4 @@ public class DataToOwl {
         writer.append(docCloser);
         writer.close();
     }
-
-
-
 }

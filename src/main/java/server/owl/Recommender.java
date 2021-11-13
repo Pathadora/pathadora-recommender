@@ -5,7 +5,6 @@ import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
 import server.stardog.Queries;
 import server.stardog.StardogDatabase;
-import server.utils.OutputToJson;
 
 import java.util.*;
 
@@ -20,6 +19,7 @@ public class Recommender {
         this.model = new RuleBasedModel(manager);
     }
 
+
     public Map<String, List<String>> recommendedFaculties(String learner, String degree)
             throws OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
 
@@ -32,12 +32,11 @@ public class Recommender {
         }
         manager.savePathadoraOntology(manager.pathadoraOnt(), true);
         return output;
-
     }
 
 
-    public List<Map<String, String>> recommendedCourses(String l, String f, String d, String y,StardogDatabase database){
-        return database.queryDatabase(Queries.courses());
+    public List<Map<String, String>> recommendedCourses(String learner, String degree, String year, StardogDatabase database){
+        return database.queryDatabase(Queries.courses(learner, degree, year));
     }
 
 
@@ -46,15 +45,12 @@ public class Recommender {
     }
 
 
-
-
     public void initializeOntologyWithRules(boolean apply)
             throws SWRLParseException, SWRLBuiltInException {
         if (apply) {
             System.out.println("Recommender applying rules, waiting ...");
             model.applyRule(SCHOOL, Rules.schoolRule());
             model.applyRule(DEPARTMENT, Rules.departmentRule());
-            //model.applyRule(FACULTIES, Rules.recommendedFaculties());
             System.out.println("Recommender completed applying rules");
         } else {
             System.out.println("Recommender will not apply rules");
@@ -75,7 +71,6 @@ public class Recommender {
         model.applyRule(ruleName, rule);
         return updatedEntities().extractIndividualsBy(learner, property, manager);
     }
-
 
 
     private OntologyEntities updatedEntities(){ return new OntologyEntities(manager);}

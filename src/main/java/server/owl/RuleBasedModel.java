@@ -1,6 +1,5 @@
 package server.owl;
 
-import org.semanticweb.owlapi.model.*;
 import org.swrlapi.core.SWRLRuleEngine;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.factory.SWRLAPIFactory;
@@ -23,9 +22,6 @@ public class RuleBasedModel {
         SWRLRuleEngine engine = initializeRuleEngine();
         engine.createSWRLRule(ruleName, rule);
         engine.infer();
-        OWLOntology pathadora = pathadoraManager.pathadoraOnt();
-
-        // pathadoraManager.updatePathadoraOntology(pathadora);
     }
 
 

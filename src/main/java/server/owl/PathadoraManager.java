@@ -1,39 +1,34 @@
 package server.owl;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
-import server.stardog.Queries;
 import server.stardog.StardogDatabase;
-import server.stardog.StardogRunnable;
 import server.utils.OutputToJson;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static server.owl.Rules.recommendedCourses;
-import static server.stardog.DataToOwl.TMP_FILE;
 import static server.utils.PathadoraConfig.OntologyConfig.*;
 import static server.utils.PathadoraConfig.ServerConfig.*;
 
 public class PathadoraManager {
     private OWLOntologyManager manager;
     private OWLOntology pathadora;
-    private StardogDatabase database;
+    private final StardogDatabase database;
 
 
     public PathadoraManager() throws OWLOntologyCreationException, OWLOntologyStorageException {
         this.database = new StardogDatabase();
         initialize();
     }
+
 
     private void initialize() throws OWLOntologyCreationException, OWLOntologyStorageException {
         this.manager = OWLManager.createOWLOntologyManager();
@@ -60,20 +55,25 @@ public class PathadoraManager {
         savePathadoraOntology(pathadora, false);
     }
 
+
     public String addIndividual(Inserter inserter, Map<String, String> params) throws OWLOntologyStorageException {
         inserter.addNewIndividual(params);
         return String.valueOf(STATUS_OK);
     }
 
+
     public String recommendFacAndDep(Recommender recommender, Map<String, String> params)
             throws SWRLParseException, SWRLBuiltInException, OWLOntologyStorageException {
-        String learner = params.get("learner");
-        String degree = params.get("degree");
+        String learner = params.get(LEARNER);
+        String degree = params.get(DEGREE);
         Map<String, List<String>> output = recommender.recommendedFaculties(learner, degree);
         return OutputToJson.facultiesJsonResponse(learner, output);
     }
 
-    public String recommendCourses(Recommender recommender, Map<String, String> params) {
+
+    public String recommendCourses(Recommender recommender, Map<String, String> params) throws IOException {
+        initializeStardogDatabase(PATHADORA_TEMP_LOCAL_PATH);
+
         String learner = params.get(LEARNER);
         String degree = params.get(DEGREE);
         String year = params.get(YEAR);
@@ -85,7 +85,7 @@ public class PathadoraManager {
         learnerData.put(YEAR, year);
         learnerData.put(FACULTY, faculty);
 
-        List<Map<String,String>>  result = recommender.recommendedCourses(learner,faculty,degree,year, database);
+        List<Map<String,String>>  result = recommender.recommendedCourses(learner, degree, year, database);
         result.add(0, learnerData);
 
         return OutputToJson.coursesJsonResponse(result);
@@ -97,14 +97,11 @@ public class PathadoraManager {
         learnerData.put(LEARNER, "Cokle");
         learnerData.put(DEGREE, "bachelor");
         learnerData.put(YEAR, "1");
-        learnerData.put(FACULTY, "Facolta di merda");
+        learnerData.put(FACULTY, "Facolta XYZ");
 
         List<Map<String,String>>  result = recommender.recommendResources(database);
         result.add(0, learnerData);
         return OutputToJson.resourcesJsonResponse(result);
-    }
-
-    public void reset() {
     }
 
 
@@ -112,29 +109,22 @@ public class PathadoraManager {
         if (temporary) {
             OWLDocumentFormat format = manager.getOntologyFormat(updatedOnt);
             assert format != null;
-
             manager.saveOntology(updatedOnt, format, IRI.create(new File(PATHADORA_TEMP_LOCAL_PATH).toURI()));
-            initializeStardogDatabase(PATHADORA_TEMP_LOCAL_PATH);
         } else {
             manager.saveOntology(updatedOnt);
         }
     }
 
-    private void initializeStardogDatabase(String owlFile) {
-        StardogRunnable stardog = new StardogRunnable(database);
-        new Thread(() -> {
-            try {
-                // stardog.database().insertData(caOwl+opaOwl+apaOwl);
-                stardog.database().importData(owlFile);
-                //Files.deleteIfExists(new File(owlFile).toPath());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }).start();
+
+    private void initializeStardogDatabase(String owlFile) throws IOException {
+        database.importData(owlFile);
+        Files.deleteIfExists(new File(owlFile).toPath());
     }
+
 
     public OWLOntologyManager getManager() { return manager;
     }
+
 
     public OWLOntology pathadoraOnt() {
         return pathadora;

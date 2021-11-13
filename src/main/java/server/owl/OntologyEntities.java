@@ -31,6 +31,7 @@ public class OntologyEntities {
         return classAssertion(valName(tIndividual.toString()), valName(learnerClass.toString()));
     }
 
+
     public String defineObjectPropertyAssertions(Map<String, String> obj_prop, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
         StringBuilder outBuild = new StringBuilder();
         for (Map.Entry<String, String> obj : obj_prop.entrySet()) {
@@ -111,6 +112,7 @@ public class OntologyEntities {
         return dataProperty(key, value);
     }
 
+    
     public OWLLogicalEntity ontologyEntitiesBy(String type, String key) {
         OWLDataFactory df = pathadoraManager.getManager().getOWLDataFactory();
         PrefixManager pm = new DefaultPrefixManager(PATHADORA_RESOURCE);
@@ -173,28 +175,35 @@ public class OntologyEntities {
         return pathadoraManager.pathadoraOnt().getObjectPropertiesInSignature();
     }
 
+    
     private Set<OWLClass> classes() {
         return pathadoraManager.pathadoraOnt().getClassesInSignature();
     }
 
+    
     private Set<OWLDataProperty> dataProperties() {
         return pathadoraManager.pathadoraOnt().getDataPropertiesInSignature(); }
 
+    
     private Set<OWLNamedIndividual> namedIndividuals() {
         return pathadoraManager.pathadoraOnt().getIndividualsInSignature(); }
 
+    
     private Set<OWLAnnotationProperty> annotationProperties() {
         return pathadoraManager.pathadoraOnt().getAnnotationPropertiesInSignature();
     }
 
+    
     private String propName(String prop) {
         return prop.substring(0, prop.length() - 1).split("#")[1];
     }
 
+    
     private String valName(String val){
         return val.substring(1,val.length()-1);
     }
 
+    
     private String annName(String ann){
         return ann.split("#")[1].split(">")[0];
     }

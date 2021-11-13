@@ -11,7 +11,6 @@ import java.nio.file.Files;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 
 import com.stardog.stark.query.SelectQueryResult;
 import com.complexible.stardog.api.Connection;
@@ -22,6 +21,7 @@ import static com.stardog.stark.io.RDFFormats.*;
 
 import static server.stardog.DataToOwl.*;
 import static server.stardog.Provider.*;
+import static server.stardog.Queries.prefixesMap;
 import static server.utils.PathadoraConfig.OntologyConfig.*;
 
 public class StardogDatabase {
@@ -54,16 +54,6 @@ public class StardogDatabase {
         Files.deleteIfExists(new File(TMP_FILE).toPath());
     }
 
-    private static ConnectionPool createConnectionPool(ConnectionConfiguration connectionConfig) {
-        ConnectionPoolConfig poolConfig = ConnectionPoolConfig
-                .using(connectionConfig)
-                .minPool(MIN_POOL)
-                .maxPool(MAX_POOL)
-                .expiration(1, TimeUnit.HOURS)
-                .blockAtCapacity(1, TimeUnit.MINUTES);
-        return poolConfig.create();
-    }
-
 
     public List<Map<String, String>>  queryDatabase(String sparqlQuery) {
         SelectQuery query = connection.select(sparqlQuery);
@@ -82,6 +72,15 @@ public class StardogDatabase {
     }
 
 
+    public void removeDatabase(){
+        try (final AdminConnection aConn = AdminConnectionConfiguration
+                .toServer(Provider.url).credentials(Provider.username, Provider.password)
+                .connect()) {
+            if (aConn.list().contains(Provider.database)) {aConn.drop(Provider.database);}
+        }
+    }
+
+
     private void checkDuplicatedDatabases() {
         try (final AdminConnection aConn = AdminConnectionConfiguration
                 .toServer(Provider.url)
@@ -90,14 +89,6 @@ public class StardogDatabase {
             //aConn.list().forEach(System.out::println);
             if (aConn.list().contains(Provider.database)) {aConn.drop(Provider.database);}
             aConn.disk(Provider.database).create();
-        }
-    }
-
-    public void removeDatabase(){
-        try (final AdminConnection aConn = AdminConnectionConfiguration
-                .toServer(Provider.url).credentials(Provider.username, Provider.password)
-                .connect()) {
-            if (aConn.list().contains(Provider.database)) {aConn.drop(Provider.database);}
         }
     }
 
@@ -110,7 +101,10 @@ public class StardogDatabase {
                 .reasoning(false)
                 .credentials(Provider.username, Provider.password);
         ConnectionPool connectionPool = createConnectionPool(connectionConfig);
-        return connectionPool.obtain();
+        Connection connection = connectionPool.obtain();
+        importPrefixes(connection);
+
+        return connection;
     }
 
 
@@ -128,11 +122,28 @@ public class StardogDatabase {
         }
     }
 
+
+    private void importPrefixes(Connection connection){
+        prefixesMap().forEach((key, value) -> connection.namespaces().add(key, value));
+    }
+
+
+    private static ConnectionPool createConnectionPool(ConnectionConfiguration connectionConfig) {
+        ConnectionPoolConfig poolConfig = ConnectionPoolConfig
+                .using(connectionConfig)
+                .minPool(MIN_POOL)
+                .maxPool(MAX_POOL)
+                .expiration(1, TimeUnit.HOURS)
+                .blockAtCapacity(1, TimeUnit.MINUTES);
+        return poolConfig.create();
+    }
+
+
     public static void main(String... args) throws IOException {
         StardogDatabase db = new StardogDatabase();
         db.importData(PATHADORA_TEMP_LOCAL_PATH);
 
-        List<Map<String, String>> result = db.queryDatabase(Queries.resources());
-        System.out.println(OutputToJson.resourcesJsonResponse(result));
+        List<Map<String, String>> result = db.queryDatabase(Queries.courses("Learner_Eloho", "Degree_Bachelor", "1"));
+        System.out.println(OutputToJson.coursesJsonResponse(result));
     }
 }

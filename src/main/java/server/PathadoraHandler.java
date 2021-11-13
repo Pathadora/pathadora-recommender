@@ -56,7 +56,7 @@ class PathadoraHandler implements HttpHandler {
                     exchange.sendResponseHeaders(STATUS_METHOD_NOT_ALLOWED, NO_RESPONSE_LENGTH);
                     break;
             }
-        } catch (OWLOntologyCreationException | OWLOntologyStorageException | SWRLParseException | SWRLBuiltInException e) {
+        } catch (OWLOntologyCreationException | OWLOntologyStorageException | SWRLParseException | SWRLBuiltInException | InterruptedException e) {
             e.printStackTrace();
         } finally {
             exchange.close();
@@ -64,7 +64,7 @@ class PathadoraHandler implements HttpHandler {
     }
 
     private String computeRequest(String paramsString) throws IOException,
-            OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException {
+            OWLOntologyCreationException, OWLOntologyStorageException, SWRLParseException, SWRLBuiltInException, InterruptedException {
         Map<String, String> params = paramsToMap(paramsString);
 
         if (params.containsKey(ACTION)) {
@@ -85,11 +85,6 @@ class PathadoraHandler implements HttpHandler {
                 case RESOURCE_GENERATION:
                     System.out.println("Recommended resources was was requested");
                     return pathadoraManager.recommendResources(recommender, params);
-
-                case FINISH:
-                    System.out.println("Operation finished");
-                    pathadoraManager.reset();
-                    return String.valueOf(STATUS_OK);
 
                 default:
                     return "No correct action";

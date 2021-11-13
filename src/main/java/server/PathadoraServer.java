@@ -3,8 +3,6 @@ package server;
 import com.sun.net.httpserver.HttpServer;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
-import org.swrlapi.exceptions.SWRLBuiltInException;
-import org.swrlapi.parser.SWRLParseException;
 import server.owl.PathadoraManager;
 import java.io.*;
 import java.net.InetSocketAddress;
