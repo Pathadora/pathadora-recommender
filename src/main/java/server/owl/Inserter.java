@@ -16,7 +16,7 @@ public class Inserter {
     }
 
     public String addNewIndividual(Map<String, String> params) throws OWLOntologyStorageException {
-        OntologyEntities entities = new OntologyEntities(manager);
+        SemanticEntities entities = new OntologyEntities(manager);
         OWLOntology pathadora = manager.pathadoraOnt();
 
         Map<String, String> obj_prop = paramsToMapByKey(OBJECT_PROPERTIES, params);

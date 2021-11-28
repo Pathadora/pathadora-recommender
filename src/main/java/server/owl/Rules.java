@@ -19,17 +19,19 @@ public class Rules {
     }
 
 
-    public static String recommendedFaculties(String learner, String degree){
-        String degreeProperty = "";
-        if(degree.contains("Bachelor")){ degreeProperty = "isBachelorFaculty";}
-        if(degree.contains("Master")){ degreeProperty = "isMasterFaculty";}
-        if(degree.contains("Doctoral")){ degreeProperty = "isDoctoralFaculty";}
-
-        return
-                "pathadora-ontology:Departments(?depart) ^"+
-                        "pathadora-ontology:recommendedDepartment(pathadora-ontology:"+learner+", ?depart) ^ " +
+    public static String recommendedFaculties(String learner, String degree){ return
+            "pathadora-ontology:Departments(?depart) ^"+
+                    "pathadora-ontology:recommendedDepartment(pathadora-ontology:"+learner+", ?depart) ^ " +
                         "pathadora-ontology:facultyOfDepartment(?fac, ?depart) ^  " +
-                        "pathadora-ontology:"+degreeProperty+"(?fac, pathadora-ontology:"+degree+") -> " +
+                        "pathadora-ontology:"+degreeProperty(degree)+"(?fac, pathadora-ontology:"+degree+") -> " +
                         "pathadora-ontology:recommendedFaculty(pathadora-ontology:"+learner+", ?fac)";
+    }
+
+
+    private static String degreeProperty(String degree){
+        if(degree.contains("Bachelor")){ return  "isBachelorFaculty";}
+        if(degree.contains("Master")){   return  "isMasterFaculty";}
+        if(degree.contains("Doctoral")){ return  "isDoctoralFaculty";}
+        return "isBachelorFaculty";
     }
 }

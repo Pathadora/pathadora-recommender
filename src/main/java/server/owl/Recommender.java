@@ -3,8 +3,8 @@ package server.owl;
 import org.semanticweb.owlapi.model.*;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
+import server.stardog.GraphDatabase;
 import server.stardog.Queries;
-import server.stardog.StardogDatabase;
 
 import java.util.*;
 
@@ -35,13 +35,15 @@ public class Recommender {
     }
 
 
-    public List<Map<String, String>> recommendedCourses(String learner, String degree, String year, StardogDatabase database){
-        return database.queryDatabase(Queries.courses(learner, degree, year));
+    public List<Map<String, String>> recommendedCourses(String learner, String year, String faculty, GraphDatabase database){
+        System.out.println("Recommender ");
+
+        return database.queryDatabase(Queries.courses(learner, year, faculty));
     }
 
 
-    public List<Map<String, String>> recommendResources(StardogDatabase database){
-        return database.queryDatabase(Queries.resources());
+    public List<Map<String, String>> recommendResources(String learner, GraphDatabase database){
+        return database.queryDatabase(Queries.resources(learner));
     }
 
 

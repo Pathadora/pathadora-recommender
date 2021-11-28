@@ -140,8 +140,6 @@ public class CourseScraper {
         List<String> languages = Arrays.asList(italian);
 
         new CourseScraper().extractCourses(0, url, faculty, 1, yes, languages);
-
-
     }
 
 }

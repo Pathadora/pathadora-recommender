@@ -1,11 +1,13 @@
 package server.owl;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.swrlapi.exceptions.SWRLBuiltInException;
 import org.swrlapi.parser.SWRLParseException;
+import server.stardog.GraphDatabase;
 import server.stardog.StardogDatabase;
+import org.semanticweb.owlapi.model.*;
+
 import server.utils.OutputToJson;
 
 import java.io.File;
@@ -21,7 +23,7 @@ import static server.utils.PathadoraConfig.ServerConfig.*;
 public class PathadoraManager {
     private OWLOntologyManager manager;
     private OWLOntology pathadora;
-    private final StardogDatabase database;
+    private final GraphDatabase database;
 
 
     public PathadoraManager() throws OWLOntologyCreationException, OWLOntologyStorageException {
@@ -85,7 +87,7 @@ public class PathadoraManager {
         learnerData.put(YEAR, year);
         learnerData.put(FACULTY, faculty);
 
-        List<Map<String,String>>  result = recommender.recommendedCourses(learner, degree, year, database);
+        List<Map<String,String>>  result = recommender.recommendedCourses(learner, faculty, year, database);
         result.add(0, learnerData);
 
         return OutputToJson.coursesJsonResponse(result);
@@ -94,12 +96,14 @@ public class PathadoraManager {
 
     public String recommendResources(Recommender recommender, Map<String, String> params) {
         Map<String, String> learnerData = new HashMap<>();
-        learnerData.put(LEARNER, "Cokle");
-        learnerData.put(DEGREE, "bachelor");
-        learnerData.put(YEAR, "1");
-        learnerData.put(FACULTY, "Facolta XYZ");
 
-        List<Map<String,String>>  result = recommender.recommendResources(database);
+        String learner = params.get(LEARNER);
+        String course =params.get(FACULTY);
+
+        learnerData.put(LEARNER, learner);
+        learnerData.put(COURSE, course);
+
+        List<Map<String,String>>  result = recommender.recommendResources(learner, database);
         result.add(0, learnerData);
         return OutputToJson.resourcesJsonResponse(result);
     }
@@ -114,7 +118,6 @@ public class PathadoraManager {
             manager.saveOntology(updatedOnt);
         }
     }
-
 
     private void initializeStardogDatabase(String owlFile) throws IOException {
         database.importData(owlFile);

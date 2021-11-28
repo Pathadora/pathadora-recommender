@@ -14,7 +14,7 @@ import static server.utils.PathadoraConfig.*;
 import static server.utils.PathadoraConfig.OntologyConfig.*;
 import static server.utils.PathadoraConfig.annotation;
 
-public class OntologyEntities {
+public class OntologyEntities implements SemanticEntities{
 
     private final PathadoraManager pathadoraManager;
 
@@ -22,7 +22,7 @@ public class OntologyEntities {
         this.pathadoraManager = mng;
     }
 
-
+    @Override
     public String defineClassAssertion(Map<String, String> params, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
         OWLDataFactory df = pathadoraManager.getManager().getOWLDataFactory();
         OWLClass learnerClass = (OWLClass) ontologyEntitiesBy(CLASSES, params.get(CLASS));
@@ -31,10 +31,10 @@ public class OntologyEntities {
         return classAssertion(valName(tIndividual.toString()), valName(learnerClass.toString()));
     }
 
-
-    public String defineObjectPropertyAssertions(Map<String, String> obj_prop, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
+    @Override
+    public String defineObjectPropertyAssertions(Map<String, String> objProp, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
         StringBuilder outBuild = new StringBuilder();
-        for (Map.Entry<String, String> obj : obj_prop.entrySet()) {
+        for (Map.Entry<String, String> obj : objProp.entrySet()) {
             /* check for multiple object property values */
             if (obj.getValue().contains(",")) {
                 Arrays.stream(obj.getValue().split(",")).forEach(o -> {
@@ -48,10 +48,10 @@ public class OntologyEntities {
         return outBuild.toString();
     }
 
-
-    public String defineDataPropertyAssertions(Map<String, String> obj_prop, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
+    @Override
+    public String defineDataPropertyAssertions(Map<String, String> objProp, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
         StringBuilder outBuild = new StringBuilder();
-        for (Map.Entry<String, String> obj : obj_prop.entrySet()) {
+        for (Map.Entry<String, String> obj : objProp.entrySet()) {
             /* check for multiple object property values */
             outBuild.append(addDataProperty(obj.getKey(), obj.getValue(), tIndividual, pathadora));
         }
@@ -59,7 +59,7 @@ public class OntologyEntities {
         return outBuild.toString();
     }
 
-
+    @Override
     public String defineAnnotationPropertyAssertions(Map<String, String> ann_prop, OWLNamedIndividual tIndividual, OWLOntology pathadora) {
         StringBuilder outBuild = new StringBuilder();
         for (Map.Entry<String, String> obj : ann_prop.entrySet()) {
@@ -112,7 +112,7 @@ public class OntologyEntities {
         return dataProperty(key, value);
     }
 
-    
+    @Override
     public OWLLogicalEntity ontologyEntitiesBy(String type, String key) {
         OWLDataFactory df = pathadoraManager.getManager().getOWLDataFactory();
         PrefixManager pm = new DefaultPrefixManager(PATHADORA_RESOURCE);

@@ -16,22 +16,20 @@ import com.stardog.stark.query.SelectQueryResult;
 import com.complexible.stardog.api.Connection;
 import com.complexible.stardog.api.ConnectionConfiguration;
 import com.complexible.stardog.api.SelectQuery;
-import server.utils.OutputToJson;
 import static com.stardog.stark.io.RDFFormats.*;
 
 import static server.stardog.DataToOwl.*;
 import static server.stardog.Provider.*;
 import static server.stardog.Queries.prefixesMap;
-import static server.utils.PathadoraConfig.OntologyConfig.*;
 
-public class StardogDatabase {
+public class StardogDatabase implements GraphDatabase{
    private final Connection connection;
 
     public StardogDatabase() {
         this.connection = initializeConnection();
     }
 
-
+    @Override
     public void importData(String path) throws FileNotFoundException {
         connection.begin();
         connection.add().io()
@@ -41,7 +39,7 @@ public class StardogDatabase {
         System.out.println("Stardog Database: Ontology loaded\n");
     }
 
-
+    @Override
     public void insertData(String content) throws IOException {
         DataToOwl.toOWLFile(content);
 
@@ -54,7 +52,7 @@ public class StardogDatabase {
         Files.deleteIfExists(new File(TMP_FILE).toPath());
     }
 
-
+    @Override
     public List<Map<String, String>>  queryDatabase(String sparqlQuery) {
         SelectQuery query = connection.select(sparqlQuery);
         try(SelectQueryResult aResult = query.execute()) {
@@ -72,6 +70,23 @@ public class StardogDatabase {
     }
 
 
+    @Override
+    public Connection initializeConnection(){
+        checkDuplicatedDatabases();
+        ConnectionConfiguration connectionConfig = ConnectionConfiguration
+                .to(Provider.database)
+                .server(Provider.url)
+                .reasoning(false)
+                .credentials(Provider.username, Provider.password);
+        ConnectionPool connectionPool = createConnectionPool(connectionConfig);
+        Connection connection = connectionPool.obtain();
+        importPrefixes(connection);
+
+        return connection;
+    }
+
+
+    @Override
     public void removeDatabase(){
         try (final AdminConnection aConn = AdminConnectionConfiguration
                 .toServer(Provider.url).credentials(Provider.username, Provider.password)
@@ -91,22 +106,6 @@ public class StardogDatabase {
             aConn.disk(Provider.database).create();
         }
     }
-
-
-    private Connection initializeConnection(){
-        checkDuplicatedDatabases();
-        ConnectionConfiguration connectionConfig = ConnectionConfiguration
-                .to(Provider.database)
-                .server(Provider.url)
-                .reasoning(false)
-                .credentials(Provider.username, Provider.password);
-        ConnectionPool connectionPool = createConnectionPool(connectionConfig);
-        Connection connection = connectionPool.obtain();
-        importPrefixes(connection);
-
-        return connection;
-    }
-
 
     private String extractKey(String data){
         return data.substring(1, data.indexOf("="));
@@ -138,12 +137,4 @@ public class StardogDatabase {
         return poolConfig.create();
     }
 
-
-    public static void main(String... args) throws IOException {
-        StardogDatabase db = new StardogDatabase();
-        db.importData(PATHADORA_TEMP_LOCAL_PATH);
-
-        List<Map<String, String>> result = db.queryDatabase(Queries.courses("Learner_Eloho", "Degree_Bachelor", "1"));
-        System.out.println(OutputToJson.coursesJsonResponse(result));
-    }
 }

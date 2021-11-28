@@ -34,7 +34,6 @@ public class OutputToJson {
         data.forEach((key, value) -> {
             JSONObject facOfDepartment = new JSONObject();
             facOfDepartment.put(DEPARTMENT, key);
-
             facOfDepartment.put(FACULTIES, value);
             dataArray.put(facOfDepartment);
             facultiesInfo.put(DATA, dataArray);
@@ -57,17 +56,22 @@ public class OutputToJson {
         });
 
         courseInfo.put(COURSES, courses);
+
+        System.out.println("Data to output: " + courseInfo.toString());
+
         return courseInfo.toString();
     }
 
 
     private static String parseResources(List<Map<String, String>> data) {
         JSONObject resourcesRec = new JSONObject();
+        data.get(0).forEach(resourcesRec::put);
+
         JSONArray resources = new JSONArray();
 
-        data.forEach(course -> {
+        data.subList(1, data.size()).forEach(resource -> {
             JSONObject resourceData = new JSONObject();
-            course.forEach(resourceData::put);
+            resource.forEach(resourceData::put);
             resources.put(resourceData);
         });
 
