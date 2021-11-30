@@ -2,9 +2,11 @@ package server.utils;
 
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
+import org.apache.commons.lang3.math.NumberUtils;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.util.regex.Pattern;
 
 /**
  * Utils class to help on server configuration and handling the requests.
@@ -110,8 +112,12 @@ public class PathadoraConfig {
     }
 
     public static String dataProperty(String propName, String val){
-        return "<pathadora-ontology:"+propName+" rdf:datatype=\"http://www.w3.org/2001/XMLSchema#int\">"
-                +Integer.valueOf(val)+"</pathadora-ontology:"+propName+">\n";
+        return (NumberUtils.isNumber(val)) ?
+             "<pathadora-ontology:" + propName + " rdf:datatype=\"http://www.w3.org/2001/XMLSchema#integer\">"
+                    + Integer.valueOf(val) + "</pathadora-ontology:" + propName + ">\n" :
+             "<pathadora-ontology:" + propName + " rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">"
+                    + val + "</pathadora-ontology:" + propName + ">\n";
+
     }
 
     public static String endIndividualDeclaration(){
